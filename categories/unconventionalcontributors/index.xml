@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>UnconventionalContributors - Category - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/categories/unconventionalcontributors/</link>
+        <description>UnconventionalContributors - Category - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Mon, 20 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/categories/unconventionalcontributors/" rel="self" type="application/rss+xml" /><item>
+    <title>Interview with Prathamesh Chavan</title>
+    <link>https://www.parthgoswami.com/prathameshchavan/</link>
+    <pubDate>Mon, 20 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/prathameshchavan/</guid>
+    <description><![CDATA[We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
+</item>
+</channel>
+</rss>

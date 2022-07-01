@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JupyterNotebooks - Tag - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/jupyternotebooks/</link>
+        <description>JupyterNotebooks - Tag - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Wed, 29 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/jupyternotebooks/" rel="self" type="application/rss+xml" /><item>
+    <title>Getting started with Jupyter Notebooks</title>
+    <link>https://www.parthgoswami.com/jupyternotebooks/</link>
+    <pubDate>Wed, 29 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/jupyternotebooks/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/jupyternotebook/jupyternotebook.png" referrerpolicy="no-referrer">
+            </div>I started exploring and using Jupyter Notebook earlier this year for a project based on opensource enablement, licensing and operate first. This is the first time ever I was working with a notebook and apparently had to start from sratch right from understanding how it works, how it needs to be installed and finally how it is to be pushed to a repo and publish the work.
+In the process of exploring the tool, I went throught quite a handful of articles and videos.]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,38 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>How-to - Category - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/categories/how-to/</link>
+        <description>How-to - Category - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Wed, 29 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/categories/how-to/" rel="self" type="application/rss+xml" /><item>
+    <title>Getting started with Jupyter Notebooks</title>
+    <link>https://www.parthgoswami.com/jupyternotebooks/</link>
+    <pubDate>Wed, 29 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/jupyternotebooks/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/jupyternotebook/jupyternotebook.png" referrerpolicy="no-referrer">
+            </div>I started exploring and using Jupyter Notebook earlier this year for a project based on opensource enablement, licensing and operate first. This is the first time ever I was working with a notebook and apparently had to start from sratch right from understanding how it works, how it needs to be installed and finally how it is to be pushed to a repo and publish the work.
+In the process of exploring the tool, I went throught quite a handful of articles and videos.]]></description>
+</item>
+<item>
+    <title>Managing Windows Server from Red Hat Server using Ansible</title>
+    <link>https://www.parthgoswami.com/ansible_sd/</link>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/ansible_sd/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">
+            </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
+</item>
+<item>
+    <title>Dockerizing LAMP Stack Application</title>
+    <link>https://www.parthgoswami.com/dockerizing_lamp_stack_app/</link>
+    <pubDate>Mon, 06 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Vrinda Hegde</author>
+    <guid>https://www.parthgoswami.com/dockerizing_lamp_stack_app/</guid>
+    <description><![CDATA[Let us create a dockerfile for deploying the application. In this dockerfile we will use ubuntu image as the base image and then install apache and php above it. Then we will create a MYSQL container which will be connected to our application.
+Below is the Dockerfile snippet: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 # Dockerfile for LAMP Stack installation # Ubuntu 18.]]></description>
+</item>
+</channel>
+</rss>
