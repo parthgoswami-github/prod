@@ -4,18 +4,18 @@
 
 ##### TL;DR: 
 **Name:** Parth Goswami<br/>
-[Follow me on Twitter](https://www.twitter.com/parthtwts)
+[Let's connect on Twitter](https://www.twitter.com/parthtwts)
 
 ## About the website
 ##### A platform for the community, by the community
 
 ##### VistingAuthors 
-Many of my colleagues are avid writers who frequently document their knowledge and experiences. Some of them use their own platforms to publish the information, while others use blogs like Medium and Blogger to publish it. The *VisitingAuthors* area of this website is an effort to offer one such platform for authors to share their knowledge and ideas. Please check out the site; I hope it will provide you with useful content.
+Many of my colleagues are avid writers who frequently document their knowledge and experiences. Some of them use their own platforms to publish the information, while others use blogs like Medium and Blogger to publish it. The [*VisitingAuthors*](https://www.parthgoswami.com/categories/visitingauthors/) area of this website is an effort to offer one such platform for authors to share their knowledge and ideas. Please check out the site; I hope it will provide you with useful content.
 
 ##### UnconventionalContributors
 We have a diverse range of contributors in the open source community who make contributions in unconventional ways without using any coding or developing expertise, some ways we hear quite often, some not so much. This high-level instructional interview series should be beneficial to anyone who wants to start contributing to open source. 
 
-One such forum is the *UnconventionalContributors* series, which is designed for aspiring and emerging contributors to get involved with open source communities. 
+One such forum is the [*UnconventionalContributors*](https://www.parthgoswami.com/categories/unconventionalcontributors/) series, which is designed for aspiring and emerging contributors to get involved with open source communities. 
 
 
 <br/>
