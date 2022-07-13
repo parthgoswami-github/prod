@@ -1,7 +1,7 @@
 # How to configure AWS Rekognition and AWS Transcoder
 
 
-![](/images/aws_rekognition/intro.png " ")
+![ ](/images/aws_rekognition/intro.png " ")
 
 ## Consider a scenerio:
 
@@ -41,46 +41,46 @@ The EC2 instances will have IAM roles attached to it having roles set like *AWSS
 1. **First step is to configure VPC:** <br/>
 
 	1.1 Create VPC with the name **MyVPC**: <br/>
-![](/images/aws_rekognition/step-1.1.png " ")
+![ ](/images/aws_rekognition/step-1.1.png " ")
 	1.2 Create 3 Subnets with the name **Public**, **Public1**, **Private**:<br/>
-![](/images/aws_rekognition/step-1.2.png " ")
+![ ](/images/aws_rekognition/step-1.2.png " ")
 	1.3 Create a separate Route table with names **PublicRT** and **PrivateRT** and place the subnets with the respective route table:<br/>
-![](/images/aws_rekognition/step-1.3.1.png " ")
-![](/images/aws_rekognition/step-1.3.2.png " ")
+![ ](/images/aws_rekognition/step-1.3.1.png " ")
+![ ](/images/aws_rekognition/step-1.3.2.png " ")
 	1.4 Create a Gateway with the name **MyGateway**:<br/>
-![](/images/aws_rekognition/step-1.4.png " ")
+![ ](/images/aws_rekognition/step-1.4.png " ")
 2. **Create three EC2 instances and attach them with *MyVPC* as given below :**<br/>
-![](/images/aws_rekognition/step-2.1.png " ")
-![](/images/aws_rekognition/step-2.2.png " ")
-![](/images/aws_rekognition/step-2.3.png " ")
-![](/images/aws_rekognition/step-2.4.png " ")
+![ ](/images/aws_rekognition/step-2.1.png " ")
+![ ](/images/aws_rekognition/step-2.2.png " ")
+![ ](/images/aws_rekognition/step-2.3.png " ")
+![ ](/images/aws_rekognition/step-2.4.png " ")
 3. **Create IAM roles the instances:** <br/>
 
 	3.1 Create IAM roles for Public Instance with respective policy as shown below:<br/>
-![](/images/aws_rekognition/step-3.1.png " ")
+![ ](/images/aws_rekognition/step-3.1.png " ")
 	3.2 Create IAM role for Private instance which holds RDS policy (optional) :<br/>
-![](/images/aws_rekognition/step-3.2.png " ")
+![ ](/images/aws_rekognition/step-3.2.png " ")
 4. **Create S3 bucket as follows:** <br/>
 
 	4.1 Create 2 buckets with the name **inputbucket12** and **outputbucket12**:<br/>
-![](/images/aws_rekognition/step-4.1.png " ")
+![ ](/images/aws_rekognition/step-4.1.png " ")
 	4.2 In **inputbucket12** will be used to upload images and videos:<br/>
-![](/images/aws_rekognition/step-4.2.png " ")
+![ ](/images/aws_rekognition/step-4.2.png " ")
 5. **Setup for AWS Image Rekognition in *Public* instance using cli mode:**<br/>
-![](/images/aws_rekognition/step-5.png " ")
+![ ](/images/aws_rekognition/step-5.png " ")
 6. **Setting up AWS Transcoder for video converter:** <br/>
 
 	6.1 Create Pipeline as given below:<br/>
-![](/images/aws_rekognition/step-6.1.png " ")
+![ ](/images/aws_rekognition/step-6.1.png " ")
 	6.2 Create job for the Pipeline:<br/>
-![](/images/aws_rekognition/step-6.2.1.png " ")
-![](/images/aws_rekognition/step-6.2.2.png " ")
-![](/images/aws_rekognition/step-6.2.3.png " ")
-![](/images/aws_rekognition/step-6.2.4.png " ")
+![ ](/images/aws_rekognition/step-6.2.1.png " ")
+![ ](/images/aws_rekognition/step-6.2.2.png " ")
+![ ](/images/aws_rekognition/step-6.2.3.png " ")
+![ ](/images/aws_rekognition/step-6.2.4.png " ")
 	6.3 Output of the video will be shown in **outputbucket12**:<br/>
-![](/images/aws_rekognition/step-6.3.1.png " ")
-![](/images/aws_rekognition/step-6.3.2.png " ")
-![](/images/aws_rekognition/step-6.3.3.png " ")
+![ ](/images/aws_rekognition/step-6.3.1.png " ")
+![ ](/images/aws_rekognition/step-6.3.2.png " ")
+![ ](/images/aws_rekognition/step-6.3.3.png " ")
 
 
 
