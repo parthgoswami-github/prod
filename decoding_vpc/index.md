@@ -34,7 +34,7 @@ VPC stands for Virtual Private Cloud and is one of the most fundamental and wide
 
 9.  If the  private subnet wants to talk to the internet but it cannot communicate directly to the internet that time we will use **NAT**. NAT, *Network Address Translation*, refers to the proxy server. Private subnet will talk to the internet through NAT but internet will not talk directly to the private subnet, it will first communicate with public subnet and then public subnet will talk to the private subnet.
 
-![](/images/decoding_vpc/VPC.png "VPC reference diagram")
+![ ](/images/decoding_vpc/VPC.png "VPC reference diagram")
 
 ## What is CIDR?
 
