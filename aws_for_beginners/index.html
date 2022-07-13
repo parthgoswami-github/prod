@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>How to get started on AWS - Parth Goswami</title><meta name="Description" content="Parth&#39;s blogsite"><meta property="og:title" content="How to get started on AWS" />
+<meta property="og:description" content="Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks about AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5&#43; years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/aws_for_beginners/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-03T00:00:00+00:00" /><meta property="og:site_name" content="Parth&#39;s blogsite" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="How to get started on AWS"/>
+<meta name="twitter:description" content="Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks about AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5&#43; years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/aws_for_beginners/" /><link rel="prev" href="https://www.parthgoswami.com/ansible_sd/" /><link rel="next" href="https://www.parthgoswami.com/docker_containters_ansibleaws/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to get started on AWS",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/aws_for_beginners\/"
+        },"genre": "posts","keywords": "How-to, blog, aws, technology","wordcount":  889 ,
+        "url": "https:\/\/www.parthgoswami.com\/aws_for_beginners\/","datePublished": "2022-06-03T00:00:00+00:00","dateModified": "2022-06-03T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Parth Goswami"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">How to get started on AWS</h1><h2 class="single-subtitle">A beginners Guide to your probably first Public Cloud Provider</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.parthgoswami.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Parth Goswami</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-03">2022-06-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;889 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-aws">What is AWS?</a></li>
+    <li><a href="#start-with-core-services">Start with core services</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#careers">Careers</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><br/>
+<p>Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks <em>about</em> AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5+ years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS. For many, due to one or the other reasons, AWS is the first public cloud provider which they get exposed to.</p>
+<p>Hence, this article aims at providing you a detailed overview about AWS and its ecosystem and how to get started with it. I plan to write a similar blogpost on the other two major cloud providers, Google Cloud Platform [GCP] and Microsoft Azure, but that&rsquo;s for another day once I myself get a good hold on them.</p>
+<p>This article is for a student, who is just starting with their cloud journey, or for a software developer, tester, technical sales who are new to AWS or cloud for that matter. If your team is looking to invest in AWS, or your company is undergoing digital transformation, or if you are a startup looking to migrate some/entire load on to AWS, then this article is for you.  I hope this article serves you&rsquo;ll well.</p>
+<br/>
+<p>Let&rsquo;s get started!</p>
+<br/>
+<h2 id="what-is-aws">What is AWS?</h2>
+<p>AWS stands for Amazon Web Services.  It offers variety of models, the most famous being pay-as-you-go, to work with the basic infrastructure you would need to run your company. The services include range of products in the compute, storage, networking, database, analytics and many other domain.</p>
+<p>It is a comprehensive cloud computing platform that includes infrastructure as a service (IaaS), platform as a service (PaaS) as well as sofware as a service (SaaS) offerings.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/aws_for_beginners/services.png" title="Services" data-thumbnail="/images/aws_for_beginners/services.png" data-sub-html="<h2>services</h2><p>Services</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_for_beginners/services.png"
+            data-srcset="/images/aws_for_beginners/services.png, /images/aws_for_beginners/services.png 1.5x, /images/aws_for_beginners/services.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_for_beginners/services.png" />
+    </a><figcaption class="image-caption">services</figcaption>
+    </figure></p>
+<h2 id="start-with-core-services">Start with core services</h2>
+<p>AWS offers more than 150+ services, which can be quite intimidating for a beginner. However, you don&rsquo;t need to master them all. You can start with the core services which acts as a building blocks of any cloud provider and also help you get certified eventually.</p>
+<p>I always recommend to start with <em>Identity and Access Management (IAM)</em> service for couple of reasons. Since it is absolutely free of cost:</p>
+<ul>
+<li>You get a good grasp of AWS console while exploring and learning IAM</li>
+<li>Even if you mess up with IAM, your account most probably will not get charged</li>
+</ul>
+<br/>
+<p>Below are some of the key “building block” services which form the core of the AWS platform. Getting familiar with these is a good place to start your learning:</p>
+<ul>
+<li><a href="https://www.aws.training/learningobject/video?id=16382" target="_blank" rel="noopener noreffer ">Elastic Compute Cloud (EC2)</a>: virtual servers</li>
+<li><a href="https://aws.amazon.com/rds/" target="_blank" rel="noopener noreffer ">Relational Database Service (RDS)</a>: relational databases</li>
+<li><a href="https://aws.amazon.com/ebs/" target="_blank" rel="noopener noreffer ">Elastic Block Store (EBS)</a>: block storage</li>
+<li><a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreffer ">Simple Storage Service (S3)</a>: file storage</li>
+<li><a href="https://aws.amazon.com/iam/" target="_blank" rel="noopener noreffer ">Identity and Access Management (IAM)</a>: users, groups and roles</li>
+<li><a href="https://aws.amazon.com/vpc/" target="_blank" rel="noopener noreffer ">Virtual Private Cloud (VPC)</a>: networking</li>
+</ul>
+<br/>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Remember<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ol>
+<li>Learn core AWS services first</li>
+<li>Prioritise hands-on learning</li>
+<li>Structure your learning</li>
+</ol>
+</div>
+        </div>
+    </div>
+<br/>
+<h2 id="certifications">Certifications</h2>
+<p>Getting certified on AWS have great benefits and you don&rsquo;t have to get certified on all of them. Depending on your role/domain/aspirations, you select a specific track and prepare for accordingly.</p>
+<p>The good thing is, AWS certificaion exams are simplified and borken down into different categories.</p>
+<ul>
+<li><strong>Associate</strong>: The associate exams are your more entry level exams,</li>
+<li><strong>Professional</strong>: The professional exams build on top of the associate exams with more detail.</li>
+<li><strong>Specialty</strong>: You can also go down a specialty route and learning a specific topic like Networking or Security.</li>
+</ul>
+<p><figure><a class="lightgallery" href="/images/aws_for_beginners/certifications.png" title="AWS Certifications" data-thumbnail="/images/aws_for_beginners/certifications.png" data-sub-html="<h2>AWS Certifications</h2><p>AWS Certifications</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_for_beginners/certifications.png"
+            data-srcset="/images/aws_for_beginners/certifications.png, /images/aws_for_beginners/certifications.png 1.5x, /images/aws_for_beginners/certifications.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_for_beginners/certifications.png" />
+    </a><figcaption class="image-caption">AWS Certifications</figcaption>
+    </figure></p>
+<p>The best place to start as a complete beginner is with the Cloud Practitioner exam. The Cloud Practitioner exam is going to give you a solid basis in AWS. When you’ve completed the Cloud Practitioner exam, you can then take a look at one of the associate exams, Architect, SysOps or Developer depending on your preference.</p>
+<h2 id="resources">Resources</h2>
+<p>Alright, since we have covered what AWS is, what are its services and what certifications AWS provides, I think it&rsquo;s time to talk about the resources to master those services.</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/" target="_blank" rel="noopener noreffer ">Documentation</a></li>
+<li><a href="https://www.youtube.com/user/AmazonWebServices" target="_blank" rel="noopener noreffer ">youtube</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/amazon-web-services" target="_blank" rel="noopener noreffer ">stackoverflow</a></li>
+<li><a href="https://aws.amazon.com/free" target="_blank" rel="noopener noreffer ">aws.amazon.com/free</a></li>
+</ul>
+<p>In addition to these resources, also checkout:</p>
+<p>• <strong>Whitepapers</strong>: Resources designed to broaden your technical understanding, written
+by the AWS team, independent analysts, and AWS partners.</p>
+<p>• <strong>FAQ</strong>: Commonly raised issues and questions that will help you understand
+AWS products, services, and features beyond the scope of your personal
+experience.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you start with hands-on practice, you need:</p>
+<ul>
+<li>AWS free tier account to kick off journey</li>
+<li>Credit card or debit card is mandatory ( It will not charge if you are using the free tier resources properly. Do checkout the free tier limit for the services you are working with).</li>
+</ul>
+<h2 id="events">Events</h2>
+<p>AWS hosts events, both online and in-person, bringing the cloud computing community together to connect, collaborate, and learn from AWS experts.</p>
+<p>These events ranges from AWS Summits, to partner events, webinars, training and certification and more.</p>
+<p>Check out the <a href="https://aws.amazon.com/events/?events-master-main.sort-by=item.additionalFields.startDateTime&amp;events-master-main.sort-order=asc&amp;awsf.events-master-type=*all&amp;awsf.events-master-series=*all&amp;awsf.events-master-audience=*all&amp;awsf.events-master-location=*all&amp;awsf.events-master-tech-category=*all&amp;awsf.events-master-level=*all" target="_blank" rel="noopener noreffer ">events</a> page for more details.</p>
+<h2 id="careers">Careers</h2>
+<p>AWS offers exciting and variety of roles around the globe. Check out the <a href="https://aws.amazon.com/careers/" target="_blank" rel="noopener noreffer ">careers</a> page for more details.</p>
+<br/>
+<p><strong>Note</strong>: AWS frequently keeps adding new services to its current pool and reguarly comes up with new certifications. Also, the links that I have shared in this articles may get updated. If you come across any such instance, feel free to reach out to me so that it will help me keep this article updated.</p>
+<br/>
+<p>Happy learning!</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-03</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/aws_for_beginners/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/aws_for_beginners/" data-title="How to get started on AWS" data-via="parthtwts" data-hashtags="How-to,blog,aws,technology"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/aws_for_beginners/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/aws_for_beginners/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/aws_for_beginners/" data-title="How to get started on AWS" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/aws_for_beginners/" data-title="How to get started on AWS"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/aws_for_beginners/" data-title="How to get started on AWS"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/blog/">blog</a>,&nbsp;<a href="/tags/aws/">aws</a>,&nbsp;<a href="/tags/technology/">technology</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ansible_sd/" class="prev" rel="prev" title="Managing Windows Server from Red Hat Server using Ansible on AWS EC2"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</a>
+            <a href="/docker_containters_ansibleaws/" class="next" rel="next" title="Docker containers using Ansible on AWS">Docker containers using Ansible on AWS<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Decline","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

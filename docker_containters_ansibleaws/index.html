@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Docker containers using Ansible on AWS - Parth Goswami</title><meta name="Description" content="Parth&#39;s blogsite"><meta property="og:title" content="Docker containers using Ansible on AWS" />
+<meta property="og:description" content="Ansible is an open-source configuration management and deployment tool.
+Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.
+Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/docker_containters_ansibleaws/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-03T00:00:00+00:00" /><meta property="og:site_name" content="Parth&#39;s blogsite" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="Docker containers using Ansible on AWS"/>
+<meta name="twitter:description" content="Ansible is an open-source configuration management and deployment tool.
+Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.
+Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/docker_containters_ansibleaws/" /><link rel="prev" href="https://www.parthgoswami.com/aws_for_beginners/" /><link rel="next" href="https://www.parthgoswami.com/dockerizing_lamp_stack_app/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Docker containers using Ansible on AWS",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/docker_containters_ansibleaws\/"
+        },"genre": "posts","keywords": "How-to, docker, blog, ansible, aws, technology, VrindaHegde, SiyaAmonkar, VisitingAuthors","wordcount":  947 ,
+        "url": "https:\/\/www.parthgoswami.com\/docker_containters_ansibleaws\/","datePublished": "2022-06-03T00:00:00+00:00","dateModified": "2022-06-03T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Vrinda Hegde and Siya Amonkar"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker containers using Ansible on AWS</h1><h2 class="single-subtitle">In the article we will see how to run docker container on target machine using ansible playbook on AWS instance.</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.parthgoswami.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vrinda Hegde and Siya Amonkar</a></span>&nbsp;<span class="post-category">included in <a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-03">2022-06-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;947 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="content" id="content"><br/>
+<p>Ansible is an open-source configuration management and deployment tool.</p>
+<p>Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.</p>
+<hr>
+<ul>
+<li>Create AWS EC2 instances (master and slave)</li>
+<li>Update the security group of slave exposing port 8080</li>
+<li>Install Ansible on master</li>
+<li>Install python on slave</li>
+<li>Update /etc/ansible/hosts on master with the slave IP</li>
+<li>Create a dockerfile which will be used to create customized image</li>
+<li>Create an ansible playbook with detailed tasks</li>
+<li>Execute the ansible playbook</li>
+<li>Check if the docker container is running successfully on the slave machine</li>
+</ul>
+<hr>
+<h2 id="install-ansible-on-master-machine">Install Ansible on master machine:</h2>
+<p>Execute the below commands to install Ansible on the master machine:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt install software-properties-common
+</span></span><span class="line"><span class="cl">sudo apt-add-repository ppa:ansible/ansible
+</span></span><span class="line"><span class="cl">sudo apt-get install ansible
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<h2 id="install-python-on-slave-machine">Install Python on slave machine:</h2>
+<p>Use the below commands to install python on the slave machine:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install python
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<p>On the master machine perform the below steps to create ssh-keygen:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /home/ubuntu/.ssh
+</span></span><span class="line"><span class="cl">ssh-keygen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<p>File names id_rsa.pub will be generated after executing ssh-keygen on master machine.</p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/1_on_master_machine.png" title="on master machine" data-thumbnail="/images/docker_vh/1_on_master_machine.png" data-sub-html="<h2>on master machine</h2><p>on master machine</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/1_on_master_machine.png"
+            data-srcset="/images/docker_vh/1_on_master_machine.png, /images/docker_vh/1_on_master_machine.png 1.5x, /images/docker_vh/1_on_master_machine.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/1_on_master_machine.png" />
+    </a><figcaption class="image-caption">on master machine</figcaption>
+    </figure></p>
+<br/>
+<p>Copy the contents of the id_rsa.pub file and paste it on slave machine inside the authorized_keys file located at /home/ubuntu/.ssh</p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/2_on_slave_machine.png" title="on slave machine" data-thumbnail="/images/docker_vh/2_on_slave_machine.png" data-sub-html="<h2>on slave machine</h2><p>on slave machine</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/2_on_slave_machine.png"
+            data-srcset="/images/docker_vh/2_on_slave_machine.png, /images/docker_vh/2_on_slave_machine.png 1.5x, /images/docker_vh/2_on_slave_machine.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/2_on_slave_machine.png" />
+    </a><figcaption class="image-caption">on slave machine</figcaption>
+    </figure></p>
+<br/>
+<h2 id="update-the-hosts-file-on-master">Update the hosts file on master:</h2>
+<p>To establish ssh connection with the slave machine, add the IP of the slave machine on master’s hosts file.</p>
+<p>To edit the hosts file use the below command:</p>
+<p><code>sudo nano /etc/ansible/hosts</code></p>
+<br/>
+<p>Paste the below content at the end of the file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[production]
+</span></span><span class="line"><span class="cl">slave ansible_ssh_host=&lt;slave-IP&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<p>To verify the ssh connection between the master and slave, execute the below command:</p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/3_output_ping_master.png" title="output of the ping command on master machine" data-thumbnail="/images/docker_vh/3_output_ping_master.png" data-sub-html="<h2>output of the ping command on master machine</h2><p>output of the ping command on master machine</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/3_output_ping_master.png"
+            data-srcset="/images/docker_vh/3_output_ping_master.png, /images/docker_vh/3_output_ping_master.png 1.5x, /images/docker_vh/3_output_ping_master.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/3_output_ping_master.png" />
+    </a><figcaption class="image-caption">output of the ping command on master machine</figcaption>
+    </figure></p>
+<br/>
+<h2 id="creating-the-code-directory-on-master-machine">Creating the code directory on master machine:</h2>
+<p>Create a directory named LAMP_STACK_content at /home/ubuntu/ location on the master machine. Create a dockerfile at this location.</p>
+<br/>
+<h2 id="create-a-dockerfile">Create a dockerfile:</h2>
+<p>In order to create a customized image we will create a dockerfile with the following contents:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Dockerfile for LAMP Stack installation
+</span></span><span class="line"><span class="cl"># Ubuntu 18.04 image
+</span></span><span class="line"><span class="cl">FROM ubuntu:18.04
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ENV DEBIAN_FRONTEND=noninteractive
+</span></span><span class="line"><span class="cl">RUN apt-get update -y
+</span></span><span class="line"><span class="cl">RUN apt-get upgrade -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Install apache
+</span></span><span class="line"><span class="cl">RUN apt-get install -y apache2 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Prerequisites for installing php7.3
+</span></span><span class="line"><span class="cl">RUN apt-get install -y software-properties-common
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN add-apt-repository ppa:ondrej/php
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN apt install -y php7.3-fpm
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Install php7.3 for this set up
+</span></span><span class="line"><span class="cl">RUN apt install -y php7.3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Extensions of php
+</span></span><span class="line"><span class="cl">RUN apt install php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-imagick php7.3-cli php7.3-dev php7.3-imap php7.3-mbstring php7.3-opcache php7.3-soap php7.3-zip php7.3-intl -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Removing the default index.html page and copying the project code
+</span></span><span class="line"><span class="cl">RUN rm -f /var/www/html/index.html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">COPY . /var/www/html/   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Install ufw
+</span></span><span class="line"><span class="cl">RUN apt install ufw -y
+</span></span><span class="line"><span class="cl">RUN ufw app list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># install library
+</span></span><span class="line"><span class="cl">RUN apt-get install libapache2-mod-php7.3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># install additional packages
+</span></span><span class="line"><span class="cl">RUN a2dismod mpm_event &amp;&amp;  a2enmod mpm_prefork &amp;&amp;  a2enmod php7.3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Restart apache
+</span></span><span class="line"><span class="cl">RUN service apache2 restart
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Provide executable permissions to the code
+</span></span><span class="line"><span class="cl">RUN chmod -R 0777 /var/www/html/*
+</span></span><span class="line"><span class="cl">RUN chmod -R 0777 /var/*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Change WORKDIR
+</span></span><span class="line"><span class="cl">WORKDIR /var/www/html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CMD [&#34;apachectl&#34;,&#34;-D&#34;,&#34;FOREGROUND&#34;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN a2enmod rewrite
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">EXPOSE 80
+</span></span><span class="line"><span class="cl">EXPOSE 443
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<h2 id="create-ansible-playbook">Create ansible playbook:</h2>
+<p>Create an ansible-playbook-lamp-stack-new.yaml file on master with the below content.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">- hosts: slave
+</span></span><span class="line"><span class="cl">  become: yes
+</span></span><span class="line"><span class="cl">  gather_facts: no
+</span></span><span class="line"><span class="cl">  tasks:
+</span></span><span class="line"><span class="cl">    - name: create build directory
+</span></span><span class="line"><span class="cl">      file:
+</span></span><span class="line"><span class="cl">        path: /root/demo-lamp_stack
+</span></span><span class="line"><span class="cl">        state: directory
+</span></span><span class="line"><span class="cl">        owner: root
+</span></span><span class="line"><span class="cl">        group: root
+</span></span><span class="line"><span class="cl">        mode: &#39;0755&#39;
+</span></span><span class="line"><span class="cl">    - name: copy Dockerfile
+</span></span><span class="line"><span class="cl">      copy:
+</span></span><span class="line"><span class="cl">        src: /home/ubuntu/LAMP_STACK_content
+</span></span><span class="line"><span class="cl">        dest: /root/demo-lamp_stack/
+</span></span><span class="line"><span class="cl">        owner: root
+</span></span><span class="line"><span class="cl">        group: root
+</span></span><span class="line"><span class="cl">        mode: &#39;0644&#39;
+</span></span><span class="line"><span class="cl">    - name: build and push container image
+</span></span><span class="line"><span class="cl">      community.docker.docker_image:
+</span></span><span class="line"><span class="cl">        build:
+</span></span><span class="line"><span class="cl">          path: /root/demo-lamp_stack/LAMP_STACK_content/
+</span></span><span class="line"><span class="cl">        name: dock1998/lamp_stack_new:v1
+</span></span><span class="line"><span class="cl">        source: build
+</span></span><span class="line"><span class="cl">        state: present
+</span></span><span class="line"><span class="cl">    - name: Running the container
+</span></span><span class="line"><span class="cl">      community.docker.docker_container:
+</span></span><span class="line"><span class="cl">        image: dock1998/lamp_stack_new:v1
+</span></span><span class="line"><span class="cl">        name: lamp_stack_new_cont
+</span></span><span class="line"><span class="cl">        state: started
+</span></span><span class="line"><span class="cl">        ports: &#34;8080:80&#34;
+</span></span><span class="line"><span class="cl">    - name: Tag and push to docker hub
+</span></span><span class="line"><span class="cl">      community.docker.docker_image:
+</span></span><span class="line"><span class="cl">        name: dock1998/lamp_stack_new:v1
+</span></span><span class="line"><span class="cl">        repository: dock1998/lamp_stack_new:v2
+</span></span><span class="line"><span class="cl">        push: yes
+</span></span><span class="line"><span class="cl">        source: local
+</span></span><span class="line"><span class="cl">        state: present
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<h2 id="execute-the-ansible-playbook">Execute the ansible playbook:</h2>
+<p><em>Note</em>: Before proceeding ahead with the next steps, you will need to perform docker login using the dockerhub account on the slave machine from where the image will be pushed and pulled.</p>
+<br/>
+<p>To execute the playbook use the below command:</p>
+<p><code>ansible-playbook ansible-playbook-lmap-stack-new.yaml</code></p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/4_output_on_master.png" title="output of the above command on master machine" data-thumbnail="/images/docker_vh/4_output_on_master.png" data-sub-html="<h2>output of the above command on master machine</h2><p>output of the above command on master machine</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/4_output_on_master.png"
+            data-srcset="/images/docker_vh/4_output_on_master.png, /images/docker_vh/4_output_on_master.png 1.5x, /images/docker_vh/4_output_on_master.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/4_output_on_master.png" />
+    </a><figcaption class="image-caption">output of the above command on master machine</figcaption>
+    </figure></p>
+<br/>
+<h2 id="to-verify-the-execution-of-playbook">To verify the execution of playbook:</h2>
+<p>Check if the code directory is copied on the slave machine.</p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/5_output_on_slave.png" title="output on slave" data-thumbnail="/images/docker_vh/5_output_on_slave.png" data-sub-html="<h2>output on slave</h2><p>output on slave</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/5_output_on_slave.png"
+            data-srcset="/images/docker_vh/5_output_on_slave.png, /images/docker_vh/5_output_on_slave.png 1.5x, /images/docker_vh/5_output_on_slave.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/5_output_on_slave.png" />
+    </a><figcaption class="image-caption">output on slave</figcaption>
+    </figure></p>
+<br/>
+<p>Check if the docker container is running on the slave machine:</p>
+<p><code>docker ps</code></p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/6_output_dockerps_slave.png" title="output of docker ps on the slave machine" data-thumbnail="/images/docker_vh/6_output_dockerps_slave.png" data-sub-html="<h2>output of docker ps on the slave machine</h2><p>output of docker ps on the slave machine</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/6_output_dockerps_slave.png"
+            data-srcset="/images/docker_vh/6_output_dockerps_slave.png, /images/docker_vh/6_output_dockerps_slave.png 1.5x, /images/docker_vh/6_output_dockerps_slave.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/6_output_dockerps_slave.png" />
+    </a><figcaption class="image-caption">output of docker ps on the slave machine</figcaption>
+    </figure></p>
+<br/>
+<p><em>Note</em>: If you get permission denied error after executing docker ps command then you need to give permissions to the docker.sock file by executing the below command:</p>
+<p><code>chmod -R 0777 /var/run/docker.sock</code></p>
+<br/>
+<p>On the slave machine add the in-bound rules to direct traffic to the port 8080 by updating the security groups on the AWS console as shown below.</p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/7_awsconsole_onslave.png" title="AWS console for slave machine" data-thumbnail="/images/docker_vh/7_awsconsole_onslave.png" data-sub-html="<h2>AWS console for slave machine</h2><p>AWS console for slave machine</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/7_awsconsole_onslave.png"
+            data-srcset="/images/docker_vh/7_awsconsole_onslave.png, /images/docker_vh/7_awsconsole_onslave.png 1.5x, /images/docker_vh/7_awsconsole_onslave.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/7_awsconsole_onslave.png" />
+    </a><figcaption class="image-caption">AWS console for slave machine</figcaption>
+    </figure></p>
+<br/>
+<p>Access the slave IP with the exposed port 8080 on the browser and the application should be up.</p>
+<p><figure><a class="lightgallery" href="/images/docker_vh/8_app_8080.png" title="Application running on port 8080" data-thumbnail="/images/docker_vh/8_app_8080.png" data-sub-html="<h2>Application running on port 8080</h2><p>Application running on port 8080</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/docker_vh/8_app_8080.png"
+            data-srcset="/images/docker_vh/8_app_8080.png, /images/docker_vh/8_app_8080.png 1.5x, /images/docker_vh/8_app_8080.png 2x"
+            data-sizes="auto"
+            alt="/images/docker_vh/8_app_8080.png" />
+    </a><figcaption class="image-caption">Application running on port 8080</figcaption>
+    </figure></p>
+<br/>
+<p>Hope the article was useful, thanks for reading! Happy learning. 👍</p>
+<br/>
+<br/>
+<p><em>Vrinda Hegde is a DevOps Engineer, who likes to explore orchestration tools and automate the process of deploying containerized applications. She likes to share her findings by writing articles on medium.com. She can be reached out on <a href="https://www.linkedin.com/in/vrinda-hegde" target="_blank" rel="noopener noreffer ">LinkedIn</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=vrindahedge98@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em></p>
+<br/>
+<p><em>Siya Amonkar is a DevOps Engineer who likes to explore new tools and technologies. She can be reached out on <a href="https://www.linkedin.com/in/siya-amonkar-b818b41b4" target="_blank" rel="noopener noreffer ">LinkedIn</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=siya.amonkar9811@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-03</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/docker_containters_ansibleaws/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS" data-via="parthtwts" data-hashtags="How-to,docker,blog,ansible,aws,technology,VrindaHegde,SiyaAmonkar,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/blog/">blog</a>,&nbsp;<a href="/tags/ansible/">ansible</a>,&nbsp;<a href="/tags/aws/">aws</a>,&nbsp;<a href="/tags/technology/">technology</a>,&nbsp;<a href="/tags/vrindahegde/">VrindaHegde</a>,&nbsp;<a href="/tags/siyaamonkar/">SiyaAmonkar</a>,&nbsp;<a href="/tags/visitingauthors/">VisitingAuthors</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/aws_for_beginners/" class="prev" rel="prev" title="How to get started on AWS"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>How to get started on AWS</a>
+            <a href="/dockerizing_lamp_stack_app/" class="next" rel="next" title="Dockerizing LAMP Stack Application">Dockerizing LAMP Stack Application<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Decline","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

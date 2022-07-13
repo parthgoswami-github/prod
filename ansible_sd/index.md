@@ -1,4 +1,4 @@
-# Managing Windows Server from Red Hat Server using Ansible
+# Managing Windows Server from Red Hat Server using Ansible on AWS EC2
 
 
 Recently, while working on an internal project I was required to ping a Windows server from a RHEL server. Sounds easy, right? It would have been indeed, however, the task was to ping the Windows server from RHEL via ansible, and that's where the scenario got tricky. I went through a few articles and videos on and thought of documenting my learnings in this blog. 
@@ -21,13 +21,11 @@ For Ansible to communicate to a Windows host and use Windows modules, the Window
 
 <br/>
 
-    `PS C:\Users\Adminstrator> Get-Host | Select-Object version`
-<br/>
+`PS C:\Users\Adminstrator> Get-Host | Select-Object version`
 
-![version](/images/ansible_sd/1a.png)
+![version](/images/ansible_sd/1a.png "powershell version")
 
-<br/>
-    <br/> The powershell version should at least be 3.0 or more. If not then upgrade it using this document. 
+<br/>The powershell version should at least be 3.0 or more. If not then upgrade it using this document. 
      Since we have version 5.1 no need to upgrade the version.
 
 
@@ -74,16 +72,14 @@ $global:compName = $computerName
 enableWinRM
 exit 0
 ```    
-
-![Version after script completion](/images/ansible_sd/1c.png)
+![Version after script completion](/images/ansible_sd/1c.png "version after script completion")
 
 <br/>
 
  d. **Check if ports are listening:**
 <br/>
  `PS C:\Users\Administrator> winrm enumerate winrm/config/Listener`
-
-![istener](/images/ansible_sd/1d.png)
+![istener](/images/ansible_sd/1d.png "port listener")
 
 <br/>
 
@@ -106,7 +102,7 @@ exit 0
 ```
 [root@ip-172-31-23-177 ~]# pip2 --version
 [root@ip-172-31-23-177 ~]# pip3 --version
-￼[root@ip-172-31-23-177 ~]# dnf install python2-pip
+[root@ip-172-31-23-177 ~]# dnf install python2-pip
 [root@ip-172-31-23-177 ~]# dnf install python3-pip
 [root@ip-172-31-23-177 ~]# pip2 --version
 pip 9.0.3 from /usr/lib/python2.7/site-packages (python 2.7)
@@ -126,8 +122,8 @@ pip 9.0.3 from /usr/lib/python3.6/site-packages (python 3.6)
 107.20.75.188
 
 [windows:vars]
-ansible_user=Administrator
-ansible_password=UDJQRabMPn@%3$xYU)Y?E755XSBfm7d=
+ansible_user="windows_username"				//for example: ansible_user="Administrator"
+ansible_password="windows_user_password"
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
 ```
@@ -136,10 +132,7 @@ ansible_winrm_server_cert_validation=ignore
  e. **Use the below command to ping windows server:**
 <br/>
 `[root@ip-172-31-23-177 ansible]# ansible all -i hosts -m win_ping`
-
-
-![ping](/images/ansible_sd/2e.png)
-
+![ping](/images/ansible_sd/2e.png "pinging windows server")
 ## Resources:
 
 1. [Setting up a Windows Host](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html)
@@ -154,8 +147,9 @@ ansible_winrm_server_cert_validation=ignore
 > Tip: <br/>
 > RDP Port No: 3389
 
-
 -------
+<br/>
 
-*Shreya Dhange is a Technical Training Developer at Red Hat, who likes to explore and learn new technologies and share her knowledge by writing articles. She has completed her Masters in Computer Science and has gained award for her exemplary academic performance. She has been engaged in creating and delivering content in the cloud and linux space. She can be reached out [LinkedIn](https://www.linkedin.com/in/shreyadhange/) or via [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=shreyadhange@gmail.com)*.
+
+*Shreya Dhange is a Technical Training Developer at [Red Hat](https://www.redhat.com/en), who likes to explore and learn new technologies and share her knowledge by writing articles. She has completed her Masters in Computer Science and has gained award for her exemplary academic performance. She has been engaged in creating and delivering content in the cloud and linux space. She can be reached out [LinkedIn](https://www.linkedin.com/in/shreyadhange/) or via [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=shreyadhange@gmail.com)*.
 

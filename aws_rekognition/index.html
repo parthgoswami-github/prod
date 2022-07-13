@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>How to configure AWS Rekognition and AWS Transcoder - Parth Goswami</title><meta name="Description" content="Parth&#39;s blogsite"><meta property="og:title" content="How to configure AWS Rekognition and AWS Transcoder" />
+<meta property="og:description" content="Consider a scenerio: We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.
+Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/aws_rekognition/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-26T00:00:00+00:00" /><meta property="og:site_name" content="Parth&#39;s blogsite" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="How to configure AWS Rekognition and AWS Transcoder"/>
+<meta name="twitter:description" content="Consider a scenerio: We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.
+Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/aws_rekognition/" /><link rel="prev" href="https://www.parthgoswami.com/prathameshchavan/" /><link rel="next" href="https://www.parthgoswami.com/decoding_vpc/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to configure AWS Rekognition and AWS Transcoder",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/aws_rekognition\/"
+        },"genre": "posts","keywords": "How-to, technology, AWS, aws rekognition, aws transcoder, ShreyaDhange, VisitingAuthors","wordcount":  459 ,
+        "url": "https:\/\/www.parthgoswami.com\/aws_rekognition\/","datePublished": "2022-06-26T00:00:00+00:00","dateModified": "2022-06-26T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Shreya Dhange"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">How to configure AWS Rekognition and AWS Transcoder</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/shreyadhange/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Shreya Dhange</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-26">2022-06-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;459 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#consider-a-scenerio">Consider a scenerio:</a></li>
+    <li><a href="#steps">Steps:</a></li>
+    <li><a href="#configuration">Configuration:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><figure><a class="lightgallery" href="/images/aws_rekognition/intro.png" title="/images/aws_rekognition/intro.png" data-thumbnail="/images/aws_rekognition/intro.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/intro.png"
+            data-srcset="/images/aws_rekognition/intro.png, /images/aws_rekognition/intro.png 1.5x, /images/aws_rekognition/intro.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/intro.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<h2 id="consider-a-scenerio">Consider a scenerio:</h2>
+<p>We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.</p>
+<p>Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it.</p>
+<p>The EC2 instances will have IAM roles attached to it having roles set like <em>AWSS3FullAccess</em>, <em>AWSRekognitionFullAccess</em> and <em>AWSElasticTranscoderFullAccess.</em></p>
+<h2 id="steps">Steps:</h2>
+<ol>
+<li>Private instance will have NAT connectivity with Public instance which will open a browser with the endpoint given to the user to access S3 bucket uploads an image an request for image recognition.</li>
+</ol>
+<br/>
+<ol start="2">
+<li>
+<p>Inside EC2 run this command to get the output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws rekognition detect-labels --image &#34;{\&#34;S3Object\&#34;:{\&#34;Bucket\&#34;:\&#34;bucketname\&#34;,\&#34;Name\&#34;:\&#34;image.png\&#34;}}&#34; --region us-east-1
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<br/>
+<ol start="3">
+<li>The output of the image recognition will be stored in Amazon RDS.</li>
+</ol>
+<br/>
+<ol start="4">
+<li>If the user wants a video to be converted to the version which can be accessible via phone or pc can upload the video in S3 Bucket and by setting up a pipeline in AWS Transcoder the user will be notified about the process completion and the user can further request for image/video recognition.</li>
+</ol>
+<br/>
+<ol start="5">
+<li>The user having internet connection will access S3 Bucket with the endpoint provided and can further request for the AWS Rekognition. Procedure is same as above.</li>
+</ol>
+<h2 id="configuration">Configuration:</h2>
+<ol>
+<li>
+<p><strong>First step is to configure VPC:</strong> <br/></p>
+<p>1.1 Create VPC with the name <strong>MyVPC</strong>: <br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-1.1.png" title="/images/aws_rekognition/step-1.1.png" data-thumbnail="/images/aws_rekognition/step-1.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-1.1.png"
+            data-srcset="/images/aws_rekognition/step-1.1.png, /images/aws_rekognition/step-1.1.png 1.5x, /images/aws_rekognition/step-1.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-1.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+1.2 Create 3 Subnets with the name <strong>Public</strong>, <strong>Public1</strong>, <strong>Private</strong>:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-1.2.png" title="/images/aws_rekognition/step-1.2.png" data-thumbnail="/images/aws_rekognition/step-1.2.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-1.2.png"
+            data-srcset="/images/aws_rekognition/step-1.2.png, /images/aws_rekognition/step-1.2.png 1.5x, /images/aws_rekognition/step-1.2.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-1.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+1.3 Create a separate Route table with names <strong>PublicRT</strong> and <strong>PrivateRT</strong> and place the subnets with the respective route table:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-1.3.1.png" title="/images/aws_rekognition/step-1.3.1.png" data-thumbnail="/images/aws_rekognition/step-1.3.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-1.3.1.png"
+            data-srcset="/images/aws_rekognition/step-1.3.1.png, /images/aws_rekognition/step-1.3.1.png 1.5x, /images/aws_rekognition/step-1.3.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-1.3.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-1.3.2.png" title="/images/aws_rekognition/step-1.3.2.png" data-thumbnail="/images/aws_rekognition/step-1.3.2.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-1.3.2.png"
+            data-srcset="/images/aws_rekognition/step-1.3.2.png, /images/aws_rekognition/step-1.3.2.png 1.5x, /images/aws_rekognition/step-1.3.2.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-1.3.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+1.4 Create a Gateway with the name <strong>MyGateway</strong>:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-1.4.png" title="/images/aws_rekognition/step-1.4.png" data-thumbnail="/images/aws_rekognition/step-1.4.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-1.4.png"
+            data-srcset="/images/aws_rekognition/step-1.4.png, /images/aws_rekognition/step-1.4.png 1.5x, /images/aws_rekognition/step-1.4.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-1.4.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+</li>
+<li>
+<p><strong>Create three EC2 instances and attach them with <em>MyVPC</em> as given below :</strong><br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-2.1.png" title="/images/aws_rekognition/step-2.1.png" data-thumbnail="/images/aws_rekognition/step-2.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-2.1.png"
+            data-srcset="/images/aws_rekognition/step-2.1.png, /images/aws_rekognition/step-2.1.png 1.5x, /images/aws_rekognition/step-2.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-2.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-2.2.png" title="/images/aws_rekognition/step-2.2.png" data-thumbnail="/images/aws_rekognition/step-2.2.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-2.2.png"
+            data-srcset="/images/aws_rekognition/step-2.2.png, /images/aws_rekognition/step-2.2.png 1.5x, /images/aws_rekognition/step-2.2.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-2.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-2.3.png" title="/images/aws_rekognition/step-2.3.png" data-thumbnail="/images/aws_rekognition/step-2.3.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-2.3.png"
+            data-srcset="/images/aws_rekognition/step-2.3.png, /images/aws_rekognition/step-2.3.png 1.5x, /images/aws_rekognition/step-2.3.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-2.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-2.4.png" title="/images/aws_rekognition/step-2.4.png" data-thumbnail="/images/aws_rekognition/step-2.4.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-2.4.png"
+            data-srcset="/images/aws_rekognition/step-2.4.png, /images/aws_rekognition/step-2.4.png 1.5x, /images/aws_rekognition/step-2.4.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-2.4.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+</li>
+<li>
+<p><strong>Create IAM roles the instances:</strong> <br/></p>
+<p>3.1 Create IAM roles for Public Instance with respective policy as shown below:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-3.1.png" title="/images/aws_rekognition/step-3.1.png" data-thumbnail="/images/aws_rekognition/step-3.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-3.1.png"
+            data-srcset="/images/aws_rekognition/step-3.1.png, /images/aws_rekognition/step-3.1.png 1.5x, /images/aws_rekognition/step-3.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-3.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+3.2 Create IAM role for Private instance which holds RDS policy (optional) :<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-3.2.png" title="/images/aws_rekognition/step-3.2.png" data-thumbnail="/images/aws_rekognition/step-3.2.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-3.2.png"
+            data-srcset="/images/aws_rekognition/step-3.2.png, /images/aws_rekognition/step-3.2.png 1.5x, /images/aws_rekognition/step-3.2.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-3.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+</li>
+<li>
+<p><strong>Create S3 bucket as follows:</strong> <br/></p>
+<p>4.1 Create 2 buckets with the name <strong>inputbucket12</strong> and <strong>outputbucket12</strong>:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-4.1.png" title="/images/aws_rekognition/step-4.1.png" data-thumbnail="/images/aws_rekognition/step-4.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-4.1.png"
+            data-srcset="/images/aws_rekognition/step-4.1.png, /images/aws_rekognition/step-4.1.png 1.5x, /images/aws_rekognition/step-4.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-4.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+4.2 In <strong>inputbucket12</strong> will be used to upload images and videos:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-4.2.png" title="/images/aws_rekognition/step-4.2.png" data-thumbnail="/images/aws_rekognition/step-4.2.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-4.2.png"
+            data-srcset="/images/aws_rekognition/step-4.2.png, /images/aws_rekognition/step-4.2.png 1.5x, /images/aws_rekognition/step-4.2.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-4.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+</li>
+<li>
+<p><strong>Setup for AWS Image Rekognition in <em>Public</em> instance using cli mode:</strong><br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-5.png" title="/images/aws_rekognition/step-5.png" data-thumbnail="/images/aws_rekognition/step-5.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-5.png"
+            data-srcset="/images/aws_rekognition/step-5.png, /images/aws_rekognition/step-5.png 1.5x, /images/aws_rekognition/step-5.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-5.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+</li>
+<li>
+<p><strong>Setting up AWS Transcoder for video converter:</strong> <br/></p>
+<p>6.1 Create Pipeline as given below:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.1.png" title="/images/aws_rekognition/step-6.1.png" data-thumbnail="/images/aws_rekognition/step-6.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.1.png"
+            data-srcset="/images/aws_rekognition/step-6.1.png, /images/aws_rekognition/step-6.1.png 1.5x, /images/aws_rekognition/step-6.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+6.2 Create job for the Pipeline:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.2.1.png" title="/images/aws_rekognition/step-6.2.1.png" data-thumbnail="/images/aws_rekognition/step-6.2.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.2.1.png"
+            data-srcset="/images/aws_rekognition/step-6.2.1.png, /images/aws_rekognition/step-6.2.1.png 1.5x, /images/aws_rekognition/step-6.2.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.2.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.2.2.png" title="/images/aws_rekognition/step-6.2.2.png" data-thumbnail="/images/aws_rekognition/step-6.2.2.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.2.2.png"
+            data-srcset="/images/aws_rekognition/step-6.2.2.png, /images/aws_rekognition/step-6.2.2.png 1.5x, /images/aws_rekognition/step-6.2.2.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.2.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.2.3.png" title="/images/aws_rekognition/step-6.2.3.png" data-thumbnail="/images/aws_rekognition/step-6.2.3.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.2.3.png"
+            data-srcset="/images/aws_rekognition/step-6.2.3.png, /images/aws_rekognition/step-6.2.3.png 1.5x, /images/aws_rekognition/step-6.2.3.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.2.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.2.4.png" title="/images/aws_rekognition/step-6.2.4.png" data-thumbnail="/images/aws_rekognition/step-6.2.4.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.2.4.png"
+            data-srcset="/images/aws_rekognition/step-6.2.4.png, /images/aws_rekognition/step-6.2.4.png 1.5x, /images/aws_rekognition/step-6.2.4.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.2.4.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+6.3 Output of the video will be shown in <strong>outputbucket12</strong>:<br/>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.3.1.png" title="/images/aws_rekognition/step-6.3.1.png" data-thumbnail="/images/aws_rekognition/step-6.3.1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.3.1.png"
+            data-srcset="/images/aws_rekognition/step-6.3.1.png, /images/aws_rekognition/step-6.3.1.png 1.5x, /images/aws_rekognition/step-6.3.1.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.3.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.3.2.png" title="/images/aws_rekognition/step-6.3.2.png" data-thumbnail="/images/aws_rekognition/step-6.3.2.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.3.2.png"
+            data-srcset="/images/aws_rekognition/step-6.3.2.png, /images/aws_rekognition/step-6.3.2.png 1.5x, /images/aws_rekognition/step-6.3.2.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.3.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/aws_rekognition/step-6.3.3.png" title="/images/aws_rekognition/step-6.3.3.png" data-thumbnail="/images/aws_rekognition/step-6.3.3.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/aws_rekognition/step-6.3.3.png"
+            data-srcset="/images/aws_rekognition/step-6.3.3.png, /images/aws_rekognition/step-6.3.3.png 1.5x, /images/aws_rekognition/step-6.3.3.png 2x"
+            data-sizes="auto"
+            alt="/images/aws_rekognition/step-6.3.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+</li>
+</ol>
+<hr>
+<br/>
+<p><em>Shreya Dhange is a Technical Training Developer at <a href="https://www.redhat.com/en" target="_blank" rel="noopener noreffer ">Red Hat</a>, who likes to explore and learn new technologies and share her knowledge by writing articles. She has completed her Masters in Computer Science and has gained award for her exemplary academic performance. She has been engaged in creating and delivering content in the cloud and linux space. She can be reached out <a href="https://www.linkedin.com/in/shreyadhange/" target="_blank" rel="noopener noreffer ">LinkedIn</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=shreyadhange@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/aws_rekognition/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/aws_rekognition/" data-title="How to configure AWS Rekognition and AWS Transcoder" data-via="parthtwts" data-hashtags="How-to,technology,AWS,aws rekognition,aws transcoder,ShreyaDhange,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/aws_rekognition/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/aws_rekognition/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/aws_rekognition/" data-title="How to configure AWS Rekognition and AWS Transcoder" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/aws_rekognition/" data-title="How to configure AWS Rekognition and AWS Transcoder"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/aws_rekognition/" data-title="How to configure AWS Rekognition and AWS Transcoder"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/technology/">technology</a>,&nbsp;<a href="/tags/aws/">aws</a>,&nbsp;<a href="/tags/aws-rekognition/">aws rekognition</a>,&nbsp;<a href="/tags/aws-transcoder/">aws transcoder</a>,&nbsp;<a href="/tags/shreyadhange/">ShreyaDhange</a>,&nbsp;<a href="/tags/visitingauthors/">VisitingAuthors</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/prathameshchavan/" class="prev" rel="prev" title="Interview with Prathamesh Chavan"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Interview with Prathamesh Chavan</a>
+            <a href="/decoding_vpc/" class="next" rel="next" title="How does VPC work?">How does VPC work?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Decline","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

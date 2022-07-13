@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>How does VPC work? - Parth Goswami</title><meta name="Description" content="Parth&#39;s blogsite"><meta property="og:title" content="How does VPC work?" />
+<meta property="og:description" content="If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
+Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
+In this article, I will be discussing how networking works in the cloud computing." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/decoding_vpc/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-26T00:00:00+00:00" /><meta property="og:site_name" content="Parth&#39;s blogsite" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="How does VPC work?"/>
+<meta name="twitter:description" content="If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
+Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
+In this article, I will be discussing how networking works in the cloud computing."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/decoding_vpc/" /><link rel="prev" href="https://www.parthgoswami.com/aws_rekognition/" /><link rel="next" href="https://www.parthgoswami.com/jupyternotebooks/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How does VPC work?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/decoding_vpc\/"
+        },"genre": "posts","keywords": "How-to, technology, aws, VPC, networking, ShreyaDhange, VisitingAuthors","wordcount":  815 ,
+        "url": "https:\/\/www.parthgoswami.com\/decoding_vpc\/","datePublished": "2022-06-26T00:00:00+00:00","dateModified": "2022-06-26T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Shreya Dhange"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">How does VPC work?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/shreyadhange/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Shreya Dhange</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-26">2022-06-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;815 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p><a href="/images/decoding_vpc/VPC_intro.png" target="_blank"><img src="/images/decoding_vpc/VPC_intro.png" width="200px" align="right" /></a>
+<br/>
+If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.</p>
+<p>Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.</p>
+<p>In this article, I will be discussing how networking works in the cloud computing. For clarity, this article focuses on <strong>Virtual Private Cloud[VPC]</strong>, a networking service provided by <em>Amazon Web Services</em>.</p>
+<p>Let&rsquo;s dive into it!</p>
+<h2 id="what-is-vpc">What is VPC?</h2>
+<p>VPC stands for Virtual Private Cloud and is one of the most fundamental and widely used AWS service which provides a virtual network dedicated for the AWS environments. It is logically isolated from the other virtual networks in the cloud and exists within a single region. VPC allows for more control of AWS Cloud Network with extra layer of security.</p>
+<h2 id="how-does-vpc-works">How does VPC works?</h2>
+<ol>
+<li>
+<p>VPC cannot talk directly to the internet. For that we need <strong>Internet Gateway</strong> to talk to the internet. Internet Gateway is used to allow resources (subnets) in your VPC to access Internet.</p>
+</li>
+<li>
+<p>VPC can have multiple <strong>subnets</strong> and these subnets can be  public facing or private. Subnets are the the spaces where your applications are running. Subnets are been decided by <strong>CIDR( Classless inter-domain routing)</strong>.</p>
+</li>
+<li>
+<p>Public subnets are the ones that are accessible to the internet and Private subnets are the ones that are not accessible by the internet. For example:  Amazon Shopping Website, you cannot access the database of this website but you can access the application of Amazon Shopping Website . This means that the application is running on public subnet and the database is running on private subnet.</p>
+</li>
+<li>
+<p>We decide these public and private subnets using <strong>Route Table</strong>. Route table is the place where you put all the entries of these public and private subnets i.e. IP address.</p>
+</li>
+<li>
+<p>Every VPC has one default Route table. All subnets that you launch will be a part of this Route table.</p>
+</li>
+<li>
+<p>Everything will go into the Route table i.e. public subnet, private subnet and the internet gateway which means anyone who is coming can access my private subnet which is dangerous. To over come this we use different Route tables i.e. we will make different public route table and different private route table i.e. the internet gateway can access my public subnet and not the private subnet.</p>
+</li>
+<li>
+<p>All the new entries of the subnet will enter into default Route table and whenever you want you can move these entries into public or private subnets.</p>
+</li>
+<li>
+<p>Internet gateway can access the public subnet and public subnet will communicate with the private subnet.</p>
+</li>
+<li>
+<p>If the  private subnet wants to talk to the internet but it cannot communicate directly to the internet that time we will use <strong>NAT</strong>. NAT, <em>Network Address Translation</em>, refers to the proxy server. Private subnet will talk to the internet through NAT but internet will not talk directly to the private subnet, it will first communicate with public subnet and then public subnet will talk to the private subnet.</p>
+</li>
+</ol>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/VPC.png" title="/images/decoding_vpc/VPC.png" data-thumbnail="/images/decoding_vpc/VPC.png" data-sub-html="<h2>VPC reference diagram</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/VPC.png"
+            data-srcset="/images/decoding_vpc/VPC.png, /images/decoding_vpc/VPC.png 1.5x, /images/decoding_vpc/VPC.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/VPC.png" />
+    </a><figcaption class="image-caption">VPC reference diagram</figcaption>
+    </figure></p>
+<h2 id="what-is-cidr">What is CIDR?</h2>
+<ul>
+<li><strong>CIDR</strong>  is Classless inter-domain routing. This will decide how many subnets you want to launch in a machine (VPC). Inside these subnets we can launch our machines. It contains the range of IPs i.e. IPv4 and IPv6.</li>
+</ul>
+<h6 id="ipv6---128-bits">IPv6 - 128 bits</h6>
+<h6 id="ipv4---32-bits">IPv4 - 32 bits</h6>
+<p><code>x.x.x.x/16 - x.x.x.x/28</code> (choose any value between this CIDR range)</p>
+<p>Suppose,
+<code>10.0.0.0/16 = 32-16=16 ==&gt; 2^16= 65536</code> (65536 IP can be launched in 1 VPC of 16 CIDR value)</p>
+<p><code>10.0.0.0/24 = 32-24= 8 ==&gt; 2^8= 256</code>
+<br/>
+<code>10.0.0.0/28= 32-28= 4 ==&gt; 2^4= 16</code></p>
+<ul>
+<li>
+<p>A minimum 16 subnets and maximum 65536 subnets can be launched in 1 VPC.</p>
+</li>
+<li>
+<p>If your requirements is for more subnets then choose lower CIDR value and if requirement is less then choose higher CIDR value.</p>
+</li>
+</ul>
+<h2 id="benefits-of-vpc">Benefits of VPC</h2>
+<ul>
+<li>Define custom networks.</li>
+<li>Assigns static private ipv4 addresses to the instances.</li>
+<li>Define network interfaces and attach one or more network interface to the instance. Define routing between different subnets.</li>
+<li>Define internet access for the subnets.</li>
+<li>Define your network security by allowing/denying the traffic.</li>
+</ul>
+<br/>
+<p>In this article, we discussed what VPC is and how does it work along with some of its benefits. In the next article, I will be discussing how to configure VPC in AWS and the steps to delete it once we are done tinkering with it. Stay tuned for the next article!</p>
+<hr>
+<br/>
+<p><em>Shreya Dhange is a Technical Training Developer at <a href="https://www.redhat.com/en" target="_blank" rel="noopener noreffer ">Red Hat</a>, who likes to explore and learn new technologies and share her knowledge by writing articles. She has completed her Masters in Computer Science and has gained award for her exemplary academic performance. She has been engaged in creating and delivering content in the cloud and linux space. She can be reached out <a href="https://www.linkedin.com/in/shreyadhange/" target="_blank" rel="noopener noreffer ">LinkedIn</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=shreyadhange@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/decoding_vpc/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/decoding_vpc/" data-title="How does VPC work?" data-via="parthtwts" data-hashtags="How-to,technology,aws,VPC,networking,ShreyaDhange,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/decoding_vpc/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/decoding_vpc/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/decoding_vpc/" data-title="How does VPC work?" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/decoding_vpc/" data-title="How does VPC work?"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/decoding_vpc/" data-title="How does VPC work?"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/technology/">technology</a>,&nbsp;<a href="/tags/aws/">aws</a>,&nbsp;<a href="/tags/vpc/">VPC</a>,&nbsp;<a href="/tags/networking/">networking</a>,&nbsp;<a href="/tags/shreyadhange/">ShreyaDhange</a>,&nbsp;<a href="/tags/visitingauthors/">VisitingAuthors</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/aws_rekognition/" class="prev" rel="prev" title="How to configure AWS Rekognition and AWS Transcoder"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>How to configure AWS Rekognition and AWS Transcoder</a>
+            <a href="/jupyternotebooks/" class="next" rel="next" title="Getting started with Jupyter Notebooks">Getting started with Jupyter Notebooks<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Decline","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

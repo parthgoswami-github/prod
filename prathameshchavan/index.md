@@ -5,7 +5,8 @@ We have many diverse contributors here at Red Hat that help upstream communities
 
 For this month’s edition, we talked about the Mozilla and Wikipedia with Prathamesh Chavan.
 
-![DP](/images/unconventionalcontributors/prathameshchavan/prathameshchavan.png#center)
+<a href="/images/decoding_vpc/VPC_intro.png" target="_blank"><img src="/images/unconventionalcontributors/prathameshchavan/prathameshchavan.png" width="250px" align="right" /></a>
+
 
 <br/>
 

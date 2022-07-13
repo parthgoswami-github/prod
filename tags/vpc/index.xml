@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>VPC - Tag - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/vpc/</link>
+        <description>VPC - Tag - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/vpc/" rel="self" type="application/rss+xml" /><item>
+    <title>How does VPC work?</title>
+    <link>https://www.parthgoswami.com/decoding_vpc/</link>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/decoding_vpc/</guid>
+    <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
+Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
+In this article, I will be discussing how networking works in the cloud computing.]]></description>
+</item>
+</channel>
+</rss>
