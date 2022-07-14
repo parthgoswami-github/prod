@@ -36,10 +36,10 @@ Inside Public instance we have S3 bucket endpoint to which users will have the a
 </item>
 <item>
     <title>Contributor Blog #1: Pilot</title>
-    <link>https://www.parthgoswami.com/contributorblog#1/</link>
+    <link>https://www.parthgoswami.com/contributorblog_1/</link>
     <pubDate>Mon, 20 Jun 2022 00:00:00 &#43;0000</pubDate>
     <author>Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/contributorblog#1/</guid>
+    <guid>https://www.parthgoswami.com/contributorblog_1/</guid>
     <description><![CDATA[We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
 </item>
 <item>
