@@ -64,7 +64,7 @@ The EC2 instances will have IAM roles attached to it having roles set like *AWSS
 
 	4.1 Create 2 buckets with the name **inputbucket12** and **outputbucket12**:<br/>
 ![ ](/images/aws_rekognition/step-4.1.png " ")
-	4.2 In **inputbucket12** will be used to upload images and videos:<br/>
+	4.2 The **inputbucket12** will be used to upload images and videos:<br/>
 ![ ](/images/aws_rekognition/step-4.2.png " ")
 5. **Setup for AWS Image Rekognition in *Public* instance using cli mode:**<br/>
 ![ ](/images/aws_rekognition/step-5.png " ")

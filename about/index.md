@@ -55,6 +55,6 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 - Except for original works, most of the pictures on this site come from the Internet. The original copyright owner of such pictures may request this site to stop using relevant pictures at any time and for any reason, including pictures edited by this site (such as annotated descriptions).
 {{< /admonition >}}
 
-## Stay in touch 👍🏻
-Get in touch with me on [Twitter](https://www.twitter.com/parthtwts) or send me an [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=parthifs.g@gmail.com). We would love to talk with you.
+## Come, say hello!👋🏻
+Get in touch with us on [Twitter](https://www.twitter.com/parthtwts), [LinkedIn](https://www.linkedin.com/in/parth-goswami/) or send me an [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=parthifs.g@gmail.com). We would love to talk with you.
 
