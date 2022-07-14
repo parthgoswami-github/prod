@@ -1,4 +1,4 @@
-# Interview with Prathamesh Chavan
+# Contributor Blog #1: Pilot
 
 
 We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don't require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
@@ -69,6 +69,10 @@ I would love to recommend Priyanka Nag from Red Hat India since Priyanka has bee
 <br/>
 If we embrace a learning mindset, the possibilities are limitless. Knowledge and abilities are learned rather than inherent. They need hours or years of practice and experience to be perfect. A stuck mindset is reflected in statements like "I'm just not technical enough" or "I can't code to be able to contribute to open source." It's never too late to look at our skills and what activities might be a good fit if an individual is interested in helping the community grow by contributing. The options are limitless!
 
+<br/>
+
+I'd like to thank Prathamesh for his time and an enlighting conversation. I will leave you all with my favorite takeaway from this interview..
+###### I always recommend people choose a project that inspires them, motivates them, and is something that they use every day. 
 
 
 <br/>
@@ -82,7 +86,7 @@ If we embrace a learning mindset, the possibilities are limitless. Knowledge and
 _________________
 
 
-This blog post is part of the July edition of UnconventionalContributors, our monthly blog series about different ways to contribute in opensource. If you like this article, check out the stories of other contributors and stay tuned for our upcoming editions. 
+This blog post is part of the July edition of [UnconventionalContributors](http://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly blog series about different ways to contribute in opensource. If you like this article, check out the stories of other contributors and stay tuned for our upcoming editions. 
 <br/>
 
 Have a story to share? We'd be delighted to get in touch so that we can discuss sharing your story. We are also open to suggestions for new content that will foster the community's growth.

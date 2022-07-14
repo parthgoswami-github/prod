@@ -35,7 +35,7 @@ In this article, I will be discussing how networking works in the cloud computin
 Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it.]]></description>
 </item>
 <item>
-    <title>Interview with Prathamesh Chavan</title>
+    <title>Contributor Blog #1: Pilot</title>
     <link>https://www.parthgoswami.com/prathameshchavan/</link>
     <pubDate>Mon, 20 Jun 2022 00:00:00 &#43;0000</pubDate>
     <author>Parth Goswami</author>
