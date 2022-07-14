@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Contributor Blog #1: Pilot - Parth Goswami</title><meta name="Description" content="Parth&#39;s blogsite"><meta property="og:title" content="Contributor Blog #1: Pilot" />
+<meta property="og:description" content="We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/contributorblog#1/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-20T00:00:00+00:00" /><meta property="og:site_name" content="Parth&#39;s blogsite" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="Contributor Blog #1: Pilot"/>
+<meta name="twitter:description" content="We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/contributorblog#1/" /><link rel="prev" href="https://www.parthgoswami.com/dockerizing_lamp_stack_app/" /><link rel="next" href="https://www.parthgoswami.com/aws_rekognition/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Contributor Blog #1: Pilot",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/contributorblog#1\/"
+        },"genre": "posts","keywords": "blogs, community, fedora, mozilla","wordcount":  1416 ,
+        "url": "https:\/\/www.parthgoswami.com\/contributorblog#1\/","datePublished": "2022-06-20T00:00:00+00:00","dateModified": "2022-06-20T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Parth Goswami"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Contributor Blog #1: Pilot</h1><h2 class="single-subtitle">Interview with Prathamesh Chavan</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/parth-goswami/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Parth Goswami</a></span>&nbsp;<span class="post-category">included in <a href="/categories/community/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>community</a>&nbsp;<a href="/categories/unconventionalcontributors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>UnconventionalContributors</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-20">2022-06-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1416 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.</p>
+<p>For this month’s edition, we talked about the Mozilla and Wikipedia with Prathamesh Chavan.</p>
+<p><a href="/images/unconventionalcontributors/prathameshchavan/prathameshchavan.png" target="_blank"><img src="/images/unconventionalcontributors/prathameshchavan/prathameshchavan.png" width="250px" align="right" /></a></p>
+<br/>
+<p><strong>Can you tell us some background about you, what your journey has been at Red Hat, and what you do today?</strong>
+<br/>
+I am Prathamesh Chavan and I completed my engineering degree in information technology in 2016 and joined Red Hat as an intern on October 3rd, 2016. I was converted to full-time employment in 2017 and joined the Technical Chat Support team as an Associate Customer Support Specialist-Technical. As a Technical Support Engineer, I worked on queries related to subscription management, and it was in March of 2020 when I joined the then CEE Operations team as a Technical Project Coordinator. As of today, I am an Associate Technical Project Manager in the CEE Strategic Solutions team, and my day- to-day responsibilities involve managing agile projects.</p>
+<br/>
+<p><strong>Share your experience in becoming a community contributor.</strong>
+<br/>
+An open source contribution is a selfless effort to do something good. After becoming an open source contributor, I was able to explore the various steps of the software development life cycle. I learned how it provides a basis for project planning, scheduling, and estimating, as well as how it raises project planning visibility among all the stakeholders. I felt very empowered and motivated due to the open source ideology, and this has helped me in building a “never stop, never-give-up” attitude.</p>
+<br/>
+<p><strong>What project(s) have you contributed to? How did your contribution journey start?</strong>
+<br/></p>
+<h4 id="i-have-contributed-to-mozilla-projects-and-wikipedia">I have contributed to Mozilla projects and Wikipedia.</h4>
+<p>I joined the technical club at my university as an events blogger, and it was only after that that I came to know about the various open source communities and the contribution pathways.
+In my initial days, I read a couple of articles in the Mozilla Developers Network portal related to the Mozilla Firefox browser and started to suggest edits wherever needed. Later, I started localizing the Mozilla articles, which were written in English, into my native language, Marathi. Over the next couple of months, I got acquainted with the Mozilla Firefox browser and started helping other users fix their issues with the browser.</p>
+<p>I also believe most open source organizations consider answering other people&rsquo;s questions on Quora or Reddit to be a useful contribution. I started joining and reading discussions on threads and learned a lot through that. So, I always recommend to people that if we notice a question and know the solution, we may try to help the person who asked it by answering it, and our responses will be counted as contributions to the project. Sometimes, assuming one doesn&rsquo;t know the perfect solution to the problem, simply helping others comprehend why the problem arises may be enough to allow them to come up with their own solution. You may help manage the discussion threads or community chat channels by answering questions about problems on GitHub, opensource.com, Mozilla, etc.</p>
+<br/>
+<p><strong>In what way(s) have you contributed?</strong>
+<br/>
+As someone who likes talking about open source philosophies and concepts, I decided to start with a documentation-related contribution as a technical writer, where I started writing and reviewing the documentation on the Mozilla Developers Network. Later, I realized that the articles were only written in English, and there was a huge need to localize such articles in the regional languages. I started my contribution by localizing the articles and strings. Due to such contributions, I got some knowledge about how to use the Firefox browser more efficiently and I started to solve the most common issues that my friends could face. Slowly, it took a course of helping other users online, and this is how I ventured into user support for Firefox.</p>
+<p>Anyone interested in helping can contribute to the documentation in a variety of ways. The contributions include translating the content into native or other languages, producing new tutorials for the project, and even noting current project updates and challenges. Hence, the communities have some projects that want expertise in updating and proofreading the core documentation. One could also propose enhancing examples and explanations to improve the quality and readability of the documentation or a specific section of it.</p>
+<p>Throughout this journey, I met exciting new contributors who would request help at times to grow the open source community in their respective universities, and ultimately, I started evangelizing Firefox and other open source projects across other universities. So, to summarize my contribution pathways, they started from technical writing to localization to user support to tech speaker to community management.</p>
+<br/>
+<p><strong>Can you talk about some of the challenges you might have faced?</strong>
+<br/>
+Contributing to open source can be a meaningful and exciting experience, but it can be challenging to know where to begin. Finding resources that would assist me in starting my contributions was always a challenge for me. Later, I found that every community has a <em>whatcanidofor&lt;project_name&gt;.org</em> page that has all the steps mentioned to start a contribution.<br/>
+Here are the example to type in for particular community links:<br/>
+Fedora | <a href="https://whatcanidoforfedora.org" target="_blank" rel="noopener noreffer ">whatcanidoforfedora.org</a><br/>
+Mozilla | <a href="https://whatcanidoformozilla.org" target="_blank" rel="noopener noreffer ">whatcanidoformozilla.org</a></p>
+<br/>
+<p><strong>How do I get started with contributing your way?</strong>
+<br/>
+Learn and engage with communities: This might be a great opportunity for beginners or anyone who wants to make their first contribution if you enjoy engaging people, organizing activities, and socializing with the community. One can volunteer to help with the planning of conferences or meetings. We can also suggest a topic, moderate a discussion, or organize a meetup in our own city, university, or office. One can also help with administrative work at these conferences and meetings by volunteering. Most open source projects have a significant following of people who use and contribute to the project on a daily basis. Some even host their own conferences and gatherings on a regular basis.</p>
+<p>Therefore, I always recommend people choose a project that inspires them, motivates them, and is something that they use every day. Once you lock down that project, all you need to do is search for a one-stop portal that has all the information you need to start your contributions. And it should be an easy sail then.</p>
+<br/>
+<p><strong>Recommend one unconventional contributor whom you admire and tell us more about them.</strong>
+<br/>
+I would love to recommend Priyanka Nag from Red Hat India since Priyanka has been my mentor throughout my open source journey. Priyanka was invited as a guest speaker by the technical club at my university back in 2013, and her session was on kickstarting open source contributions. She was an active contributor to the Mozilla Developers Network. There were approximately 50 students who had attended her talk, and she inspired us to contribute to open source projects.</p>
+<br/>
+<p><strong>Any closing thoughts?</strong>
+<br/>
+If we embrace a learning mindset, the possibilities are limitless. Knowledge and abilities are learned rather than inherent. They need hours or years of practice and experience to be perfect. A stuck mindset is reflected in statements like &ldquo;I&rsquo;m just not technical enough&rdquo; or &ldquo;I can&rsquo;t code to be able to contribute to open source.&rdquo; It&rsquo;s never too late to look at our skills and what activities might be a good fit if an individual is interested in helping the community grow by contributing. The options are limitless!</p>
+<br/>
+<p>I&rsquo;d like to thank Prathamesh for his time and an enlighting conversation. I will leave you all with my favorite takeaway from this interview..</p>
+<h6 id="i-always-recommend-people-choose-a-project-that-inspires-them-motivates-them-and-is-something-that-they-use-every-day">I always recommend people choose a project that inspires them, motivates them, and is something that they use every day.</h6>
+<br/>
+<br/>
+<p><em>Prathamesh Chavan is a Technical Project Manager at Red Hat and a Mozilla Representatives Mentor. He can be reached out on <a href="https://www.linkedin.com/in/prathameshpchavan" target="_blank" rel="noopener noreffer ">LinkedIn</a> or on his Telegram handle @PathfinderPC</em></p>
+<br/>
+<br/>
+<hr>
+<p>This blog post is part of the July edition of <a href="http://www.parthgoswami.com/categories/unconventionalcontributors/" target="_blank" rel="noopener noreffer ">UnconventionalContributors</a>, our monthly blog series about different ways to contribute in opensource. If you like this article, check out the stories of other contributors and stay tuned for our upcoming editions.
+<br/></p>
+<p>Have a story to share? We&rsquo;d be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community&rsquo;s growth.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/contributorblog#1/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/contributorblog#1/" data-title="Contributor Blog #1: Pilot" data-via="parthtwts" data-hashtags="blogs,community,fedora,mozilla"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/contributorblog#1/" data-hashtag="blogs"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/contributorblog#1/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/contributorblog#1/" data-title="Contributor Blog #1: Pilot" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/contributorblog#1/" data-title="Contributor Blog #1: Pilot"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/contributorblog#1/" data-title="Contributor Blog #1: Pilot"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/blogs/">blogs</a>,&nbsp;<a href="/tags/community/">community</a>,&nbsp;<a href="/tags/fedora/">fedora</a>,&nbsp;<a href="/tags/mozilla/">mozilla</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/dockerizing_lamp_stack_app/" class="prev" rel="prev" title="Dockerizing LAMP Stack Application"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Dockerizing LAMP Stack Application</a>
+            <a href="/aws_rekognition/" class="next" rel="next" title="How to configure AWS Rekognition and AWS Transcoder">How to configure AWS Rekognition and AWS Transcoder<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
