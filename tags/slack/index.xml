@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>slack - Tag - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/slack/</link>
+        <description>slack - Tag - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/slack/" rel="self" type="application/rss+xml" /><item>
+    <title>Invoke AWS Lambda from Slack</title>
+    <link>https://www.parthgoswami.com/lambda_slack/</link>
+    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Siya Amonkar and Varshareddykumbham</author>
+    <guid>https://www.parthgoswami.com/lambda_slack/</guid>
+    <description><![CDATA[AWS Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code only when needed and scales automatically, from a few requests per day to thousands per second. AWS Lambda in our task is invoked using the API Gateway.
+Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work — all within a secure, enterprise-grade environment.]]></description>
+</item>
+</channel>
+</rss>

@@ -31,7 +31,7 @@ The opinions stated here are my own, not necessarily those of my company.
 ## About copyright
 All original articles on this site are protected by the [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/) Attribution-NonCommercial 4.0 License/CC BY-NC 4.0 .
 
-{{< admonition note "Copyright statement" >}}
+{{< admonition note "Copyright statement" false >}}
 
 <div style="text-align: center"> 
 <b>You are free to:</b> 
@@ -55,6 +55,21 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 - Except for original works, most of the pictures on this site come from the Internet. The original copyright owner of such pictures may request this site to stop using relevant pictures at any time and for any reason, including pictures edited by this site (such as annotated descriptions).
 {{< /admonition >}}
 
+---
 ## Come, say hello!👋🏻
-Get in touch with us on [Twitter](https://www.twitter.com/parthtwts), [LinkedIn](https://www.linkedin.com/in/parth-goswami/) or send me an [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=parthifs.g@gmail.com). We would love to talk with you.
+Get in touch with us, we would love to talk to you. <br/>
+
+<a href="http://twitter.com/parthtwts">
+  <img src="https://img.shields.io/twitter/follow/parthtwts?label=Twitter&logo=twitter&style=for-the-badge&color=blue" />
+</a>
+
+<a href="http://linkedin.com/in/parth-goswami/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+<a href="mailto:parthifs.g@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+</a>
+
+---
 

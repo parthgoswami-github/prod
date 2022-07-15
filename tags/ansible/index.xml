@@ -18,7 +18,7 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
     <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
     <link>https://www.parthgoswami.com/ansible_sd/</link>
     <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
+    <author>Shreya Dhange and Parth Goswami</author>
     <guid>https://www.parthgoswami.com/ansible_sd/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">

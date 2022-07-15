@@ -19,7 +19,7 @@
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/ansible_sd/" /><link rel="next" href="https://www.parthgoswami.com/aws_for_beginners/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/ansible_sd/" /><link rel="next" href="https://www.parthgoswami.com/lambda_slack/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -30,12 +30,12 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.parthgoswami.com\/ansible_sd\/"
-        },"genre": "posts","keywords": "How-to, technology, windows, Red Hat, RHEL, ansible, ShreyaDhange, VisitingAuthors","wordcount":  676 ,
+        },"genre": "posts","keywords": "How-to, technology, windows, Red Hat, RHEL, ansible, ShreyaDhange, VisitingAuthors","wordcount":  839 ,
         "url": "https:\/\/www.parthgoswami.com\/ansible_sd\/","datePublished": "2022-05-26T00:00:00+00:00","dateModified": "2022-05-26T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
-                "name": "Shreya Dhange"
+                "name": "Shreya Dhange and Parth Goswami"
             },"description": ""
     }
     </script></head>
@@ -101,8 +101,8 @@
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Managing Windows Server from Red Hat Server using Ansible on AWS EC2</h1><h2 class="single-subtitle">Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server hosted on AWS EC2 instance</h2><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/shreyadhange/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Shreya Dhange</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;676 words&nbsp;
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/shreyadhange/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Shreya Dhange and Parth Goswami</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;839 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -111,7 +111,9 @@
         data-srcset="/images/ansible_sd/ansible_windows1.png, /images/ansible_sd/ansible_windows1.png 1.5x, /images/ansible_sd/ansible_windows1.png 2x"
         data-sizes="auto"
         alt="/images/ansible_sd/ansible_windows1.png"
-        title="/images/ansible_sd/ansible_windows1.png" /></div><div class="content" id="content"><p>Recently, while working on an internal project I was required to ping a Windows server from a RHEL server. Sounds easy, right? It would have been indeed, however, the task was to ping the Windows server from RHEL via ansible, and that&rsquo;s where the scenario got tricky. I went through a few articles and videos on and thought of documenting my learnings in this blog.</p>
+        title="/images/ansible_sd/ansible_windows1.png" /></div><div class="content" id="content"><p>Recently, while working on an internal project I was required to establish network connection between a Windows server and a RHEL server. Sounds easy, right? It would have been indeed, however, the task was not only to establish the network but also to ping the Windows server from RHEL via ansible, and that&rsquo;s where the scenario got tricky. Also, the servers were EC2 instances hosted on AWS. I went through a few articles and videos on and thought of documenting my learnings in this blog.</p>
+<p><strong>Amazon Elastic Compute Cloud (Amazon EC2)</strong> provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.</p>
+<p><strong>Ping</strong> is a command-line utility, available on virtually any operating system with network connectivity, that acts as a test to see if a networked device is reachable. The ping command sends a request over the network to a specific device. A successful ping results in a response from the computer that was pinged back to the originating computer.</p>
 <p>Let&rsquo;s start by getting to know the host requirements.</p>
 <h1 id="host-requirements">Host requirements:</h1>
 <p>For Ansible to communicate to a Windows host and use Windows modules, the Windows host must meet these requirements:</p>
@@ -126,7 +128,7 @@
 <p><br/> a. <strong>Open Windows PowerShell and check the version:</strong></p>
 <br/>
 <p><code>PS C:\Users\Adminstrator&gt; Get-Host | Select-Object version</code></p>
-<p><figure><a class="lightgallery" href="/images/ansible_sd/1a.png" title="version" data-thumbnail="/images/ansible_sd/1a.png" data-sub-html="<h2>powershell version</h2><p>version</p>">
+<p><figure><a class="lightgallery" href="/images/ansible_sd/1a.png" title=" " data-thumbnail="/images/ansible_sd/1a.png" data-sub-html="<h2>powershell version</h2><p> </p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -213,7 +215,7 @@ Since we have version 5.1 no need to upgrade the version.</p>
 </span></span><span class="line"><span class="cl">exit 0
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="/images/ansible_sd/1c.png" title="Version after script completion" data-thumbnail="/images/ansible_sd/1c.png" data-sub-html="<h2>version after script completion</h2><p>Version after script completion</p>">
+</div><p><figure><a class="lightgallery" href="/images/ansible_sd/1c.png" title=" " data-thumbnail="/images/ansible_sd/1c.png" data-sub-html="<h2>version after script completion</h2><p> </p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -227,7 +229,7 @@ Since we have version 5.1 no need to upgrade the version.</p>
 <p>d. <strong>Check if ports are listening:</strong>
 <br/>
 <code>PS C:\Users\Administrator&gt; winrm enumerate winrm/config/Listener</code>
-<figure><a class="lightgallery" href="/images/ansible_sd/1d.png" title="istener" data-thumbnail="/images/ansible_sd/1d.png" data-sub-html="<h2>port listener</h2><p>istener</p>">
+<figure><a class="lightgallery" href="/images/ansible_sd/1d.png" title=" " data-thumbnail="/images/ansible_sd/1d.png" data-sub-html="<h2>port listener</h2><p> </p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -307,7 +309,7 @@ Since we have version 5.1 no need to upgrade the version.</p>
 <p>e. <strong>Use the below command to ping windows server:</strong>
 <br/>
 <code>[root@ip-172-31-23-177 ansible]# ansible all -i hosts -m win_ping</code>
-<figure><a class="lightgallery" href="/images/ansible_sd/2e.png" title="ping" data-thumbnail="/images/ansible_sd/2e.png" data-sub-html="<h2>pinging windows server</h2><p>ping</p>">
+<figure><a class="lightgallery" href="/images/ansible_sd/2e.png" title=" " data-thumbnail="/images/ansible_sd/2e.png" data-sub-html="<h2>pinging windows server</h2><p> </p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -359,7 +361,7 @@ RDP Port No: 3389</p>
     </div>
 
     <div class="post-nav">
-            <a href="/aws_for_beginners/" class="next" rel="next" title="How to get started on AWS">How to get started on AWS<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+            <a href="/lambda_slack/" class="next" rel="next" title="Invoke AWS Lambda from Slack">Invoke AWS Lambda from Slack<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">

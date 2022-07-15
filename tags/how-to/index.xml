@@ -62,10 +62,19 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
     <description><![CDATA[Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks about AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5+ years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS.]]></description>
 </item>
 <item>
+    <title>Invoke AWS Lambda from Slack</title>
+    <link>https://www.parthgoswami.com/lambda_slack/</link>
+    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Siya Amonkar and Varshareddykumbham</author>
+    <guid>https://www.parthgoswami.com/lambda_slack/</guid>
+    <description><![CDATA[AWS Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code only when needed and scales automatically, from a few requests per day to thousands per second. AWS Lambda in our task is invoked using the API Gateway.
+Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work — all within a secure, enterprise-grade environment.]]></description>
+</item>
+<item>
     <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
     <link>https://www.parthgoswami.com/ansible_sd/</link>
     <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
+    <author>Shreya Dhange and Parth Goswami</author>
     <guid>https://www.parthgoswami.com/ansible_sd/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">

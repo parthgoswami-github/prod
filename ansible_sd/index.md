@@ -1,7 +1,11 @@
 # Managing Windows Server from Red Hat Server using Ansible on AWS EC2
 
 
-Recently, while working on an internal project I was required to ping a Windows server from a RHEL server. Sounds easy, right? It would have been indeed, however, the task was to ping the Windows server from RHEL via ansible, and that's where the scenario got tricky. I went through a few articles and videos on and thought of documenting my learnings in this blog. 
+Recently, while working on an internal project I was required to establish network connection between a Windows server and a RHEL server. Sounds easy, right? It would have been indeed, however, the task was not only to establish the network but also to ping the Windows server from RHEL via ansible, and that's where the scenario got tricky. Also, the servers were EC2 instances hosted on AWS. I went through a few articles and videos on and thought of documenting my learnings in this blog. 
+
+**Amazon Elastic Compute Cloud (Amazon EC2)** provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.
+
+**Ping** is a command-line utility, available on virtually any operating system with network connectivity, that acts as a test to see if a networked device is reachable. The ping command sends a request over the network to a specific device. A successful ping results in a response from the computer that was pinged back to the originating computer.
 
 Let's start by getting to know the host requirements. 
 
@@ -23,7 +27,7 @@ For Ansible to communicate to a Windows host and use Windows modules, the Window
 
 `PS C:\Users\Adminstrator> Get-Host | Select-Object version`
 
-![version](/images/ansible_sd/1a.png "powershell version")
+![ ](/images/ansible_sd/1a.png "powershell version")
 
 <br/>The powershell version should at least be 3.0 or more. If not then upgrade it using this document. 
      Since we have version 5.1 no need to upgrade the version.
@@ -72,14 +76,14 @@ $global:compName = $computerName
 enableWinRM
 exit 0
 ```    
-![Version after script completion](/images/ansible_sd/1c.png "version after script completion")
+![ ](/images/ansible_sd/1c.png "version after script completion")
 
 <br/>
 
  d. **Check if ports are listening:**
 <br/>
  `PS C:\Users\Administrator> winrm enumerate winrm/config/Listener`
-![istener](/images/ansible_sd/1d.png "port listener")
+![ ](/images/ansible_sd/1d.png "port listener")
 
 <br/>
 
@@ -132,7 +136,7 @@ ansible_winrm_server_cert_validation=ignore
  e. **Use the below command to ping windows server:**
 <br/>
 `[root@ip-172-31-23-177 ansible]# ansible all -i hosts -m win_ping`
-![ping](/images/ansible_sd/2e.png "pinging windows server")
+![ ](/images/ansible_sd/2e.png "pinging windows server")
 ## Resources:
 
 1. [Setting up a Windows Host](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html)
