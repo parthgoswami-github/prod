@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Configuring a custom VPC - Parth Goswami</title><meta name="Description" content="Parth&#39;s blogsite"><meta property="og:title" content="Configuring a custom VPC" />
+<meta property="og:description" content="In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
+Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/configuring_vpc/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-26T00:00:00+00:00" /><meta property="og:site_name" content="Parth&#39;s blogsite" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="Configuring a custom VPC"/>
+<meta name="twitter:description" content="In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
+Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/configuring_vpc/" /><link rel="prev" href="https://www.parthgoswami.com/decoding_vpc/" /><link rel="next" href="https://www.parthgoswami.com/jupyternotebooks/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Configuring a custom VPC",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/configuring_vpc\/"
+        },"genre": "posts","keywords": "How-to, technology, aws, VPC, networking, ShreyaDhange, VisitingAuthors","wordcount":  1135 ,
+        "url": "https:\/\/www.parthgoswami.com\/configuring_vpc\/","datePublished": "2022-06-26T00:00:00+00:00","dateModified": "2022-06-26T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Shreya Dhange and Parth Goswami"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Configuring a custom VPC</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.parthgoswami.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Shreya Dhange and Parth Goswami</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-26">2022-06-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1135 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>In the <a href="https://www.parthgoswami.com/decoding_vpc" target="_blank" rel="noopener noreffer ">previous article</a>, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.</p>
+<p>Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it. We will also see how to delete the VPC and related resources.</p>
+<h2 id="steps-to-configure-vpc">Steps to configure VPC</h2>
+<ol>
+<li>Go to AWS services from the dashboard in that Network &amp; Content delivery select VPC.</li>
+</ol>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-1.png" title=" " data-thumbnail="/images/decoding_vpc/step-1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-1.png"
+            data-srcset="/images/decoding_vpc/step-1.png, /images/decoding_vpc/step-1.png 1.5x, /images/decoding_vpc/step-1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="2">
+<li>Create a VPC. Every VPC has one default VPC. Note: do not delete the default VPC. Here i have given the name as MyFirstVPC with the CIDR value as 10.0.0.0/16. You can choose any CIDR value of your choice between 10.0.0.0/16 - 10.0.0.0/28.</li>
+</ol>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-2.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-2.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-2.1.png"
+            data-srcset="/images/decoding_vpc/step-2.1.png, /images/decoding_vpc/step-2.1.png 1.5x, /images/decoding_vpc/step-2.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-2.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-2.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-2.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-2.2.png"
+            data-srcset="/images/decoding_vpc/step-2.2.png, /images/decoding_vpc/step-2.2.png 1.5x, /images/decoding_vpc/step-2.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-2.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="3">
+<li>Now VPC is created successfully.</li>
+</ol>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-3.png" title=" " data-thumbnail="/images/decoding_vpc/step-3.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-3.png"
+            data-srcset="/images/decoding_vpc/step-3.png, /images/decoding_vpc/step-3.png 1.5x, /images/decoding_vpc/step-3.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="4">
+<li>
+<p>Now if you will go the Route Tables on the left side of the dashboard you will see our default route table is been created. To confirm which one is our Route table check the VPC ID. You can give the name to it after confirming. I have given it as MyRouteTable.
+<figure><a class="lightgallery" href="/images/decoding_vpc/step-4.png" title=" " data-thumbnail="/images/decoding_vpc/step-4.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-4.png"
+            data-srcset="/images/decoding_vpc/step-4.png, /images/decoding_vpc/step-4.png 1.5x, /images/decoding_vpc/step-4.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-4.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+</li>
+<li>
+<p>Inside our VPC we are going to create our subnets i.e. public subnet and private subnet.</p>
+</li>
+</ol>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-5.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-5.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-5.1.png"
+            data-srcset="/images/decoding_vpc/step-5.1.png, /images/decoding_vpc/step-5.1.png 1.5x, /images/decoding_vpc/step-5.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-5.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p>Give the name as PublicSubnet and PrivateSubnet and the VPC can be chosen from the VPC that you have created. Here i have created it as MyFirstVPC. Availability zone can be chosen any of your choice. CIDR block should be chosen according to the IP range that you have given. Here i give it as 10.0.1.0/24 for PrivateSubnet and 10.0.2.0/24 for PublicSubnet.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-5.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-5.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-5.2.png"
+            data-srcset="/images/decoding_vpc/step-5.2.png, /images/decoding_vpc/step-5.2.png 1.5x, /images/decoding_vpc/step-5.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-5.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-5.3.png" title=" " data-thumbnail="/images/decoding_vpc/step-5.3.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-5.3.png"
+            data-srcset="/images/decoding_vpc/step-5.3.png, /images/decoding_vpc/step-5.3.png 1.5x, /images/decoding_vpc/step-5.3.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-5.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<ol start="6">
+<li>Now the subnets are been created successfully.</li>
+</ol>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-6.png" title=" " data-thumbnail="/images/decoding_vpc/step-6.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-6.png"
+            data-srcset="/images/decoding_vpc/step-6.png, /images/decoding_vpc/step-6.png 1.5x, /images/decoding_vpc/step-6.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-6.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<ol start="7">
+<li>As we know all the new entries of the subnets will enter into our default Route table. Go to the Route table in that select Subnet Associates you will see your subnets. Note: Here we don&rsquo;t have separate Route table all will enter into our default Route table.</li>
+</ol>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-7.png" title=" " data-thumbnail="/images/decoding_vpc/step-7.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-7.png"
+            data-srcset="/images/decoding_vpc/step-7.png, /images/decoding_vpc/step-7.png 1.5x, /images/decoding_vpc/step-7.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-7.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<ol start="8">
+<li>Now we will create separate Route table in our VPC i.e. Public Route table with the name PublicRT and Private Route table with the name PrivateRT. You can give the name of your choice.</li>
+</ol>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-8.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-8.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-8.1.png"
+            data-srcset="/images/decoding_vpc/step-8.1.png, /images/decoding_vpc/step-8.1.png 1.5x, /images/decoding_vpc/step-8.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-8.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-8.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-8.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-8.2.png"
+            data-srcset="/images/decoding_vpc/step-8.2.png, /images/decoding_vpc/step-8.2.png 1.5x, /images/decoding_vpc/step-8.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-8.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-8.3.png" title=" " data-thumbnail="/images/decoding_vpc/step-8.3.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-8.3.png"
+            data-srcset="/images/decoding_vpc/step-8.3.png, /images/decoding_vpc/step-8.3.png 1.5x, /images/decoding_vpc/step-8.3.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-8.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<ol start="9">
+<li>Now by default all my subnets are into the default Route table, now we will put our subnets into their respective Route table i.e. PublicSubnet will go to PublicRT and PrivateSubnet will go to PrivateRT.</li>
+</ol>
+<p>Note: we will not have any duplicate records i.e. 1 subnet can have any 1 Route table.</p>
+<p>Go to PublicRT in that select Subnet Associations and select Edit subnet associations and select the PublicSubnet and save it. Do the same for PrivateRT.</p>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-9.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-9.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-9.1.png"
+            data-srcset="/images/decoding_vpc/step-9.1.png, /images/decoding_vpc/step-9.1.png 1.5x, /images/decoding_vpc/step-9.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-9.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-9.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-9.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-9.2.png"
+            data-srcset="/images/decoding_vpc/step-9.2.png, /images/decoding_vpc/step-9.2.png 1.5x, /images/decoding_vpc/step-9.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-9.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p>Now if you will go to the the default Route table i.e. MyRouteTable there will be no subnets.</p>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-9.3.png" title=" " data-thumbnail="/images/decoding_vpc/step-9.3.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-9.3.png"
+            data-srcset="/images/decoding_vpc/step-9.3.png, /images/decoding_vpc/step-9.3.png 1.5x, /images/decoding_vpc/step-9.3.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-9.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<ol start="10">
+<li>Now we will create an Internet Gateway to connect to our VPC. Go to the Internet Gateway on the left side of the dashboard and create it. Here i gave the name as MyGateway you can give of your own choice.</li>
+</ol>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-10.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-10.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-10.1.png"
+            data-srcset="/images/decoding_vpc/step-10.1.png, /images/decoding_vpc/step-10.1.png 1.5x, /images/decoding_vpc/step-10.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-10.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-10.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-10.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-10.2.png"
+            data-srcset="/images/decoding_vpc/step-10.2.png, /images/decoding_vpc/step-10.2.png 1.5x, /images/decoding_vpc/step-10.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-10.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p>Now Internet Gateway is created successfully. Now go to Actions on the right side of your console and Attach the VPC.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-10.3.png" title=" " data-thumbnail="/images/decoding_vpc/step-10.3.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-10.3.png"
+            data-srcset="/images/decoding_vpc/step-10.3.png, /images/decoding_vpc/step-10.3.png 1.5x, /images/decoding_vpc/step-10.3.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-10.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-10.4.png" title=" " data-thumbnail="/images/decoding_vpc/step-10.4.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-10.4.png"
+            data-srcset="/images/decoding_vpc/step-10.4.png, /images/decoding_vpc/step-10.4.png 1.5x, /images/decoding_vpc/step-10.4.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-10.4.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p>Now your Internet Gateway is attached to your VPC.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-10.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-10.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-10.1.png"
+            data-srcset="/images/decoding_vpc/step-10.1.png, /images/decoding_vpc/step-10.1.png 1.5x, /images/decoding_vpc/step-10.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-10.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="11">
+<li>Now will attach our Internet Gateway to our public route table which will be accessible through the internet. Now go to Route Tables in that select PublicRT and select Route and select Edit routes. Add Route and give any IP, here i give 0.0.0.0/0 i.e. from anywhere i can access my VPC.</li>
+</ol>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-11.png" title=" " data-thumbnail="/images/decoding_vpc/step-11.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-11.png"
+            data-srcset="/images/decoding_vpc/step-11.png, /images/decoding_vpc/step-11.png 1.5x, /images/decoding_vpc/step-11.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-11.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="12">
+<li>Now we will launch our instances into our subnets. Here, we will launch EC2 instance for PublicSubnet. Go to EC2 and select any instance. After selecting go to Configure Instance and select the Network i.e. the VPC you have created. Since we had given my CIDR value as 24 i will get 251 IPs. And we will enable Public IP.</li>
+</ol>
+<p>After that we will add Security Groups i.e. HTTP and HTTPS.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-12.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-12.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-12.1.png"
+            data-srcset="/images/decoding_vpc/step-12.1.png, /images/decoding_vpc/step-12.1.png 1.5x, /images/decoding_vpc/step-12.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-12.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p>Similarly launch an EC2 instance for PrivateSubnet and the process is same only the change will in Networks, here we will select PrivateSubnet and Public IP will be disabled for this.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-12.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-12.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-12.2.png"
+            data-srcset="/images/decoding_vpc/step-12.2.png, /images/decoding_vpc/step-12.2.png 1.5x, /images/decoding_vpc/step-12.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-12.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="13">
+<li>Now IPs of these instances will be given the range that you had given.</li>
+</ol>
+<br/> 
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-13.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-13.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-13.1.png"
+            data-srcset="/images/decoding_vpc/step-13.1.png, /images/decoding_vpc/step-13.1.png 1.5x, /images/decoding_vpc/step-13.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-13.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-13.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-13.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-13.1.png"
+            data-srcset="/images/decoding_vpc/step-13.1.png, /images/decoding_vpc/step-13.1.png 1.5x, /images/decoding_vpc/step-13.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-13.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="14">
+<li>Now go and check if my PublicInstance is accessible through the internet and similiarly we will do it for PrivateInstance. If you see that PublicInstance will have public ip wherein PrivateInstance will not have public ip which means only PublicInstance can be accessed through internet. By taking the remote access of the PublicInstance we can check if it is accessible.</li>
+</ol>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-14.png" title=" " data-thumbnail="/images/decoding_vpc/step-14.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-14.png"
+            data-srcset="/images/decoding_vpc/step-14.png, /images/decoding_vpc/step-14.png 1.5x, /images/decoding_vpc/step-14.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-14.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p>Since it is accessible, now go and remove the Internet Gateway from the PublicRT and check if it is accessible.</p>
+<ol start="15">
+<li>PrivateInstance is not accessible through the internet. To access this you will go through the PublicInstance using NAT.</li>
+</ol>
+<p>For example: In PublicInstance i will create a .pem file suppose <em>shreya2311.pem</em> and i will copy the key and paste it in <em>shreya2311.pem</em> and will give the permission chmod 400 to the pem file. Now we will try taking the remote access of PrivateInstance through ssh and ping google.com. It will not ping because from PrivateInstance you cannot access the internet.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-15.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-15.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-15.1.png"
+            data-srcset="/images/decoding_vpc/step-15.1.png, /images/decoding_vpc/step-15.1.png 1.5x, /images/decoding_vpc/step-15.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-15.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-15.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-15.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-15.2.png"
+            data-srcset="/images/decoding_vpc/step-15.2.png, /images/decoding_vpc/step-15.2.png 1.5x, /images/decoding_vpc/step-15.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-15.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<ol start="16">
+<li>Go to the NAT Gateway on the left side of the dashboard and create a NAT Gateway. NAT Gateway will be launched inside PublicSubnet and will add it in a PrivateSubnet.</li>
+</ol>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-16.1.png" title=" " data-thumbnail="/images/decoding_vpc/step-16.1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-16.1.png"
+            data-srcset="/images/decoding_vpc/step-16.1.png, /images/decoding_vpc/step-16.1.png 1.5x, /images/decoding_vpc/step-16.1.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-16.1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p>After creating go to the PrivateRT and select Route and select Edit routes and Add route and save it. Note: it will take some to create it. Once NAT Gateway is created PrivateInstance can access the internet.</p>
+<p>Note: PrivateInstance can access the internet but internet cannot access the PrivateInstance.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-16.2.png" title=" " data-thumbnail="/images/decoding_vpc/step-16.2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-16.2.png"
+            data-srcset="/images/decoding_vpc/step-16.2.png, /images/decoding_vpc/step-16.2.png 1.5x, /images/decoding_vpc/step-16.2.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-16.2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-16.3.png" title=" " data-thumbnail="/images/decoding_vpc/step-16.3.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-16.3.png"
+            data-srcset="/images/decoding_vpc/step-16.3.png, /images/decoding_vpc/step-16.3.png 1.5x, /images/decoding_vpc/step-16.3.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-16.3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/decoding_vpc/step-16.4.png" title=" " data-thumbnail="/images/decoding_vpc/step-16.4.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/decoding_vpc/step-16.4.png"
+            data-srcset="/images/decoding_vpc/step-16.4.png, /images/decoding_vpc/step-16.4.png 1.5x, /images/decoding_vpc/step-16.4.png 2x"
+            data-sizes="auto"
+            alt="/images/decoding_vpc/step-16.4.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<br/>
+<h2 id="steps-to-delete-the-vpc">Steps to delete the VPC</h2>
+<ol>
+<li>
+<p>Start by terminating the instances.</p>
+</li>
+<li>
+<p>Navigate to Route Tables and remove the entries in the Route Table by going into the Edit
+routes and remove the NAT Gateway and delete the subnets and then remove public
+and private route table.</p>
+</li>
+<li>
+<p>Navigate to the Internet Gateway and detach it from VPC.</p>
+</li>
+<li>
+<p>Navigate to the NAT Gateway and delete it.</p>
+</li>
+<li>
+<p>Navigate to the Subnets and remove the entries.</p>
+</li>
+<li>
+<p>Navigate to VPC and delete the VPC.</p>
+</li>
+</ol>
+<p>We hope you find this article helpful. <em><strong>Happy learning!👍🏻</strong></em></p>
+<hr>
+<br/>
+<p><em>Shreya Dhange is a Technical Training Developer at <a href="https://www.redhat.com/en" target="_blank" rel="noopener noreffer ">Red Hat</a>, who likes to explore and learn new technologies and share her knowledge by writing articles. She has completed her Masters in Computer Science and has gained award for her exemplary academic performance. She has been engaged in creating and delivering content in the cloud and linux space. She can be reached out <a href="https://www.linkedin.com/in/shreyadhange/" target="_blank" rel="noopener noreffer ">LinkedIn</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=shreyadhange@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em>.</p>
+<br/>
+<p><em><a href="https://www.linkedin.com/in/parth-goswami/" target="_blank" rel="noopener noreffer ">Parth Goswami</a> is an opensource enthusiasts and likes to talk abot AWS and cloud computing.</em></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/configuring_vpc/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/configuring_vpc/" data-title="Configuring a custom VPC" data-via="parthtwts" data-hashtags="How-to,technology,aws,VPC,networking,ShreyaDhange,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/configuring_vpc/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/configuring_vpc/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/configuring_vpc/" data-title="Configuring a custom VPC" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/configuring_vpc/" data-title="Configuring a custom VPC"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/configuring_vpc/" data-title="Configuring a custom VPC"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/technology/">technology</a>,&nbsp;<a href="/tags/aws/">aws</a>,&nbsp;<a href="/tags/vpc/">VPC</a>,&nbsp;<a href="/tags/networking/">networking</a>,&nbsp;<a href="/tags/shreyadhange/">ShreyaDhange</a>,&nbsp;<a href="/tags/visitingauthors/">VisitingAuthors</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/decoding_vpc/" class="prev" rel="prev" title="How does VPC work?"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>How does VPC work?</a>
+            <a href="/jupyternotebooks/" class="next" rel="next" title="Getting started with Jupyter Notebooks">Getting started with Jupyter Notebooks<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

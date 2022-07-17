@@ -16,10 +16,19 @@
 In the process of exploring the tool, I went throught quite a handful of articles and videos.]]></description>
 </item>
 <item>
+    <title>Configuring a custom VPC</title>
+    <link>https://www.parthgoswami.com/configuring_vpc/</link>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange and Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/configuring_vpc/</guid>
+    <description><![CDATA[In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
+Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it.]]></description>
+</item>
+<item>
     <title>How does VPC work?</title>
     <link>https://www.parthgoswami.com/decoding_vpc/</link>
     <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
+    <author>Shreya Dhange and Parth Goswami</author>
     <guid>https://www.parthgoswami.com/decoding_vpc/</guid>
     <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
 Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
@@ -71,14 +80,25 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
 Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work — all within a secure, enterprise-grade environment.]]></description>
 </item>
 <item>
-    <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
-    <link>https://www.parthgoswami.com/ansible_sd/</link>
+    <title>Amazon S3 at a glance</title>
+    <link>https://www.parthgoswami.com/s3/</link>
+    <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/s3/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/amazon_s3/s3_intro.png" referrerpolicy="no-referrer">
+            </div>Amazon S3 is used to store any amount of data of object type such as static websites, documents, images, videos and backup files as well. This data can be retrieved at any time from anywhere on the web.
+Inside S3 you create Buckets to store your objects/data. You can create multiple buckets in any region and it stores data upto 5TB.
+After you create buckets and upload objects in Amazon S3, you can manage your object storage using below features:]]></description>
+</item>
+<item>
+    <title>How AWS CloudFront works?</title>
+    <link>https://www.parthgoswami.com/cloudfront/</link>
     <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
     <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/ansible_sd/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">
-            </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
+    <guid>https://www.parthgoswami.com/cloudfront/</guid>
+    <description><![CDATA[In this article, we will see what AWS CloudFront is and in what scenario it is used. We will also take a look on some of its advantages and what edge locations are.
+Let’s consider an example where the user is searching for a website suppose www.primevideo.com and their request and response time should experience least latency. Now, if the amazon server is in the US and the user accessing prime video website is from California so they will experience less latency i.]]></description>
 </item>
 </channel>
 </rss>

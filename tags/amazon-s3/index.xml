@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Amazon S3 - Tag - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/amazon-s3/</link>
+        <description>Amazon S3 - Tag - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/amazon-s3/" rel="self" type="application/rss+xml" /><item>
+    <title>How to configure AWS Rekognition and AWS Transcoder</title>
+    <link>https://www.parthgoswami.com/aws_rekognition/</link>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/aws_rekognition/</guid>
+    <description><![CDATA[Consider a scenerio: We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.
+Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it.]]></description>
+</item>
+<item>
+    <title>Amazon S3 at a glance</title>
+    <link>https://www.parthgoswami.com/s3/</link>
+    <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/s3/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/amazon_s3/s3_intro.png" referrerpolicy="no-referrer">
+            </div>Amazon S3 is used to store any amount of data of object type such as static websites, documents, images, videos and backup files as well. This data can be retrieved at any time from anywhere on the web.
+Inside S3 you create Buckets to store your objects/data. You can create multiple buckets in any region and it stores data upto 5TB.
+After you create buckets and upload objects in Amazon S3, you can manage your object storage using below features:]]></description>
+</item>
+</channel>
+</rss>

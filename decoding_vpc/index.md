@@ -64,7 +64,7 @@ Suppose,
 
 <br/>
 
-In this article, we discussed what VPC is and how does it work along with some of its benefits. In the next article, I will be discussing how to configure VPC in AWS and the steps to delete it once we are done tinkering with it. Stay tuned for the next article!
+In this article, we discussed what VPC is and how does it work along with some of its benefits. In the next article, I will be discussing how to configure VPC in AWS and the steps to delete it once we are done tinkering with it. Check out how to configure your custom VPC in [this article](https://www.parthgoswami/configuring_vpc/). 
 
 
 -------
@@ -72,5 +72,10 @@ In this article, we discussed what VPC is and how does it work along with some o
 
 
 *Shreya Dhange is a Technical Training Developer at [Red Hat](https://www.redhat.com/en), who likes to explore and learn new technologies and share her knowledge by writing articles. She has completed her Masters in Computer Science and has gained award for her exemplary academic performance. She has been engaged in creating and delivering content in the cloud and linux space. She can be reached out [LinkedIn](https://www.linkedin.com/in/shreyadhange/) or via [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=shreyadhange@gmail.com)*.
+
+
+<br/>
+
+*[Parth Goswami](https://www.linkedin.com/in/parth-goswami/) is an opensource enthusiasts and likes to talk abot AWS and cloud computing.*
 
 
