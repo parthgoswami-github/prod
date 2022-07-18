@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>AmazonEKS - Tag - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/amazoneks/</link>
+        <description>AmazonEKS - Tag - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/amazoneks/" rel="self" type="application/rss+xml" /><item>
+    <title>Amazon EKS: The most widely used managed Kubernetes service</title>
+    <link>https://www.parthgoswami.com/amazoneks/</link>
+    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/amazoneks/</guid>
+    <description><![CDATA[Kubernetes won the race to become the de-facto container orchestration engine. Ever since, a lot of companies are coming up with their own version of container orchestration based on top of Kubernetes, while, some other companies are developing tools and products to complete the Kubernetes in the orchestration space.
+Having said that, the top three cloud provides, have come up with their own version of managed Kubernetes offerings:
+Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon Elastic Kubernetes Service (EKS) Google Cloud offers the Google Kubernetes Engine (GKE) ]]></description>
+</item>
+</channel>
+</rss>
