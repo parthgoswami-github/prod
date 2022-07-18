@@ -33,14 +33,14 @@ In this article, I will be discussing how networking works in the cloud computin
 Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it.]]></description>
 </item>
 <item>
-    <title>Amazon EKS: The most widely used managed Kubernetes service</title>
+    <title>Amazon EKS: A managed Kubernetes service by AWS</title>
     <link>https://www.parthgoswami.com/amazoneks/</link>
     <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/amazoneks/</guid>
     <description><![CDATA[Kubernetes won the race to become the de-facto container orchestration engine. Ever since, a lot of companies are coming up with their own version of container orchestration based on top of Kubernetes, while, some other companies are developing tools and products to complete the Kubernetes in the orchestration space.
 Having said that, the top three cloud provides, have come up with their own version of managed Kubernetes offerings:
-Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon Elastic Kubernetes Service (EKS) Google Cloud offers the Google Kubernetes Engine (GKE) ]]></description>
+Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon Elastic Kubernetes Service (EKS) Google Cloud offers the Google Kubernetes Engine (GKE) What is Amazon EKS?]]></description>
 </item>
 <item>
     <title>Docker containers using Ansible on AWS</title>
