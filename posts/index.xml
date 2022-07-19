@@ -49,7 +49,15 @@ Inside Public instance we have S3 bucket endpoint to which users will have the a
     <pubDate>Mon, 20 Jun 2022 00:00:00 &#43;0000</pubDate>
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/contributorblog_1/</guid>
-    <description><![CDATA[We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
+    <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways that don&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
+</item>
+<item>
+    <title>Contributor Blog #2: Passive listener → Active contributor</title>
+    <link>https://www.parthgoswami.com/contributorblog_2/</link>
+    <pubDate>Mon, 20 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/contributorblog_2/</guid>
+    <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways which doesn&rsquo;t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
 </item>
 <item>
     <title>Dockerizing LAMP Stack Application</title>
@@ -87,15 +95,6 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/aws_for_beginners/</guid>
     <description><![CDATA[Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks about AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5+ years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS.]]></description>
-</item>
-<item>
-    <title>Invoke AWS Lambda from Slack</title>
-    <link>https://www.parthgoswami.com/lambda_slack/</link>
-    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Siya Amonkar and Varshareddykumbham</author>
-    <guid>https://www.parthgoswami.com/lambda_slack/</guid>
-    <description><![CDATA[AWS Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code only when needed and scales automatically, from a few requests per day to thousands per second. AWS Lambda in our task is invoked using the API Gateway.
-Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work — all within a secure, enterprise-grade environment.]]></description>
 </item>
 </channel>
 </rss>

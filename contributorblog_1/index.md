@@ -1,7 +1,7 @@
 # Contributor Blog #1: Pilot
 
 
-We have many diverse contributors here at Red Hat that help upstream communities in unconventional ways that don't require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
+We have many diverse contributors in opensource that help upstream communities in unconventional ways that don't require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This article aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
 
 For this month’s edition, we talked about the Mozilla and Wikipedia with Prathamesh Chavan.
 
