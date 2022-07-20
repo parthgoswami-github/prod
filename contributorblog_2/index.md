@@ -79,7 +79,7 @@ These are just some of the many, many options available online for any new contr
 
 <br/>
 
-**The sites you shared should help our readers start with their contributions. Allow me digress a bit, since you have been a writer for a long time now, do you pen down your experiences somewhere?**
+**The sites you shared should help our readers start with their contributions. Allow me to digress a bit, since you have been a writer for a long time now, do you pen down your experiences somewhere?**
  
 Yes, along with technical writing, I also document a rough draft of all my thoughts in a scrapbook. You can read some of my work [here](https://priynag.blogspot.com).
 
