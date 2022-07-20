@@ -1,7 +1,7 @@
 # Contributor Blog #1: Pilot
 
 
-We have many diverse contributors in opensource that help upstream communities in unconventional ways which doesn't require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
+We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
 
 For this month’s edition, we talked about the Mozilla and Wikipedia with Prathamesh Chavan.
 
@@ -86,7 +86,7 @@ I'd like to thank Prathamesh for his time and an enlighting conversation. I will
 _________________
 
 
-This blog post is part of the July edition of [UnconventionalContributors](http://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly blog series about different ways to contribute in opensource. Thank you for reading our first Contributor Blog. Stay tuned for the next one featuring [Priyanka Pandey, Manager with the Support Delivery team at Red Hat](https://www.parthgoswami.com/contributorblog_2/) 
+This blog post is part of the July edition of [UnconventionalContributors](http://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. Thank you for reading our first Contributor Blog. Stay tuned for the next one featuring [Priyanka Pandey, Manager with the Support Delivery team at Red Hat](https://www.parthgoswami.com/contributorblog_2/) 
 <br/>
 
 Have a story to share? We'd be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community's growth.
