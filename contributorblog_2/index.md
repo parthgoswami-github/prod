@@ -67,7 +67,7 @@ Not talking about any specific project or product, but if anyone ever asks me wh
 **Open does make the world better. How do I get started with contributing your way?** 
 <br/>
 
-The open source community has been working towards making it easy for any new contributor to get started with their first contributions. There are a lot of sites like this:
+The open source community has been working towards making it easy for any new contributor to get started with their first contributions. There are a lot of sites like:
 
 - **Mozilla** | https://whatcanidoformozilla.org/
 - **Fedora**  | https://whatcanidoforfedora.org/
