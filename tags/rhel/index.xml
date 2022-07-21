@@ -4,10 +4,10 @@
         <link>https://www.parthgoswami.com/tags/rhel/</link>
         <description>RHEL - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Thu, 26 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/rhel/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Mon, 11 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/rhel/" rel="self" type="application/rss+xml" /><item>
     <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
     <link>https://www.parthgoswami.com/ansible_sd/</link>
-    <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Mon, 11 Jul 2022 00:00:00 &#43;0000</pubDate>
     <author>Shreya Dhange</author>
     <guid>https://www.parthgoswami.com/ansible_sd/</guid>
     <description><![CDATA[<div class="featured-image">

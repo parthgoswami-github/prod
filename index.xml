@@ -26,6 +26,16 @@ In the process of exploring the tool, I went throught quite a handful of article
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
 </item>
 <item>
+    <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
+    <link>https://www.parthgoswami.com/ansible_sd/</link>
+    <pubDate>Mon, 11 Jul 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/ansible_sd/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">
+            </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
+</item>
+<item>
     <title>Contributor Blog #1: Pilot</title>
     <link>https://www.parthgoswami.com/contributorblog_1/</link>
     <pubDate>Tue, 05 Jul 2022 00:00:00 &#43;0000</pubDate>
@@ -89,14 +99,6 @@ Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon 
     <description><![CDATA[Ansible is an open-source configuration management and deployment tool.
 Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.
 Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:]]></description>
-</item>
-<item>
-    <title>How to get started on AWS</title>
-    <link>https://www.parthgoswami.com/aws_for_beginners/</link>
-    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/aws_for_beginners/</guid>
-    <description><![CDATA[Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks about AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5+ years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS.]]></description>
 </item>
 </channel>
 </rss>
