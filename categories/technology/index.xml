@@ -26,6 +26,16 @@ In the process of exploring the tool, I went throught quite a handful of article
             </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
 </item>
 <item>
+    <title>Docker containers using Ansible on AWS</title>
+    <link>https://www.parthgoswami.com/docker_containters_ansibleaws/</link>
+    <pubDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</pubDate>
+    <author>Vrinda Hegde and Siya Amonkar</author>
+    <guid>https://www.parthgoswami.com/docker_containters_ansibleaws/</guid>
+    <description><![CDATA[Ansible is an open-source configuration management and deployment tool.
+Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.
+Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:]]></description>
+</item>
+<item>
     <title>Configuring a custom VPC</title>
     <link>https://www.parthgoswami.com/configuring_vpc/</link>
     <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -71,16 +81,6 @@ Below is the Dockerfile snippet: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
     <description><![CDATA[Kubernetes won the race to become the de-facto container orchestration engine. Ever since, a lot of companies are coming up with their own version of container orchestration based on top of Kubernetes, while, some other companies are developing tools and products to complete the Kubernetes in the orchestration space.
 Having said that, the top three cloud provides, have come up with their own version of managed Kubernetes offerings:
 Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon Elastic Kubernetes Service (EKS) Google Cloud offers the Google Kubernetes Engine (GKE) What is Amazon EKS?]]></description>
-</item>
-<item>
-    <title>Docker containers using Ansible on AWS</title>
-    <link>https://www.parthgoswami.com/docker_containters_ansibleaws/</link>
-    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Vrinda Hegde and Siya Amonkar</author>
-    <guid>https://www.parthgoswami.com/docker_containters_ansibleaws/</guid>
-    <description><![CDATA[Ansible is an open-source configuration management and deployment tool.
-Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.
-Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:]]></description>
 </item>
 <item>
     <title>How to get started on AWS</title>

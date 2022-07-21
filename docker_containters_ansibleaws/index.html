@@ -10,8 +10,8 @@ Below are the steps to run docker container on AWS EC2 instances using Ansible p
 Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.parthgoswami.com/docker_containters_ansibleaws/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-03T00:00:00+00:00" /><meta property="og:site_name" content="Parth Goswami" />
+<meta property="article:published_time" content="2022-07-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-09T00:00:00+00:00" /><meta property="og:site_name" content="Parth Goswami" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
@@ -23,7 +23,7 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/docker_containters_ansibleaws/" /><link rel="prev" href="https://www.parthgoswami.com/aws_for_beginners/" /><link rel="next" href="https://www.parthgoswami.com/amazoneks/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/docker_containters_ansibleaws/" /><link rel="prev" href="https://www.parthgoswami.com/contributorblog_1/" /><link rel="next" href="https://www.parthgoswami.com/ansible_sd/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -35,7 +35,7 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
             "@type": "WebPage",
             "@id": "https:\/\/www.parthgoswami.com\/docker_containters_ansibleaws\/"
         },"genre": "posts","keywords": "How-to, docker, blog, ansible, aws, technology, VrindaHegde, SiyaAmonkar, VisitingAuthors","wordcount":  947 ,
-        "url": "https:\/\/www.parthgoswami.com\/docker_containters_ansibleaws\/","datePublished": "2022-06-03T00:00:00+00:00","dateModified": "2022-06-03T00:00:00+00:00","publisher": {
+        "url": "https:\/\/www.parthgoswami.com\/docker_containters_ansibleaws\/","datePublished": "2022-07-09T00:00:00+00:00","dateModified": "2022-07-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -104,11 +104,31 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker containers using Ansible on AWS</h1><h2 class="single-subtitle">In the article we will see how to run docker container on target machine using ansible playbook on AWS instance.</h2><div class="post-meta">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker containers using Ansible on AWS</h1><h2 class="single-subtitle">In the article we will see how to run docker container on target machine using ansible playbook on AWS instance.</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://www.parthgoswami.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vrinda Hegde and Siya Amonkar</a></span>&nbsp;<span class="post-category">included in <a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-03">2022-06-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;947 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-09">2022-07-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;947 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
-        </div><div class="content" id="content"><br/>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-ansible-on-master-machine">Install Ansible on master machine:</a></li>
+    <li><a href="#install-python-on-slave-machine">Install Python on slave machine:</a></li>
+    <li><a href="#update-the-hosts-file-on-master">Update the hosts file on master:</a></li>
+    <li><a href="#creating-the-code-directory-on-master-machine">Creating the code directory on master machine:</a></li>
+    <li><a href="#create-a-dockerfile">Create a dockerfile:</a></li>
+    <li><a href="#create-ansible-playbook">Create ansible playbook:</a></li>
+    <li><a href="#execute-the-ansible-playbook">Execute the ansible playbook:</a></li>
+    <li><a href="#to-verify-the-execution-of-playbook">To verify the execution of playbook:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><br/>
 <p>Ansible is an open-source configuration management and deployment tool.</p>
 <p>Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.</p>
 <hr>
@@ -509,14 +529,14 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-06-03</span>
+                <span>Updated on 2022-07-09</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
                             <a class="link-to-markdown" href="/docker_containters_ansibleaws/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS" data-via="parthtwts" data-hashtags="How-to,docker,blog,ansible,aws,technology,VrindaHegde,SiyaAmonkar,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS" data-via="parthtwts" data-hashtags="How-to,docker,blog,ansible,aws,technology,VrindaHegde,SiyaAmonkar,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/docker_containters_ansibleaws/" data-title="Docker containers using Ansible on AWS"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -528,8 +548,8 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
         </section>
     </div>
 
-    <div class="post-nav"><a href="/aws_for_beginners/" class="prev" rel="prev" title="How to get started on AWS"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>How to get started on AWS</a>
-            <a href="/amazoneks/" class="next" rel="next" title="Amazon EKS: A managed Kubernetes service by AWS">Amazon EKS: A managed Kubernetes service by AWS<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/contributorblog_1/" class="prev" rel="prev" title="Contributor Blog #1: Pilot"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Contributor Blog #1: Pilot</a>
+            <a href="/ansible_sd/" class="next" rel="next" title="Managing Windows Server from Red Hat Server using Ansible on AWS EC2">Managing Windows Server from Red Hat Server using Ansible on AWS EC2<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
