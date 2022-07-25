@@ -54,25 +54,6 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
 </item>
 <item>
-    <title>Configuring a custom VPC</title>
-    <link>https://www.parthgoswami.com/configuring_vpc/</link>
-    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/configuring_vpc/</guid>
-    <description><![CDATA[In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
-Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it.]]></description>
-</item>
-<item>
-    <title>How does VPC work?</title>
-    <link>https://www.parthgoswami.com/decoding_vpc/</link>
-    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/decoding_vpc/</guid>
-    <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
-Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
-In this article, I will be discussing how networking works in the cloud computing.]]></description>
-</item>
-<item>
     <title>How to configure AWS Rekognition and AWS Transcoder</title>
     <link>https://www.parthgoswami.com/aws_rekognition/</link>
     <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -99,6 +80,23 @@ Below is the Dockerfile snippet: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
     <description><![CDATA[Kubernetes won the race to become the de-facto container orchestration engine. Ever since, a lot of companies are coming up with their own version of container orchestration based on top of Kubernetes, while, some other companies are developing tools and products to complete the Kubernetes in the orchestration space.
 Having said that, the top three cloud provides, have come up with their own version of managed Kubernetes offerings:
 Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon Elastic Kubernetes Service (EKS) Google Cloud offers the Google Kubernetes Engine (GKE) What is Amazon EKS?]]></description>
+</item>
+<item>
+    <title>How to get started on AWS</title>
+    <link>https://www.parthgoswami.com/aws_for_beginners/</link>
+    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/aws_for_beginners/</guid>
+    <description><![CDATA[Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks about AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5+ years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS.]]></description>
+</item>
+<item>
+    <title>Invoke AWS Lambda from Slack</title>
+    <link>https://www.parthgoswami.com/lambda_slack/</link>
+    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Siya Amonkar and Varshareddykumbham</author>
+    <guid>https://www.parthgoswami.com/lambda_slack/</guid>
+    <description><![CDATA[AWS Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code only when needed and scales automatically, from a few requests per day to thousands per second. AWS Lambda in our task is invoked using the API Gateway.
+Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work — all within a secure, enterprise-grade environment.]]></description>
 </item>
 </channel>
 </rss>

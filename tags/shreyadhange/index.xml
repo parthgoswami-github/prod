@@ -15,25 +15,6 @@
             </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
 </item>
 <item>
-    <title>Configuring a custom VPC</title>
-    <link>https://www.parthgoswami.com/configuring_vpc/</link>
-    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/configuring_vpc/</guid>
-    <description><![CDATA[In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
-Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it.]]></description>
-</item>
-<item>
-    <title>How does VPC work?</title>
-    <link>https://www.parthgoswami.com/decoding_vpc/</link>
-    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/decoding_vpc/</guid>
-    <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
-Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
-In this article, I will be discussing how networking works in the cloud computing.]]></description>
-</item>
-<item>
     <title>How to configure AWS Rekognition and AWS Transcoder</title>
     <link>https://www.parthgoswami.com/aws_rekognition/</link>
     <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -62,6 +43,25 @@ After you create buckets and upload objects in Amazon S3, you can manage your ob
     <guid>https://www.parthgoswami.com/cloudfront/</guid>
     <description><![CDATA[In this article, we will see what AWS CloudFront is and in what scenario it is used. We will also take a look on some of its advantages and what edge locations are.
 Let’s consider an example where the user is searching for a website suppose www.primevideo.com and their request and response time should experience least latency. Now, if the amazon server is in the US and the user accessing prime video website is from California so they will experience less latency i.]]></description>
+</item>
+<item>
+    <title>Configuring a custom VPC</title>
+    <link>https://www.parthgoswami.com/configuring_vpc/</link>
+    <pubDate>Mon, 18 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange and Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/configuring_vpc/</guid>
+    <description><![CDATA[In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
+Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it.]]></description>
+</item>
+<item>
+    <title>How does VPC work?</title>
+    <link>https://www.parthgoswami.com/decoding_vpc/</link>
+    <pubDate>Fri, 11 Mar 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange and Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/decoding_vpc/</guid>
+    <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
+Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
+In this article, I will be discussing how networking works in the cloud computing.]]></description>
 </item>
 </channel>
 </rss>
