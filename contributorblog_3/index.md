@@ -5,7 +5,7 @@ We have many diverse contributors in opensource that help upstream communities i
 
 For this month’s edition, we talked about open source principles of contribution and collaboration with Harish Pillay.
 
-<a href="/images/unconventionalcontributors/contributor_3/contributor_3.png" target="_blank"><img src="/images/unconventionalcontributors/contributor_3/contributor_3.png" width="300px" height="350px" align="right" /></a>
+<a href="/images/unconventionalcontributors/contributor_3/contributor_3.png" target="_blank"><img src="/images/unconventionalcontributors/contributor_3/contributor_3.png" width="300px" align="right" /></a>
 
 
 <br/>
