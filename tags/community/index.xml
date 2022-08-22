@@ -4,8 +4,16 @@
         <link>https://www.parthgoswami.com/tags/community/</link>
         <description>community - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Wed, 20 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/community/" rel="self" type="application/rss+xml" /><item>
-    <title>Contributor Blog #2: A journey from being a passive listener to an active contributor</title>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 13 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/community/" rel="self" type="application/rss+xml" /><item>
+    <title>Contributor Blog #3: Interview with Harish Pillay</title>
+    <link>https://www.parthgoswami.com/contributorblog_3/</link>
+    <pubDate>Sat, 13 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/contributorblog_3/</guid>
+    <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
+</item>
+<item>
+    <title>Contributor Blog #2: Interview with Priyanka Pandey</title>
     <link>https://www.parthgoswami.com/contributorblog_2/</link>
     <pubDate>Wed, 20 Jul 2022 00:00:00 &#43;0000</pubDate>
     <author>Parth Goswami</author>
@@ -13,12 +21,21 @@
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
 </item>
 <item>
-    <title>Contributor Blog #1: Pilot</title>
+    <title>Contributor Blog #1: Interview with Prathamesh Chavan</title>
     <link>https://www.parthgoswami.com/contributorblog_1/</link>
-    <pubDate>Tue, 05 Jul 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Wed, 15 Jun 2022 00:00:00 &#43;0000</pubDate>
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/contributorblog_1/</guid>
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
+</item>
+<item>
+    <title>My experience with CNCF KubeCon</title>
+    <link>https://www.parthgoswami.com/kubecon_exp/</link>
+    <pubDate>Sat, 11 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Rutvik Kshirsagar</author>
+    <guid>https://www.parthgoswami.com/kubecon_exp/</guid>
+    <description><![CDATA[KubeCon + CloudNativeCon in Barcelona, Spain (from 20 to 23rd May 2019) was my first international conference invite. KubeCon is kind of a conference where you will meet all cloud-native enthusiasts, researchers, engineers and everyone working to build cloud-native applications easier. I applied for a Diversity Scholarship and fortunately, I was amongst the 56 people selected to be a part of KubeCon 2019 at Barcelona.
+In KubeCon, you get to be a part of Keynotes, breakout sessions and get to attend co-located workshops, panel discussions and many more events.]]></description>
 </item>
 </channel>
 </rss>

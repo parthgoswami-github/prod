@@ -4,17 +4,7 @@
         <link>https://www.parthgoswami.com/tags/aws/</link>
         <description>aws - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Mon, 11 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/aws/" rel="self" type="application/rss+xml" /><item>
-    <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
-    <link>https://www.parthgoswami.com/ansible_sd/</link>
-    <pubDate>Mon, 11 Jul 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/ansible_sd/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">
-            </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
-</item>
-<item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/aws/" rel="self" type="application/rss+xml" /><item>
     <title>Docker containers using Ansible on AWS</title>
     <link>https://www.parthgoswami.com/docker_containters_ansibleaws/</link>
     <pubDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</pubDate>
@@ -25,13 +15,14 @@ Below are the steps to run docker container on AWS EC2 instances using Ansible p
 Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:]]></description>
 </item>
 <item>
-    <title>How to configure AWS Rekognition and AWS Transcoder</title>
-    <link>https://www.parthgoswami.com/aws_rekognition/</link>
-    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
+    <link>https://www.parthgoswami.com/ansible_sd/</link>
+    <pubDate>Sat, 11 Jun 2022 00:00:00 &#43;0000</pubDate>
     <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/aws_rekognition/</guid>
-    <description><![CDATA[Consider a scenerio: We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.
-Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it.]]></description>
+    <guid>https://www.parthgoswami.com/ansible_sd/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">
+            </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
 </item>
 <item>
     <title>Amazon EKS: A managed Kubernetes service by AWS</title>
@@ -63,7 +54,7 @@ Slack is a channel-based messaging platform. With Slack, people can work togethe
 <item>
     <title>Amazon S3 at a glance</title>
     <link>https://www.parthgoswami.com/s3/</link>
-    <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
     <author>Shreya Dhange</author>
     <guid>https://www.parthgoswami.com/s3/</guid>
     <description><![CDATA[<div class="featured-image">
@@ -71,15 +62,6 @@ Slack is a channel-based messaging platform. With Slack, people can work togethe
             </div>Amazon S3 is used to store any amount of data of object type such as static websites, documents, images, videos and backup files as well. This data can be retrieved at any time from anywhere on the web.
 Inside S3 you create Buckets to store your objects/data. You can create multiple buckets in any region and it stores data upto 5TB.
 After you create buckets and upload objects in Amazon S3, you can manage your object storage using below features:]]></description>
-</item>
-<item>
-    <title>How AWS CloudFront works?</title>
-    <link>https://www.parthgoswami.com/cloudfront/</link>
-    <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/cloudfront/</guid>
-    <description><![CDATA[In this article, we will see what AWS CloudFront is and in what scenario it is used. We will also take a look on some of its advantages and what edge locations are.
-Let’s consider an example where the user is searching for a website suppose www.primevideo.com and their request and response time should experience least latency. Now, if the amazon server is in the US and the user accessing prime video website is from California so they will experience less latency i.]]></description>
 </item>
 <item>
     <title>Configuring a custom VPC</title>
@@ -99,6 +81,24 @@ Leaving services running in cloud computing can escalate your bill quickly, henc
     <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
 Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
 In this article, I will be discussing how networking works in the cloud computing.]]></description>
+</item>
+<item>
+    <title>How AWS CloudFront works?</title>
+    <link>https://www.parthgoswami.com/cloudfront/</link>
+    <pubDate>Sun, 21 Nov 2021 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange and Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/cloudfront/</guid>
+    <description><![CDATA[In this article, we will see what AWS CloudFront is and in what scenario it is used. We will also take a look on some of its advantages and what edge locations are.
+Let’s consider an example where the user is searching for a website suppose www.primevideo.com and their request and response time should experience least latency. Now, if the amazon server is in the US and the user accessing prime video website is from California so they will experience less latency i.]]></description>
+</item>
+<item>
+    <title>How to configure AWS Rekognition and AWS Transcoder</title>
+    <link>https://www.parthgoswami.com/aws_rekognition/</link>
+    <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/aws_rekognition/</guid>
+    <description><![CDATA[Consider a scenerio: We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.
+Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it.]]></description>
 </item>
 </channel>
 </rss>

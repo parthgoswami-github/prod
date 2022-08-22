@@ -21,7 +21,13 @@ One such forum is the [*UnconventionalContributors*](https://www.parthgoswami.co
 <br/>
 
 ## About the author
-I am a Customer Enablement Engineer working for [Cloudera](https://www.cloudera.com) on the [Professional Services Team](https://www.cloudera.com/about/services-and-support/professional-services.html) in Bengaluru, India. My interests are in [Kubernetes](https://kubernetes.io/), cloud, and [cloud native](https://cncf.io) related projects. I like to contribute to OpenSource in any possible way.   
+I am a free and open source software enthusiast and a community ambassador of [Project Calico](https://www.tigera.io/project-calico/). Currently, I am a Customer Enablement Engineer working for [Cloudera](https://www.cloudera.com) on the [Professional Services Team](https://www.cloudera.com/about/services-and-support/professional-services.html) in Bengaluru, India. My interests are in [Kubernetes](https://kubernetes.io/), cloud, and [cloud native](https://cncf.io) related projects. I like to contribute to OpenSource in any possible way.   
+
+I reguarly host meetups and speak in conferences about the concepts that I've learned or am currently learning.<br/> 
+Here's the [list of talks delivered in various conferences and meetups](https://github.com/parthgoswami-github/talks_meetups)
+
+
+I have open sourced the platform's code in [this repo](https://github.com/parthgoswami-github/parthgoswami.com) for folks  who are interested in creating their own.
 
 The opinions stated here are my own, not necessarily those of my company.
 

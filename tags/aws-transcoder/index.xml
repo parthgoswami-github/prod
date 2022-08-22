@@ -4,10 +4,10 @@
         <link>https://www.parthgoswami.com/tags/aws-transcoder/</link>
         <description>aws transcoder - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/aws-transcoder/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/aws-transcoder/" rel="self" type="application/rss+xml" /><item>
     <title>How to configure AWS Rekognition and AWS Transcoder</title>
     <link>https://www.parthgoswami.com/aws_rekognition/</link>
-    <pubDate>Sun, 26 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
     <author>Shreya Dhange</author>
     <guid>https://www.parthgoswami.com/aws_rekognition/</guid>
     <description><![CDATA[Consider a scenerio: We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.

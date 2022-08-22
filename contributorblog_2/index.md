@@ -1,4 +1,4 @@
-# Contributor Blog #2: A journey from being a passive listener to an active contributor
+# Contributor Blog #2: Interview with Priyanka Pandey
 
 
 We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
@@ -87,7 +87,7 @@ Yes, along with technical writing, I also document a rough draft of all my thoug
 
 **Moving on to the last question, recommend one unconventional contributor whom you admire and tell us more about them.**
  
-Oh, I have always been a huge fan of Christian Heilmann. I had the fortune of meeting Christian a couple of times when he was working with Mozilla. Rarely do we get to see orators and presenters like Christian, who when on stage can mesmerize the entire audience with their presence. Whenever someone compliments my presentation skills today, I silently pass on a thank you to Christian. I am the *Eklavya*(student) who has been silently following my *Dronacharya*(guru) Christian for years ;)
+Oh, I have always been a huge fan of [Christian Heilmann](https://christianheilmann.com/). I had the fortune of meeting Christian a couple of times when he was working with Mozilla. Rarely do we get to see orators and presenters like Christian, who when on stage can mesmerize the entire audience with their presence. Whenever someone compliments my presentation skills today, I silently pass on a thank you to Christian. I am the *Eklavya*(student) who has been silently following my *Dronacharya*(guru) Christian for years ;)
 
 <br/>
 <br/>
@@ -114,8 +114,10 @@ I will leave you all with my favorite takeaway from this interview..
 
 _________________
 
-This blog post is part of the July edition of [UnconventionalContributors](http://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. If you like this article, check out the stories of our other contributors and stay tuned for our upcoming editions.
+This blog post is part of the July edition of [UnconventionalContributors](http://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. Don't forget to check out the next one featuring [Harish Pillay](https://www.parthgoswami.com/contributorblog_3/), Principal Community Architect at Red Hat Singapore. 
 <br/>
 
-Have a story to share? We’d be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community’s growth.
+Have a story to share? We'd be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community's growth.
+
+**We'll see you all in the next one. Till then, Happy contributing!👋🏻**
 

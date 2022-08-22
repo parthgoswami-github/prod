@@ -4,10 +4,10 @@
         <link>https://www.parthgoswami.com/tags/aws-cloudfront/</link>
         <description>aws cloudfront - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Thu, 26 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/aws-cloudfront/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sun, 21 Nov 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/aws-cloudfront/" rel="self" type="application/rss+xml" /><item>
     <title>How AWS CloudFront works?</title>
     <link>https://www.parthgoswami.com/cloudfront/</link>
-    <pubDate>Thu, 26 May 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Sun, 21 Nov 2021 00:00:00 &#43;0000</pubDate>
     <author>Shreya Dhange and Parth Goswami</author>
     <guid>https://www.parthgoswami.com/cloudfront/</guid>
     <description><![CDATA[In this article, we will see what AWS CloudFront is and in what scenario it is used. We will also take a look on some of its advantages and what edge locations are.

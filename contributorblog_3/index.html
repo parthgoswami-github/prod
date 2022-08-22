@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Contributor Blog #3: Interview with Harish Pillay - Parth Goswami</title><meta name="Description" content="A platform for the community, by the community"><meta property="og:title" content="Contributor Blog #3: Interview with Harish Pillay" />
+<meta property="og:description" content="We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/contributorblog_3/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-13T00:00:00+00:00" /><meta property="og:site_name" content="Parth Goswami" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="Contributor Blog #3: Interview with Harish Pillay"/>
+<meta name="twitter:description" content="We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/contributorblog_3/" /><link rel="prev" href="https://www.parthgoswami.com/jupyternotebooks/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Contributor Blog #3: Interview with Harish Pillay",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/contributorblog_3\/"
+        },"genre": "posts","keywords": "blogs, community, Free Software, Open Source","wordcount":  2646 ,
+        "url": "https:\/\/www.parthgoswami.com\/contributorblog_3\/","datePublished": "2022-08-13T00:00:00+00:00","dateModified": "2022-08-13T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Parth Goswami"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Contributor Blog #3: Interview with Harish Pillay</h1><h2 class="single-subtitle">Decoding the art of finding opportunities to showcase open source solutions</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/parth-goswami/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Parth Goswami</a></span>&nbsp;<span class="post-category">included in <a href="/categories/community/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>community</a>&nbsp;<a href="/categories/unconventionalcontributors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>UnconventionalContributors</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-13">2022-08-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2646 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;13 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.</p>
+<p>For this month’s edition, we talked about open source principles of contribution and collaboration with Harish Pillay.</p>
+<p><a href="/images/unconventionalcontributors/contributor_3/contributor_3.png" target="_blank"><img src="/images/unconventionalcontributors/contributor_3/contributor_3.png" width="300px" height="350px" align="right" /></a></p>
+<br/>
+<p><strong>Thank you for taking some time out and interacting with us, Harish. You have been at Red Hat for as long as I can remember. Can you give us some background about what your journey has been at Red Hat and what you do today?</strong>
+<br/></p>
+<p>I&rsquo;m Harish Pillay and I&rsquo;m a Principal Community Architect based out of the Red Hat Singapore office. I’ve been at Red Hat now for almost 19 years. Yes, it is a long journey, but meaningful from my point of view. The bigger picture is what needs to be kept in mind as we go about enabling and empowering open source technologies and software. This is coupled with technical collaboration both in software and hardware. The Red Hat Singapore office was setup in my SOHO (small office home office) in 2003. In 2004, the Singapore office became the Asia-Pacific headquarters with the help of the Singapore Economic Development Board.</p>
+<p>I had, at the start, been running Red Hat Singapore as a one-man show as the Chief Technology Architect. I did everything from tech support to sales, to marketing, to speaking at conferences, etc. It was a little simpler because we only had to deal with one product - Red Hat Enterprise Linux. And since then, as we know, Red Hat has evolved and open source solutions got deeper into the proprietary software stack. You find a lot more services and options showing up as open source now, whether from us or someone else. So, from my point of view, it was not so much about a contribution to open source projects in and of itself directly. It is about building the bigger ecosystem of opportunities.</p>
+<br/>
+<p><strong>It’s almost a lifetime that you have dedicated to the Red Hat Singapore Office and building an open source ecosystem. What has your experience been in being a contributor?</strong>
+<br/></p>
+<p>My earliest code contribution was sometime in 1982 – see the blog post about stuff done then:<br/>
+<a href="https://harishpillay.wordpress.com/2018/06/03/and-they-are-online-now/" target="_blank" rel="noopener noreffer ">https://harishpillay.wordpress.com/2018/06/03/and-they-are-online-now/</a></p>
+<p>I have contributed to so many places, I don&rsquo;t even know where it was, so I actually have no easy way to track it. These were the days before you had things like GitHub and GitLab and things like that. From a contributor’s standpoint, my claim to fame dates back to 1999. What happened in 1999 specifically just before Red Hat IPO’ed on Nasdaq, the Red Hat leadership and marketing team then looked at all the code that was being shipped at that time, which was Red Hat Linux, and extracted the email addresses and contributor names - from how-tos, kernel code, in Apache, etc and whatever was inside the distribution. These were collated into a contributors list and emails were sent to each one offering shares in Red Hat stock! Red Hat was the first one to do such a thing then (it was repeated by VA Linux some months later when VA Linux IPO’ed).</p>
+<p>So I received an email saying that I have ten shares from this entity called &ldquo;Red Hat&rdquo;. Who was this company? Frankly, I had no idea. And why did I receive it? All because I had written code and I forgot about it. I had written a <a href="http://linuxdocs.org/HOWTOs/IP-Masquerade-HOWTO-8.html" target="_blank" rel="noopener noreffer ">how-to on IP aliases</a>. It was a very pleasant and thoughtful gesture of Red Hat to acknowledge contributors. Those docs/how-tos have been translated into many languages, and I&rsquo;ve received email requests for help in French, Mandarin, Spanish, Japanese, and Russian.</p>
+<p>IP aliases was about having one network card to respond to multiple IP addresses. This was a tricky thing to do, but IP aliases allowed you to then have one server to serve multiple IPs, and each IP has its own web server associated with it. All of this predates Apache httpd itself adding virtual hosts.</p>
+<p>I have another “starting” point as well. I would go all the way back to when I was in graduate school in Oregon State University in the mid-1980s. Probably in 1986, I was working as a Teaching Assistant in the Department of Electrical and Computer Engineering and I received a tape from the Free Software Foundation. It contained a copy of emacs. I had no idea what that was about - yeah, I am a vi apologist. All of this was happening on <a href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreffer ">ARPANET</a>. ARPANET - the predecessor to the Internet, was an amazing “new thing”. It had a discussion forum called <a href="fhttps://en.wikipedia.org/wiki/Usenet" target="_blank" rel="noopener noreffer ">Usenet</a>. Usenet had hundreds of newsgroups and it came to play an important part for me in helping to complete my MSEE thesis.</p>
+<p>I posted questions around TCP/IP, coding issues around network drivers etc to the relevant newsgroups like comp.tcpip and the like. I would get replies that worked sometimes, other times got pointed to resources in other sites to explore. These were days of telnet and ftp. The web was still at least 5 years into the future. With help from Usenet newsgroups and various email conversations I was able to wrap up my thesis work. I ended up successfully building a TCP/IP stack on OS/2 - a joint IBM and Microsoft operating system. It only had netbios-based networking native to it (LAN Manager) and not TCP/IP stack. So I thought this was a pretty cool thing to make a TCP/IP working on OS/2.</p>
+<p>In doing all of this, it was very evident to me that sharing all of the work out to the world was the right thing to do. I have <a href="http://tinyurl.com/HarishPillayThesis" target="_blank" rel="noopener noreffer ">my thesis document</a> that is online, so that&rsquo;s available.</p>
+<br/>
+<p><strong>How do you think people can contribute to open source in different ways, whether they are technical or non-technical?</strong>
+<br/></p>
+<p>So for non-technical folks, that&rsquo;s what I would encourage them to do. Don&rsquo;t just consume, don&rsquo;t just be a consumer. And within Red Hat, we have an ideal opportunity to be a contributor. It is not just for a technical person who has a technical inclination; it is all of us. If we encounter a problem with the product, we file a bug report. Even that is sufficient. So that&rsquo;s where you can contribute, and we have so many ways. You just need to articulate it. We must demonstrate and explain. We need to explain to people that this is how you can do it and what it means. So I believe that is where I would advise you to begin.</p>
+<p>If you are technically inclined, you can get into the weeds of the applications and give feedback. You can file bug reports, and since the code is available to inspect and change, provide code snippets that fix the issues. At the very least, file a bug report with enough information for the developers to get to fixing it.</p>
+<p>Find opportunities to showcase open source solutions. For example, if you have Raspberry Pis, run talks and webinars to show how it can be used for all kinds of projects. I&rsquo;m still figuring out and working on some interesting projects. So for example, because of the lockdown in 2020, I started working on a project which I didn&rsquo;t have time for before. I built a hydroponics system and wired up a bunch of sensors and used a combination of different open source tools to monitor and track the vegetables that could thrive in the system. I am actually quite happy with the system and am now trying to find an even more robust system to increase yields and so on. But the entire system is set up and run with open source software and hardware.</p>
+<p>So I managed to do stuff and write some code, and it worked for me. And then I send a pull request to whoever it was and then see what happens. If they don&rsquo;t accept it, that&rsquo;s okay. It worked for me. So, do you take what you want? Small little actions like that, over a period of time, just accumulate. And by doing it, I think that is when you will feel that you&rsquo;re part of this bigger picture. You are part of the story. As the story evolves, it&rsquo;s an ongoing process.</p>
+<br/>
+<p><strong>How do I get started with contributing your way?</strong>
+<br/></p>
+<p>Again, you need to know that this is immensely possible in today&rsquo;s context. You see all those TikTok and YouTube videos where people are creating content on all types of subjects and topics. You could use that to create tutorials, how-tos etc. That is a form of contribution. I think every individual who has an opportunity, whether they are studying history, doing philosophy, or doing electrical engineering, should capitalize on this opportunity to contribute.</p>
+<p>If you are in a university, for example, you have an ideal opportunity to experiment and try out how open source contributions can happen. The challenge, sometimes, is that the faculty might not be cognizant around open source principles of contribution and collaboration. We need to educate the educators on the value of open collaboration. We need to help them understand what this means to the faculty member directly as well as the students who flow through the system. The more empowered both the faculty and students are, the better we will all be as the trained individuals enter the workforce.</p>
+<p>Because once they understand it, then they may suggest it to the students. That&rsquo;s one angle.</p>
+<p>We had a program called <a href="https://www.redhat.com/en/about/open-source-education/educators" target="_blank" rel="noopener noreffer ">POSSE</a> in 2007 or 2008. We ran this program for faculty. POSSE stands for &ldquo;Professors&rsquo; Open Source Software Experience.&rdquo; The idea was to bring university professors into a safe space to help them work through on how to collaborate in an open source way. Show them how open source magic happens. Help them learn. Those were the days when IRC was king, and show them how to communicate with somebody in IRC. A lot of them have  never done it before - it was before their time. Bring them, show them the use case, show them a way to collaborate. Sit next to them, and without saying anything verbally, communicate purely via the Internet. Eventually, they get it. When the a-ha moment happens, you will see their eyes light up.</p>
+<p>I had been teaching a class at a local university for about seven years. It was an undergraduate program where I was teaching three-credit classes. And it was all about open technologies, collaboration, and so on. As I was teaching things around open source tech, I was not going to use the school’s content management system which involved both, a restricted access only to registered students etc.</p>
+<p>So, I placed <a href="http://ce9005.pbworks.com/w/page/53490854/FrontPage" target="_blank" rel="noopener noreffer ">all of the contents</a> on a public wiki resource. All of these happened in the days before MOOCs were beginning to happen and the various universities around the world started putting their materials into publicly accessible sites.</p>
+<p>The tools to make things available publicly are trivially available today. It takes a little bit of discipline to get into doing things in the open. You can start by creating and writing blog posts. These posts are primarily for you as a way to document what you do/think about etc. I blog as a means to have a conversation with myself (and also to remind me of tips and tricks of stuff I need to work on).</p>
+<br/>
+<p><strong>Have you ever faced challenges in the open source world?</strong>
+<br/></p>
+<p>I think they&rsquo;ll always be challenging. Did I face anything personally? No. The challenge that I think faces everyone, especially with open source contributions, will be burnout. People will be tired. So when I established the <a href="https://singaporelug.org/" target="_blank" rel="noopener noreffer ">Singapore Linux user group</a> in 1993, a few months before Red Hat itself was established itself, we were running monthly meetings. We did that for many years and it was getting to be exciting times which prompted LUGS to consider, in 1999, to run a conference which we called the  <a href="https://www.sixxs.net/archive/docs/ipv6-history/6bone-mailinglist/1998-November/001823.html" target="_blank" rel="noopener noreffer ">Singapore Linux Conference</a>. We had a lot of people show up. It was in March 1999, and then we ran it in 2002, and yeah, it was just quite interesting. There&rsquo;s a lot of interest in participation.</p>
+<p>While these activities are great to build awareness and interest, it is still a big challenge to get people to volunteer. User groups are driven by volunteers. Sustaining it is NOT an easy task. You need to have succession. You need to have the next generation come in, take it and do whatever it is. Succession is a huge problem no matter where it occurs in any organization including in open-source projects. The Singapore Linux Users’ Group turned out to be a crucible. It started off with the Linux perspective. And then, eventually, so many other things like PHP, Python, Java, various other technologies started becoming interesting which drove interest and the splintering of attention and volunteer time in older groups. These are, in some sense, the price of success and it is fine.</p>
+<p>So you&rsquo;ll find there&rsquo;s a very rich community of contributors in many different areas. But again, it goes back to the same fundamental problem: How do you sustain it? The sustaining part is the biggest challenge.</p>
+<p>Open source groups/projects are not an exception to these challenges. One major benefit of open source projects, when it fails, is that whatever code was cut will always be there for the taking (assuming the right licenses were applied). Someone somewhere will take it and run with it.</p>
+<p>One way to ensure some form of digital posterity is to send the contents - code etc - to archive.org. I do support archive.org through donations and other means so that it continues to exist for as long as possible. That&rsquo;s a part of sustainability that not enough attention is given to.</p>
+<br/>
+<p><strong>Can you recommend any unconventional open source contributors you admire?</strong>
+<br/></p>
+<p>You may want to talk to Daniel Veillard while he is in France. He was one of the early contributors to XML. I would suggest that you speak with him because he has his own perspective and I think that these days, driving XML standards has been very critical to many of the things that we see today.
+<br/></p>
+<p>Harish, I appreciate you so much for taking the time to share your experience and viewpoint on open source contributions. I have learned lots of things from our conversation, and I hope that it will be helpful to our readers. Thank you so much!</p>
+<p>I will leave you all with my favorite takeaway from this interview..</p>
+<h6 id="it-takes-a-little-bit-of-discipline-to-get-into-doing-things-in-the-open">It takes a little bit of discipline to get into doing things in the open.</h6>
+<br/>
+<br/>
+<p><em>Harish has been in the technology industry (Internet, Software, Hardware, Wireless) for about 40 years. He is also a mentor to startups, educator to the next generation of engineers and makers. He has been a board member of international organizations (Internet Society) and also board member of businesses in Singapore and the US. He lives in Singapore with his family. He can be reached out on <a href="https://www.linkedin.com/in/harishpillay/" target="_blank" rel="noopener noreffer ">LinkedIn</a> or via <a href="https://twitter.com/harishpillay" target="_blank" rel="noopener noreffer ">Twitter</a>.</em></p>
+<br/>
+<br/>
+<hr>
+<p>This blog post is part of the August edition of <a href="https://www.parthgoswami.com/categories/unconventionalcontributors/" target="_blank" rel="noopener noreffer ">UnconventionalContributors</a>, our monthly interview series about different ways to contribute to opensource. If you like this article, check out the <a href="https://www.parthgoswami.com/categories/unconventionalcontributors/" target="_blank" rel="noopener noreffer ">stories of our other contributors</a> and stay tuned for our upcoming editions.</p>
+<p>Have a story to share? We’d be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community’s growth.</p>
+<p><strong>We’ll see you all in the next one. Till then, Happy contributing!👋🏻</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-08-13</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/contributorblog_3/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/contributorblog_3/" data-title="Contributor Blog #3: Interview with Harish Pillay" data-via="parthtwts" data-hashtags="blogs,community,Free Software,Open Source"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/contributorblog_3/" data-hashtag="blogs"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/contributorblog_3/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/contributorblog_3/" data-title="Contributor Blog #3: Interview with Harish Pillay" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.parthgoswami.com/contributorblog_3/" data-title="Contributor Blog #3: Interview with Harish Pillay"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/contributorblog_3/" data-title="Contributor Blog #3: Interview with Harish Pillay"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/contributorblog_3/" data-title="Contributor Blog #3: Interview with Harish Pillay"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/blogs/">blogs</a>,&nbsp;<a href="/tags/community/">community</a>,&nbsp;<a href="/tags/free-software/">Free Software</a>,&nbsp;<a href="/tags/open-source/">Open Source</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/jupyternotebooks/" class="prev" rel="prev" title="Getting started with Jupyter Notebooks"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Getting started with Jupyter Notebooks</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
