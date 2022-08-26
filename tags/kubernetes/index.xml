@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Kubernetes - Tag - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/kubernetes/</link>
+        <description>Kubernetes - Tag - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Tue, 26 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/kubernetes/" rel="self" type="application/rss+xml" /><item>
+    <title>Certified Calico Operator: Level1</title>
+    <link>https://www.parthgoswami.com/certified-calico-operator/</link>
+    <pubDate>Tue, 26 Jul 2022 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/certified-calico-operator/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/ccol1/banner.png" referrerpolicy="no-referrer">
+            </div>In this article, I will share my experience in becoming a Certified Calico Operator: Level 1. Most of the information is available on the course portal and Calico’s webpages. I&rsquo;ve made an effort to compile all the essential details about the course and exam in one location, and I hope it will be helpful to you.
+What is Project Calico? Project Calico is an open-source project with an active development and user community.]]></description>
+</item>
+</channel>
+</rss>

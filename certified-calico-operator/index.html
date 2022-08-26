@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Certified Calico Operator: Level1 - Parth Goswami</title><meta name="Description" content="A platform for the community, by the community"><meta property="og:title" content="Certified Calico Operator: Level1" />
+<meta property="og:description" content="In this article, I will share my experience in becoming a Certified Calico Operator: Level 1. Most of the information is available on the course portal and Calico’s webpages. I&rsquo;ve made an effort to compile all the essential details about the course and exam in one location, and I hope it will be helpful to you.
+What is Project Calico? Project Calico is an open-source project with an active development and user community." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/certified-calico-operator/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-26T00:00:00+00:00" /><meta property="og:site_name" content="Parth Goswami" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="Certified Calico Operator: Level1"/>
+<meta name="twitter:description" content="In this article, I will share my experience in becoming a Certified Calico Operator: Level 1. Most of the information is available on the course portal and Calico’s webpages. I&rsquo;ve made an effort to compile all the essential details about the course and exam in one location, and I hope it will be helpful to you.
+What is Project Calico? Project Calico is an open-source project with an active development and user community."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/certified-calico-operator/" /><link rel="prev" href="https://www.parthgoswami.com/jupyternotebooks/" /><link rel="next" href="https://www.parthgoswami.com/contributorblog_3/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Certified Calico Operator: Level1",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/certified-calico-operator\/"
+        },"genre": "posts","keywords": "calico, Project Calico, networking, Kubernetes, CloudNative, How-to","wordcount":  946 ,
+        "url": "https:\/\/www.parthgoswami.com\/certified-calico-operator\/","datePublished": "2022-07-26T00:00:00+00:00","dateModified": "2022-07-26T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Parth Goswami"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Certified Calico Operator: Level1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://twitter.com/parthtwts" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Parth Goswami</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-26">2022-07-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;946 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/ccol1/banner.png"
+        data-srcset="/images/ccol1/banner.png, /images/ccol1/banner.png 1.5x, /images/ccol1/banner.png 2x"
+        data-sizes="auto"
+        alt="/images/ccol1/banner.png"
+        title="/images/ccol1/banner.png" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-project-calico">What is Project Calico?</a></li>
+    <li><a href="#what-does-the-course-cover">What does the course cover?</a></li>
+    <li><a href="#key-highlights-of-the-course">Key highlights of the course:</a></li>
+    <li><a href="#lets-breakdown-the-course-content">Let’s breakdown the course content:</a></li>
+    <li><a href="#are-there-any-prerequisites">Are there any prerequisites?</a></li>
+    <li><a href="#why-did-i-take-this-course">Why did I take this course?</a></li>
+    <li><a href="#taking-the-course">Taking the course:</a></li>
+    <li><a href="#taking-the-exam">Taking the exam:</a></li>
+    <li><a href="#my-key-takeaways-from-the-course">My key takeaways from the course:</a></li>
+    <li><a href="#explore-other-certifications-from-project-calico">Explore other certifications from Project Calico:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>In this article, I will share my experience in becoming a <a href="https://www.tigera.io/lp/calico-academy-completion/" target="_blank" rel="noopener noreffer ">Certified Calico Operator: Level 1</a>. Most of the information is available on the course portal and Calico’s webpages. I&rsquo;ve made an effort to compile all the essential details about the course and exam in one location, and I hope it will be helpful to you.</p>
+<p><a href="/images/ccol1/kubecuddle.png" target="_blank"><img src="/images/ccol1/kubecuddle.png" width="300px" align="right" /></a></p>
+<h2 id="what-is-project-calico">What is Project Calico?</h2>
+<p>Project Calico is an open-source project with an active development and user community. Calico Open Source was born out of this project and has grown to be the most widely adopted solution for container networking and security, powering 2M+ nodes daily across 166 countries.</p>
+<h2 id="what-does-the-course-cover">What does the course cover?</h2>
+<p>This course will cover how Kubernetes networking works, how to configure and manage a Calico network, and how to secure your Kubernetes cluster.</p>
+<ul>
+<li><strong>Introduction to Kubernetes Networking</strong></li>
+<li><strong>Installing Calico</strong></li>
+<li><strong>Everything you need to know about Network Policy, including:</strong>
+<ul>
+<li>Introduction to Network Policy</li>
+<li>Best Practices for Network Policy</li>
+<li>Managing Trust Across Teams</li>
+<li>Network Policy for Hosts and NodePorts</li>
+</ul>
+</li>
+<li><strong>Everything you need to know about network connectivity, including:</strong>
+<ul>
+<li>Pod Connectivity Fundamentals</li>
+<li>Calico’s Next Generation eBPF Dataplane</li>
+<li>Encrypting Data in Transit</li>
+<li>Fun with IP Address Management</li>
+<li>Peering with BGP</li>
+</ul>
+</li>
+<li><strong>Everything you need to know about Kubernetes Services, including:</strong>
+<ul>
+<li>Introduction to Kubernetes Services</li>
+<li>Understanding Kube-Proxy Service Handling</li>
+<li>Understanding Calico Native Service Handling</li>
+<li>Advertising Services</li>
+</ul>
+</li>
+</ul>
+<h2 id="key-highlights-of-the-course">Key highlights of the course:</h2>
+<ul>
+<li>Self Paced</li>
+<li>Lab-Based</li>
+<li>Free</li>
+<li>Certification after competition of course</li>
+<li>Deep dive to K8s Networking and Security policy</li>
+<li>Calico CNI</li>
+</ul>
+<h2 id="lets-breakdown-the-course-content">Let’s breakdown the course content:</h2>
+<p>The course is self paced and nominally structured into 4 weeks. Each week will take around 2-4 hours to complete depending on your level of experience. So you can work at a relaxed pace one or two evenings a week, and still complete the whole course in 4 weeks.  However, you are welcome to progress at whatever pace works best for you, including completing the whole course in a single day if you would like to.</p>
+<p>Each week covers a different area of learning and consists of a combination of short video presentations and step-by-step guided hands-on labs.</p>
+<p>There’s a short quiz at the end of each week so you can test your knowledge as you progress through the course. These do not count towards your certification and are there solely to help you cement your learning. Finally there is a graded exam at the end of the course that you must pass to obtain your certification.</p>
+<ul>
+<li><strong>Week 1</strong>
+<ul>
+<li>Kubernetes Networking Introduction</li>
+<li>Lab Setup</li>
+<li>Installing Calico</li>
+<li>Installing the Sample Application</li>
+<li>Managing Your Lab</li>
+<li>Test Your Knowledge</li>
+</ul>
+</li>
+<li><strong>Week 2</strong>
+<ul>
+<li>Introduction to Network Policy</li>
+<li>Why use Calico for Network Policy</li>
+<li>Best Practices for Network Policy</li>
+<li>Network Policy Fundamentals</li>
+<li>Managing Trust Across Teams</li>
+<li>Network Policy for Hosts and NodePorts</li>
+</ul>
+</li>
+<li><strong>Week 3</strong>
+<ul>
+<li>Introduction</li>
+<li>Introduction to Pod Connectivity</li>
+<li>Pod Connectivity Fundamentals</li>
+<li>Encrypting Data in Transit</li>
+<li>IP Pools and BGP Peering</li>
+<li>Choosing the Best Networking Options</li>
+</ul>
+</li>
+<li><strong>Week 4</strong>
+<ul>
+<li>Introduction</li>
+<li>Introduction to Kubernetes Services Networking</li>
+<li>Understanding Kube-Proxy</li>
+<li>Understanding Calico Native Service Handling</li>
+<li>Advertising Services</li>
+<li>Test Your Knowledge</li>
+</ul>
+</li>
+</ul>
+<h2 id="are-there-any-prerequisites">Are there any prerequisites?</h2>
+<p>The course assumes you are already reasonably familiar with the basic Kubernetes concepts such as pods and namespaces, though you definitely don&rsquo;t have to be a Kubernetes expert.
+In-depth networking knowledge is not required. If you know what an IP address is, what DNS is, and what a load balancer is, then you know more than enough already.</p>
+<h2 id="why-did-i-take-this-course">Why did I take this course?</h2>
+<p>I come from the Networking background.  worked for Red Hat for about four years before moving on to Cloudera. During that time, I spent a significant amount of time on networking and began working with containers and kubernetes. I could therefore relate to Project calico&rsquo;s products and solutions because I was familiar with networking, cloud native, and containers. This made me want to explore Calico&rsquo;s cloud-native based open source solution on networking kubernetes.</p>
+<h2 id="taking-the-course">Taking the course:</h2>
+<p>The course helped me revise some of the networking concepts such as kubernetes network policy, pod connectivity, Kubernetes DNS, outgoing NAT and some other key concepts such as IPv6 and dual stack, ingress and egress. Ofcourse, there are many more concepts throughout the course which explain in detail about Calico’s CNI, it’s working and advantages.</p>
+<h2 id="taking-the-exam">Taking the exam:</h2>
+<p>The exam has four sections: Kubernetes Networking, Networking Policy, Pod Connectivity, and Kubernetes Services. It has about 70 questions. If you understand the fundamentals of Kubernetes networking and have done your homework by studying the course well, you should be able to pass the exam on your first try. There are a variety of question types, including true or false, multiple choice, and while some questions have multiple options with two or more than two correct answers. The exam tests your overall understanding about the concepts covered in the course content. You can check your score after submitting all of your responses, and if you passed, you can download the certificate.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/ccol1/ccol1.png" title="/images/ccol1/ccol1.png" data-thumbnail="/images/ccol1/ccol1.png" data-sub-html="<h2> </h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/ccol1/ccol1.png"
+            data-srcset="/images/ccol1/ccol1.png, /images/ccol1/ccol1.png 1.5x, /images/ccol1/ccol1.png 2x"
+            data-sizes="auto"
+            alt="/images/ccol1/ccol1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<h2 id="my-key-takeaways-from-the-course">My key takeaways from the course:</h2>
+<ul>
+<li>Calico supports both namespaced network policy, and a non-namespaced global network policy.</li>
+<li>Unlike Kubernetes, where the action is implicit allow, Calico allows to explicitly specify allow or deny actions.</li>
+<li>Calico can be installed as part of the hosted kubernetes platform on all major cloud providers such as EKS, AKS and GKE.</li>
+<li>Calico can provide both overlay and non-overlay networking.</li>
+</ul>
+<p>I would like to strongly recommend the <a href="https://academy.tigera.io/course/certified-calico-operator-level-1/" target="_blank" rel="noopener noreffer ">Certified Calico Operator: Level 1</a> course for everyone interested in Kubernetes networking.</p>
+<h2 id="explore-other-certifications-from-project-calico">Explore other certifications from Project Calico:</h2>
+<ul>
+<li><a href="https://academy.tigera.io/course/certified-calico-operator-ebpf/" target="_blank" rel="noopener noreffer ">Certified Calico Operator: eBPF</a></li>
+<li><a href="https://academy.tigera.io/course/certified-calico-operator-aws-expert/" target="_blank" rel="noopener noreffer ">Certified Calico Operator: AWS Expert</a></li>
+<li><a href="https://academy.tigera.io/course/certified-calico-operator-azure-expert/" target="_blank" rel="noopener noreffer ">Certified Calico Operator: Azure Expert</a></li>
+</ul>
+<p>Next up, I will be studying the <strong>Certified Calico Operator: AWS Expert</strong> course and taking the exam.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/ccol1/bigcat.png"
+        data-srcset="/images/ccol1/bigcat.png, /images/ccol1/bigcat.png 1.5x, /images/ccol1/bigcat.png 2x"
+        data-sizes="auto"
+        alt="/images/ccol1/bigcat.png"
+        title="/images/ccol1/bigcat.png" /></p>
+<p>Hope this article was helpful. Stay tuned for the next blog and happy learning!!👋🏻</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/certified-calico-operator/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/certified-calico-operator/" data-title="Certified Calico Operator: Level1" data-via="parthtwts" data-hashtags="calico,Project Calico,networking,Kubernetes,CloudNative,How-to"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/certified-calico-operator/" data-hashtag="calico"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/certified-calico-operator/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/certified-calico-operator/" data-title="Certified Calico Operator: Level1" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.parthgoswami.com/certified-calico-operator/" data-title="Certified Calico Operator: Level1"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/certified-calico-operator/" data-title="Certified Calico Operator: Level1"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/certified-calico-operator/" data-title="Certified Calico Operator: Level1" data-image="/images/ccol1/banner.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/calico/">calico</a>,&nbsp;<a href="/tags/project-calico/">Project Calico</a>,&nbsp;<a href="/tags/networking/">networking</a>,&nbsp;<a href="/tags/kubernetes/">Kubernetes</a>,&nbsp;<a href="/tags/cloudnative/">CloudNative</a>,&nbsp;<a href="/tags/how-to/">How-to</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/jupyternotebooks/" class="prev" rel="prev" title="Getting started with Jupyter Notebooks"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Getting started with Jupyter Notebooks</a>
+            <a href="/contributorblog_3/" class="next" rel="next" title="Contributor Blog #3: Interview with Harish Pillay">Contributor Blog #3: Interview with Harish Pillay<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"twemoji":true,"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
