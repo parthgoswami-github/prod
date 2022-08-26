@@ -6,8 +6,6 @@ KubeCon + CloudNativeCon in Barcelona, Spain (from 20 to 23rd May 2019) was my f
 
 In KubeCon, you get to be a part of Keynotes, breakout sessions and get to attend co-located workshops, panel discussions and many more events. Everything runs in parallel so you need to manage and prioritize your schedule. Registration for most of the co-located events starts a month prior to the conference date.
 
-<a href="/images/rkshirsa/kubecon_exp/kube_con.png" target="_blank"><img src="/images/rkshirsa/kubecon_exp/kube_con.png" width="300px" align="right" /></a>
-
 There were multiple sessions to pick from, mostly centered around how people use cloud native opensource tools to improve certain deliverables, mistakes they might have made using the cloud native tools and how we shouldn’t do what they did or just an introduction to new ways of doing things. 
 
 There were sessions on Cloud Native projects, Lightning talks on diverse topics and also an opportunity to meet maintainers of some of the tools we use in the cloud native space.
@@ -28,6 +26,8 @@ There were sessions on Cloud Native projects, Lightning talks on diverse topics 
 Furthermore, I did participate in **Diversity lunch and learn** activity sponsored by Google. The agenda was to meet people with common interest in the provided components, topics and sit in round table fashion, discuss things and find out ongoing challenges, best practices, and next actions based on each team discussion. 
 
 I was a part of **“Monitoring Team”** where we discussed about monitoring and tracing in cloud infrastructure. At the end, we concluded with Prometheus as the most promising tool.
+
+![](/images/rkshirsa/kubecon_exp/image3.png " ")
 
 <br/>
 
