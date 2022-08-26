@@ -31,8 +31,6 @@ I was a part of **“Monitoring Team”** where we discussed about monitoring an
 
 <br/>
 
-![](/images/rkshirsa/kubecon_exp/image3.png " ")
-
 **KubeCon focus and role of CNCF:** The major role and focus of CNCF for such events is towards Open Source Contributions, adapting community driven projects, graduating them and make it usable to solve real world problems. Once it is available in the community, people would start using it in small scale environment to the enterprise level and share their best practices, failures, research in such conferences.
 
 Some of the great Projects which were adopted and graduated by **CNCF** are:<br/>
