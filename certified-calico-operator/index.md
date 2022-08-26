@@ -97,6 +97,8 @@ The course helped me revise some of the networking concepts such as kubernetes n
 
 The exam has four sections: Kubernetes Networking, Networking Policy, Pod Connectivity, and Kubernetes Services. It has about 70 questions. If you understand the fundamentals of Kubernetes networking and have done your homework by studying the course well, you should be able to pass the exam on your first try. There are a variety of question types, including true or false, multiple choice, and while some questions have multiple options with two or more than two correct answers. The exam tests your overall understanding about the concepts covered in the course content. You can check your score after submitting all of your responses, and if you passed, you can download the certificate.
 
+<br/>
+
 ![](/images/ccol1/ccol1.png " ")
 
 <br/>
