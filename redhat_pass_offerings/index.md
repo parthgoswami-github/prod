@@ -37,11 +37,6 @@
 |3. | Kubernetes falls under Container as a Service (CAAS) which helps in managing containers and OpenShift helps in managing applications.|OSD can work on both public and Private cloud.|
 |4. | OpenShift runs above Kubernetes and helps in developing, deploying and managing applications into containers.|  It includes a Linux operating system, container runtime, networking, monitoring, container registry, authentication, and authorization solutions.|
 
-```
-find / -type f -name '*.txt' -exec ls -l {} \; 
-find / -type f -name '*.txt' -exec cp {} my_txt_files/ \; 
-```
-
 -------
 <br/>
 
