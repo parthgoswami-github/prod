@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Red Hat - Tag - Parth Goswami</title>
-        <link>https://www.parthgoswami.com/tags/red-hat/</link>
-        <description>Red Hat - Tag - Parth Goswami</description>
+        <title>OpenShift - Tag - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/openshift/</link>
+        <description>OpenShift - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/red-hat/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/openshift/" rel="self" type="application/rss+xml" /><item>
     <title>Red Hat Pass Offerings</title>
     <link>https://www.parthgoswami.com/redhat_pass_offerings/</link>
     <pubDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</pubDate>
@@ -14,16 +14,6 @@
 Openshift focuses on managing applications and not containers. As Kubernetes falls under Container as a Service (CAAS) which helps in managing containers and Openshift helps in managing applications.
 Openshift runs above Kubernetes as we deploy applications into containers.
 As Openshift helps in developing, deploying and managing container based application, it also provides self-service platform to create, modify and deploy applications on demand, enabling faster development.]]></description>
-</item>
-<item>
-    <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
-    <link>https://www.parthgoswami.com/ansible_sd/</link>
-    <pubDate>Sat, 11 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/ansible_sd/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">
-            </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
 </item>
 </channel>
 </rss>

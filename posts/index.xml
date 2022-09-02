@@ -4,7 +4,18 @@
         <link>https://www.parthgoswami.com/posts/</link>
         <description>All Posts | Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Red Hat Pass Offerings</title>
+    <link>https://www.parthgoswami.com/redhat_pass_offerings/</link>
+    <pubDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/redhat_pass_offerings/</guid>
+    <description><![CDATA[OCP (Openshift Container Platform): Openshift is a Kubernetes Platform-as-a-Service (PAAS) which is fully managed service by Red Hat.
+Openshift focuses on managing applications and not containers. As Kubernetes falls under Container as a Service (CAAS) which helps in managing containers and Openshift helps in managing applications.
+Openshift runs above Kubernetes as we deploy applications into containers.
+As Openshift helps in developing, deploying and managing container based application, it also provides self-service platform to create, modify and deploy applications on demand, enabling faster development.]]></description>
+</item>
+<item>
     <title>Certified Calico Operator: Level1</title>
     <link>https://www.parthgoswami.com/certified-calico-operator/</link>
     <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
@@ -89,16 +100,6 @@ In KubeCon, you get to be a part of Keynotes, breakout sessions and get to atten
     <guid>https://www.parthgoswami.com/dockerizing_lamp_stack_app/</guid>
     <description><![CDATA[Let us create a dockerfile for deploying the application. In this dockerfile we will use ubuntu image as the base image and then install apache and php above it. Then we will create a MYSQL container which will be connected to our application.
 Below is the Dockerfile snippet: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 # Dockerfile for LAMP Stack installation # Ubuntu 18.]]></description>
-</item>
-<item>
-    <title>Amazon EKS: A managed Kubernetes service by AWS</title>
-    <link>https://www.parthgoswami.com/amazoneks/</link>
-    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/amazoneks/</guid>
-    <description><![CDATA[Kubernetes won the race to become the de-facto container orchestration engine. Ever since, a lot of companies are coming up with their own version of container orchestration based on top of Kubernetes, while, some other companies are developing tools and products to complete the Kubernetes in the orchestration space.
-Having said that, the top three cloud provides, have come up with their own version of managed Kubernetes offerings:
-Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon Elastic Kubernetes Service (EKS) Google Cloud offers the Google Kubernetes Engine (GKE) What is Amazon EKS?]]></description>
 </item>
 </channel>
 </rss>

@@ -87,7 +87,7 @@ In-depth networking knowledge is not required. If you know what an IP address is
  
 ## Why did I take this course? 
 
-I come from the Networking background.  worked for Red Hat for about four years before moving on to Cloudera. During that time, I spent a significant amount of time on networking and began working with containers and kubernetes. I could therefore relate to Project calico's products and solutions because I was familiar with networking, cloud native, and containers. This made me want to explore Calico's cloud-native based open source solution on networking kubernetes.
+I come from the Networking background. Worked for Red Hat for about four years before moving on to Cloudera. During that time, I spent a significant amount of time on networking and began working with containers and kubernetes. I could therefore relate to Project calico's products and solutions because I was familiar with networking, cloud native, and containers. This made me want to explore Calico's cloud-native based open source solution on networking kubernetes.
  
 ## Taking the course: 
 

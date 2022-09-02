@@ -58,5 +58,5 @@ Stay tuned to learn more about its configuration in the next blog
 
 <br/>
 
-*[Parth Goswami](https://www.linkedin.com/in/parth-goswami/) is an opensource enthusiasts and likes to talk abot AWS and cloud computing.*
+*[Parth Goswami](https://www.linkedin.com/in/parth-goswami/) is an opensource enthusiasts and likes to talk about AWS and cloud computing.*
 
