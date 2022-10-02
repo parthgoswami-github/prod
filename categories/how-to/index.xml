@@ -4,18 +4,7 @@
         <link>https://www.parthgoswami.com/categories/how-to/</link>
         <description>How-to - Category - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/categories/how-to/" rel="self" type="application/rss+xml" /><item>
-    <title>Red Hat Pass Offerings</title>
-    <link>https://www.parthgoswami.com/redhat_pass_offerings/</link>
-    <pubDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/redhat_pass_offerings/</guid>
-    <description><![CDATA[OCP (Openshift Container Platform): Openshift is a Kubernetes Platform-as-a-Service (PAAS) which is fully managed service by Red Hat.
-Openshift focuses on managing applications and not containers. As Kubernetes falls under Container as a Service (CAAS) which helps in managing containers and Openshift helps in managing applications.
-Openshift runs above Kubernetes as we deploy applications into containers.
-As Openshift helps in developing, deploying and managing container based application, it also provides self-service platform to create, modify and deploy applications on demand, enabling faster development.]]></description>
-</item>
-<item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/categories/how-to/" rel="self" type="application/rss+xml" /><item>
     <title>Certified Calico Operator: Level1</title>
     <link>https://www.parthgoswami.com/certified-calico-operator/</link>
     <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
@@ -104,6 +93,15 @@ Slack is a channel-based messaging platform. With Slack, people can work togethe
             </div>Amazon S3 is used to store any amount of data of object type such as static websites, documents, images, videos and backup files as well. This data can be retrieved at any time from anywhere on the web.
 Inside S3 you create Buckets to store your objects/data. You can create multiple buckets in any region and it stores data upto 5TB.
 After you create buckets and upload objects in Amazon S3, you can manage your object storage using below features:]]></description>
+</item>
+<item>
+    <title>Configuring a custom VPC</title>
+    <link>https://www.parthgoswami.com/configuring_vpc/</link>
+    <pubDate>Mon, 18 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange and Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/configuring_vpc/</guid>
+    <description><![CDATA[In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
+Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it.]]></description>
 </item>
 </channel>
 </rss>

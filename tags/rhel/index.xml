@@ -4,18 +4,7 @@
         <link>https://www.parthgoswami.com/tags/rhel/</link>
         <description>RHEL - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/rhel/" rel="self" type="application/rss+xml" /><item>
-    <title>Red Hat Pass Offerings</title>
-    <link>https://www.parthgoswami.com/redhat_pass_offerings/</link>
-    <pubDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/redhat_pass_offerings/</guid>
-    <description><![CDATA[OCP (Openshift Container Platform): Openshift is a Kubernetes Platform-as-a-Service (PAAS) which is fully managed service by Red Hat.
-Openshift focuses on managing applications and not containers. As Kubernetes falls under Container as a Service (CAAS) which helps in managing containers and Openshift helps in managing applications.
-Openshift runs above Kubernetes as we deploy applications into containers.
-As Openshift helps in developing, deploying and managing container based application, it also provides self-service platform to create, modify and deploy applications on demand, enabling faster development.]]></description>
-</item>
-<item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 11 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/rhel/" rel="self" type="application/rss+xml" /><item>
     <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
     <link>https://www.parthgoswami.com/ansible_sd/</link>
     <pubDate>Sat, 11 Jun 2022 00:00:00 &#43;0000</pubDate>

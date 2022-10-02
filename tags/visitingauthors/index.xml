@@ -4,18 +4,7 @@
         <link>https://www.parthgoswami.com/tags/visitingauthors/</link>
         <description>VisitingAuthors - Tag - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/visitingauthors/" rel="self" type="application/rss+xml" /><item>
-    <title>Red Hat Pass Offerings</title>
-    <link>https://www.parthgoswami.com/redhat_pass_offerings/</link>
-    <pubDate>Fri, 02 Sep 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/redhat_pass_offerings/</guid>
-    <description><![CDATA[OCP (Openshift Container Platform): Openshift is a Kubernetes Platform-as-a-Service (PAAS) which is fully managed service by Red Hat.
-Openshift focuses on managing applications and not containers. As Kubernetes falls under Container as a Service (CAAS) which helps in managing containers and Openshift helps in managing applications.
-Openshift runs above Kubernetes as we deploy applications into containers.
-As Openshift helps in developing, deploying and managing container based application, it also provides self-service platform to create, modify and deploy applications on demand, enabling faster development.]]></description>
-</item>
-<item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/visitingauthors/" rel="self" type="application/rss+xml" /><item>
     <title>Docker containers using Ansible on AWS</title>
     <link>https://www.parthgoswami.com/docker_containters_ansibleaws/</link>
     <pubDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</pubDate>
@@ -103,6 +92,15 @@ In this article, I will be discussing how networking works in the cloud computin
     <guid>https://www.parthgoswami.com/cloudfront/</guid>
     <description><![CDATA[In this article, we will see what AWS CloudFront is and in what scenario it is used. We will also take a look on some of its advantages and what edge locations are.
 Let’s consider an example where the user is searching for a website suppose www.primevideo.com and their request and response time should experience least latency. Now, if the amazon server is in the US and the user accessing prime video website is from California so they will experience less latency i.]]></description>
+</item>
+<item>
+    <title>How to configure AWS Rekognition and AWS Transcoder</title>
+    <link>https://www.parthgoswami.com/aws_rekognition/</link>
+    <pubDate>Tue, 14 Sep 2021 00:00:00 &#43;0000</pubDate>
+    <author>Shreya Dhange</author>
+    <guid>https://www.parthgoswami.com/aws_rekognition/</guid>
+    <description><![CDATA[Consider a scenerio: We have setup a VPC for the instances which are in the same range. The Public instance is having an internet connection and Private instance does not having an internet connection.
+Inside Public instance we have S3 bucket endpoint to which users will have the access to upload/download images and videos. The EC2 instances have an ELB (Elastic Load Balancer) attached with an Alarm set to it.]]></description>
 </item>
 </channel>
 </rss>
