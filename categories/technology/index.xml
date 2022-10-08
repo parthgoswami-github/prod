@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>technology - Category - Parth Goswami</title>
+        <title>technology - Category - Parth&#39;s Blog - Parth Goswami</title>
         <link>https://www.parthgoswami.com/categories/technology/</link>
-        <description>technology - Category - Parth Goswami</description>
+        <description>technology - Category - Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
             <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/categories/technology/" rel="self" type="application/rss+xml" /><item>
     <title>Certified Calico Operator: Level1</title>
