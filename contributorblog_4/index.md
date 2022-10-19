@@ -5,6 +5,9 @@ We have many diverse contributors in opensource that help upstream communities i
 
 For this month’s edition, we talked about Ambassadorships, participating in Forums and writing Tech Blogs and  with Geoff Burke.
 
+<a href="/images/unconventionalcontributors/contributor_4/contributor_4.png" target="_blank"><img src="/images/unconventionalcontributors/contributor_4/contributor_4.png" width="300px" align="right" /></a>
+
+
 <br/>
 
 **Thank you for taking some time out and interacting with us, Geoff. Can you introduce yourself and share your journey so far?**
@@ -49,6 +52,9 @@ Later, fast forward to 2013-14, when I started working with RnD forums, I was on
 I then saw that Calico was asking for ambassadors. Since I always enjoyed working on Calico, I gave it a try. Another thing that I often stress upon is that while writing blogs, answering questions on forums, or while helping people, you become more solid. Your experience gets wider because people are having problems and are asking questions in different areas which you might not have seen. It's a very fulfilling thing. It is by no means a one-way street. People think that you are contributing all just for free. But you do get a lot in return. It’s subtle, but over a long period of time, you can tell you are growing stronger in your domain, the people around you become stronger and everybody wins at the end of the day. 
 
 <br/>
+
+<a href="/images/ccol1/kubecuddle.png" target="_blank"><img src="/images/ccol1/kubecuddle.png" width="300px" align="right" /></a>
+
 
 **Have you ever worked with Calico products before becoming an ambassador?**
 <br/>
@@ -119,6 +125,9 @@ I had read about Michael before because he was big in the VM world and he was an
 <br/>
 
 I think one thing they could do is to work closely with Alara because she sees the full picture of what everyone's doing. And again going back to what I said before, there are people with different skill sets, different roles, different abilities and so she can help the new ambassadors if they're not sure of what to do. Apart from that, again I go back to saying try to learn the product more because it's important. It doesn't mean that you have to go out and do an expert talk. Remember we're not replacing sales engineers at Calico. They are the people who are in direct contact with developers, they have all the secrets. Our job is to share what we know in our communities and our connections to spread the word. So I think that the big thing is to find something you're comfortable with, discuss it with Alara and then just go forward and have fun. 
+
+![](/images/ccol1/bigcat.png)
+
 
 <br/>
 
