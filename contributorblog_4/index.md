@@ -5,8 +5,6 @@ We have many diverse contributors in opensource that help upstream communities i
 
 For this month’s edition, we talked about Ambassadorships, participating in Forums and writing Tech Blogs and  with Geoff Burke.
 
-<a href="/images/unconventionalcontributors/contributor_4/contributor_4.png" target="_blank"><img src="/images/unconventionalcontributors/contributor_4/contributor_4.png" width="300px" align="right" /></a>
-
 
 <br/>
 
@@ -16,6 +14,9 @@ For this month’s edition, we talked about Ambassadorships, participating in Fo
 My name is Geoff Burke. I've been in I.T for 20 years and I’ve been mainly dealing with data protection for the last 13 years, originally starting with protecting physical machines then virtual machines and recently have started working on containers and Kubernetes.
 
 While exploring Kubernetes, I thought of setting it up over a weekend, but that didn't happen obviously because I had assumed, with all my experience, it would be easy. But it wasn't. I quickly just leveraged Docker Swarm because it was a lot more simple, only to realize that the complexity of kubernetes also created enormous flexibility and enormous capabilities. I ended up doing all the related certification exams [CNA, CKAD, CKA and CKS] which were very difficult and challenging.
+
+<a href="/images/unconventionalcontributors/contributor_4/contributor_4.png" target="_blank"><img src="/images/unconventionalcontributors/contributor_4/contributor_4.png" width="300px" align="right" /></a>
+
 
 Right now, I’m trying to move my focus totally towards kubernetes which is a bit of a challenge. I also believe this might be a challenge for a lot of people out there, hence, I'm very interested in helping people out because I realize that there are going to be a lot of people who are going to have to take these steps, like I did. Especially those who have already established themselves as virtual machines administrators and now have to make this big change of stepping into container orchestration. 
 
@@ -53,13 +54,14 @@ I then saw that Calico was asking for ambassadors. Since I always enjoyed workin
 
 <br/>
 
-<a href="/images/ccol1/kubecuddle.png" target="_blank"><img src="/images/ccol1/kubecuddle.png" width="300px" align="right" /></a>
-
 
 **Have you ever worked with Calico products before becoming an ambassador?**
 <br/>
 
 Calico ambassadors are known as Calico Big Cats. I became the Calico Big Cat in June 2021.  Along with my kubernetes exam preparation, at my present and previous company, I was constantly creating demo setups on kubernetes. Now, the problem here in Canada is that Europe has gone a bit further ahead with kubernetes. North America is moving there but it's a little bit slower. The companies, especially service providers, are worried about missing the Kubernetes bus. 
+
+<a href="/images/ccol1/kubecuddle.png" target="_blank"><img src="/images/ccol1/kubecuddle.png" width="300px" align="right" /></a>
+
 
 So, I create a lot of test clusters to perform demos and workshops and I always use Calico. I use it because it was easier for me to install, the documentation is clear, and then I  took a couple of free Calico certification exams, which I liked very much. Since I haven’t done much on Azure, I failed 3 times while taking the Azure exam. And that’s what I liked about these certifications. Even though they are open book, they make you prepare and work hard for it. 
 
