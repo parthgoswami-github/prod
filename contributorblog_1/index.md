@@ -86,7 +86,7 @@ I'd like to thank Prathamesh for his time and an enlightening conversation. I wi
 _________________
 
 
-This blog post is part of the June edition of [UnconventionalContributors](http://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. Thank you for reading our first Contributor Blog. Don't forget to check out the next one featuring [Priyanka Pandey, Manager with the Support Delivery team at Red Hat](https://www.parthgoswami.com/contributorblog_2/) 
+This blog post is part of the June edition of [UnconventionalContributors](http://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. Thank you for reading our first Contributor Blog. Don't forget to check out the next one featuring [Priyanka Pandey](https://www.parthgoswami.com/contributorblog_2/), Manager with the Support Delivery team at Red Hat.  
 <br/>
 
 Have a story to share? We'd be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community's growth.

@@ -109,7 +109,7 @@ I will leave you all with my favorite takeaway from this interview..
 
 _________________
 
-This blog post is part of the August edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. If you like this article, check out the [stories of our other contributors](https://www.parthgoswami.com/categories/unconventionalcontributors/) and stay tuned for our upcoming editions.
+This blog post is part of the August edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. Don't forget to check out the next one featuring [Geoff Burke](https://www.parthgoswami.com/contributorblog_4/), Senior Cloud Solutions Architect at Tsunati.
 
 Have a story to share? We’d be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community’s growth.
 
