@@ -36,7 +36,7 @@ I got introduced to open source products through various linux distros. I starte
 **What product(s)have you contributed to?**
 <br/>
 
-I am mainly engaged with and contributing to communities more than the product itself. I have been writing lots of posts, beginner posts for people to learn. I also run a YouTube show. [Alara Ozturk](https://www.linkedin.com/in/alara-ozturk-299936106/) from Calico was my recent guest.  Even though I've taken all the exams relevant to my roles, I still consider myself to be in a learning mode because I don't have enough production experience. 
+I am mainly engaged with and contributing to communities more than the product itself. I have been writing lots of posts, beginner posts for people to learn. I also run a [YouTube show](https://www.youtube.com/channel/UC4mrp3YgPxtIT3xdPi918_w/videos). [Alara Ozturk](https://www.linkedin.com/in/alara-ozturk-299936106/) from Calico was my recent guest.  Even though I've taken all the exams relevant to my roles, I still consider myself to be in a learning mode because I don't have enough production experience. 
 
 I think the big chunk of learning is the theory, which is covered while preparing for the exams, but then a huge chunk is the experience. Both theory and experience is necessary and if you don't have either, you don't consider yourself an expert. While the Calico ambassadorships are recent and relatively new, I have also participated in IBM’s TSM Fastback forums back then. While doing all of this, I realized that teaching other people also solidifies your own knowledge.
 
@@ -117,16 +117,16 @@ Thinking about having the title makes you happy every time if you're having a ba
 **Recommend one unconventional contributor whom you admire and tell us more about them.**
 <br/>
 
-Michael Cade is someone I have enormous respect for. He produced a  blog series this year titled ‘90 days of Devops’ which has gained a lot of attention. Michael also comes from the data protection world and was firmly settled in Virtualization but has made an astounding journey into DevOps.
+[Michael Cade](https://twitter.com/MichaelCade1) is someone I have enormous respect for. He produced a  blog series this year titled [90DaysofDevOps](https://github.com/MichaelCade/90DaysOfDevOps) which has gained a lot of attention. Michael also comes from the data protection world and was firmly settled in Virtualization but has made an astounding journey into DevOps.
 
-I had read about Michael before because he was big in the VM world and he was an excellent contributor. I came in contact with him and was shocked to see that he had no background in kubernetes and in a year he was able to produce the [90 days of devops](). Now, his job was not to become an expert in CNI or in CSI storage, his job was at the evangelist level, to get an understanding about the subject and to be able to produce something. People who were in the devops world read the content and found it excellent. He was not going deep, he was shallow but he was going into every important area just enough and he got on the list of most important people like [Kesley Hightower](https://twitter.com/kelseyhightower). I also found it impressive that he has no ego, he doesn't show off. He is just one that I know very well so it is easy for me to talk about some aspects of his work and personality that I found to be something I try to follow.
+I had read about Michael before because he was big in the VM world and he was an excellent contributor. I came in contact with him and was shocked to see that he had no background in kubernetes and in a year he was able to produce the 90DaysofDevOps. Now, his job was not to become an expert in CNI or in CSI storage, his job was at the evangelist level, to get an understanding about the subject and to be able to produce something. People who were in the devops world read the content and found it excellent. He was not going deep, he was shallow but he was going into every important area just enough and he got on the list of most important people like [Kesley Hightower](https://twitter.com/kelseyhightower). I also found it impressive that he has no ego, he doesn't show off. He is just one that I know very well so it is easy for me to talk about some aspects of his work and personality that I found to be something I try to follow.
 
 <br/>
 
 **Any word of advice for the upcoming Calico Big Cats? In what ways can they contribute?**
 <br/>
 
-I think one thing they could do is to work closely with Alara because she sees the full picture of what everyone's doing. And again going back to what I said before, there are people with different skill sets, different roles, different abilities and so she can help the new ambassadors if they're not sure of what to do. Apart from that, again I go back to saying try to learn the product more because it's important. It doesn't mean that you have to go out and do an expert talk. Remember we're not replacing sales engineers at Calico. They are the people who are in direct contact with developers, they have all the secrets. Our job is to share what we know in our communities and our connections to spread the word. So I think that the big thing is to find something you're comfortable with, discuss it with Alara and then just go forward and have fun. 
+I think one thing they could do is to work closely with [Alara](https://twitter.com/alara_ozt) because she sees the full picture of what everyone's doing. And again going back to what I said before, there are people with different skill sets, different roles, different abilities and so she can help the new ambassadors if they're not sure of what to do. Apart from that, again I go back to saying try to learn the product more because it's important. It doesn't mean that you have to go out and do an expert talk. Remember we're not replacing sales engineers at Calico. They are the people who are in direct contact with developers, they have all the secrets. Our job is to share what we know in our communities and our connections to spread the word. So I think that the big thing is to find something you're comfortable with, discuss it with Alara and then just go forward and have fun. 
 
 ![](/images/ccol1/bigcat.png)
 
@@ -139,6 +139,15 @@ I will leave you all with my favorite takeaway from this interview..
 
 ###### You need appropriate time for your contributions so that you know what is going to be for the evangelist stuff, for the ambassador stuff. You have to be able to organize and you have to make sure you're involved.
 
+<br/>
+
+## Resources
+
+- **Geoff's Blogsite**  | http://geoffburkeblog.com/
+- **90DaysofDevOps** | https://github.com/MichaelCade/90DaysOfDevOps
+- **The power of technical communities Calico study case** | https://youtu.be/akxqyLAh6G0
+- **The Kube Vanguard** | https://www.youtube.com/channel/UC4mrp3YgPxtIT3xdPi918_w/videos
+- **Calico Big Cats**  | https://www.tigera.io/blog/introducing-our-exciting-new-ambassador-program-calico-big-cats/
 
 <br/>
 <br/>
