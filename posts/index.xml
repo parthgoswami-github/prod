@@ -4,7 +4,15 @@
         <link>https://www.parthgoswami.com/posts/</link>
         <description>All Posts | Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Wed, 21 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Deploying Jenkins slave using docker containers</title>
+    <link>https://www.parthgoswami.com/jenkins_docker_master_slave/</link>
+    <pubDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Nihal Shah</author>
+    <guid>https://www.parthgoswami.com/jenkins_docker_master_slave/</guid>
+    <description><![CDATA[While exploring Jenkins, I came across a usecase wherein I wanted to make use of Jenkins slave to build some of my jobs. So after exploring I found out a way wherein we can deploy Jenkins slave as containers. Once the job is complete, the containers will be destroyed, thus releasing the resources. This removes the dependency to have extra VM&rsquo;s or need for more storage to accomodate the jobs.]]></description>
+</item>
+<item>
     <title>Contributor Blog #4: Interview with Geoff Burke</title>
     <link>https://www.parthgoswami.com/contributorblog_4/</link>
     <pubDate>Wed, 21 Sep 2022 00:00:00 &#43;0000</pubDate>
@@ -88,15 +96,6 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
                 <img src="/images/rkshirsa/kubecon_exp/kubecon_group.png" referrerpolicy="no-referrer">
             </div>KubeCon + CloudNativeCon in Barcelona, Spain (from 20 to 23rd May 2019) was my first international conference invite. KubeCon is kind of a conference where you will meet all cloud-native enthusiasts, researchers, engineers and everyone working to build cloud-native applications easier. I applied for a Diversity Scholarship and fortunately, I was amongst the 56 people selected to be a part of KubeCon 2019 at Barcelona.
 In KubeCon, you get to be a part of Keynotes, breakout sessions and get to attend co-located workshops, panel discussions and many more events.]]></description>
-</item>
-<item>
-    <title>Dockerizing LAMP Stack Application</title>
-    <link>https://www.parthgoswami.com/dockerizing_lamp_stack_app/</link>
-    <pubDate>Mon, 06 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Vrinda Hegde</author>
-    <guid>https://www.parthgoswami.com/dockerizing_lamp_stack_app/</guid>
-    <description><![CDATA[Let us create a dockerfile for deploying the application. In this dockerfile we will use ubuntu image as the base image and then install apache and php above it. Then we will create a MYSQL container which will be connected to our application.
-Below is the Dockerfile snippet: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 # Dockerfile for LAMP Stack installation # Ubuntu 18.]]></description>
 </item>
 </channel>
 </rss>

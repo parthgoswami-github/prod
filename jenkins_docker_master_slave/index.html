@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Deploying Jenkins slave using docker containers - Parth&#39;s Blog - Parth Goswami</title><meta name="Description" content="A platform for the community, by the community"><meta property="og:title" content="Deploying Jenkins slave using docker containers" />
+<meta property="og:description" content="While exploring Jenkins, I came across a usecase wherein I wanted to make use of Jenkins slave to build some of my jobs. So after exploring I found out a way wherein we can deploy Jenkins slave as containers. Once the job is complete, the containers will be destroyed, thus releasing the resources. This removes the dependency to have extra VM&rsquo;s or need for more storage to accomodate the jobs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/jenkins_docker_master_slave/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-12T00:00:00+00:00" /><meta property="og:site_name" content="Parth Goswami" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="Deploying Jenkins slave using docker containers"/>
+<meta name="twitter:description" content="While exploring Jenkins, I came across a usecase wherein I wanted to make use of Jenkins slave to build some of my jobs. So after exploring I found out a way wherein we can deploy Jenkins slave as containers. Once the job is complete, the containers will be destroyed, thus releasing the resources. This removes the dependency to have extra VM&rsquo;s or need for more storage to accomodate the jobs."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/jenkins_docker_master_slave/" /><link rel="prev" href="https://www.parthgoswami.com/contributorblog_4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Deploying Jenkins slave using docker containers",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/jenkins_docker_master_slave\/"
+        },"genre": "posts","keywords": "How-to, technology, jenkins, docker, NihalShah, VisitingAuthors","wordcount":  564 ,
+        "url": "https:\/\/www.parthgoswami.com\/jenkins_docker_master_slave\/","datePublished": "2022-11-12T00:00:00+00:00","dateModified": "2022-11-12T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Nihal Shah"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth&#39;s Blog - Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth&#39;s Blog - Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Deploying Jenkins slave using docker containers</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/nihal-shah-619469153" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Nihal Shah</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-12">2022-11-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;564 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>While exploring Jenkins, I came across a usecase wherein I wanted to make use of Jenkins slave to build some of my jobs. So after exploring I found out a way wherein we can deploy Jenkins slave as containers. Once the job is complete, the containers will be destroyed, thus releasing the resources. This removes the dependency to have extra VM&rsquo;s or need for more storage to accomodate the jobs.</p>
+<p>This article is based on configurations tried and tested on MAC. For other environments, you need to make appropriate changes on Step B.</p>
+<br/>
+<p><b>Assumptions :</b></p>
+<ol>
+<li>You have Jenkins Master already installed on docker as a container. If not you can use the following command to launch the jenkins container.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run --name jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><b>Note</b> : Complete the installation with all the plugins.</p>
+<br/>
+<p>Follow below <b>Steps</b> to setup jenkins build agents :</p>
+<p>A. You need to expose the docker api, so that the jenkins can launch the jenkins build agent to complete it&rsquo;s jobs. You can use the following command to expose the docker API to be used,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -d --restart=always -p 127.0.0.1:2376:2375 -v /var/run/docker.sock:/var/run/docker.sock alpine/socat tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<p>B. Once the above command is ran, you can check if the docker api is actually exposed to be used. Login to jenkins container and run the below command,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker exec &lt;container-name&gt; curl http://docker.for.mac.localhost:2376/v1.41/info
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<p>C. Once you get an output, you need to install a plugin on Jenkins called Docker.</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/nihalshah/jenkins/image1.png" title=" " data-thumbnail="/images/nihalshah/jenkins/image1.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/nihalshah/jenkins/image1.png"
+            data-srcset="/images/nihalshah/jenkins/image1.png, /images/nihalshah/jenkins/image1.png 1.5x, /images/nihalshah/jenkins/image1.png 2x"
+            data-sizes="auto"
+            alt="/images/nihalshah/jenkins/image1.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure>
+<br/></p>
+<p>D. Next you need to configure the jenkins build agent ( slave ) templates. Navigate to Manage Jenkins &ndash;&gt; Manage Nodes and Clouds &ndash;&gt; Configure Clouds
+You will see following screen,
+<figure><a class="lightgallery" href="/images/nihalshah/jenkins/image2.png" title=" " data-thumbnail="/images/nihalshah/jenkins/image2.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/nihalshah/jenkins/image2.png"
+            data-srcset="/images/nihalshah/jenkins/image2.png, /images/nihalshah/jenkins/image2.png 1.5x, /images/nihalshah/jenkins/image2.png 2x"
+            data-sizes="auto"
+            alt="/images/nihalshah/jenkins/image2.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p><strong>Note</strong> : You will only see Add a new cloud option.</p>
+<br/>
+<p>E. Once you navigated to above location, click on Add a new cloud &ndash;&gt; Select Docker &ndash;&gt; Then click on Docker Cloud details and configure the following settings,
+Docker Host URI : tcp://docker.for.mac.host.internal:2376
+Enabled : Select the option</p>
+<br/>
+<p>F. Now you can see the Test Connection option, please click on it and you should see the version of docker installed,</p>
+<br/>
+<p><figure><a class="lightgallery" href="/images/nihalshah/jenkins/image3.png" title=" " data-thumbnail="/images/nihalshah/jenkins/image3.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/nihalshah/jenkins/image3.png"
+            data-srcset="/images/nihalshah/jenkins/image3.png, /images/nihalshah/jenkins/image3.png 1.5x, /images/nihalshah/jenkins/image3.png 2x"
+            data-sizes="auto"
+            alt="/images/nihalshah/jenkins/image3.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p>If you got the ouput on step B, then you shouldn&rsquo;t face any issues.</p>
+<br/>
+<p>G. Next we need to configure the Docker Agent templates, this template will be used by Jenkins to launch the Jenkins build agent container.</p>
+<ol>
+<li><b>Label</b> : If you need to schedule a particular job to run on particular jenkins slave node.</li>
+<li><b>Enabled</b> : Select the option, so that jenkins can auto launch the containers when it needs to run the job</li>
+<li><b>Name</b> : Can be anything as per your preference</li>
+<li><b>Docker Image</b> : jenkins/agent &ndash;&gt; Preferred image for launching the container. There is another image called jenkins/slave but it has some issues, so it&rsquo;s best to go with jenkins/agent</li>
+<li><b>Registry Authentication</b> : Use the creds you use to login to registry. The creds you use to login to hub.docker.com</li>
+<li><b>Remote File System Root</b> : Basically the path where you job would run</li>
+<li><b>Connect method</b> : Attach docker container
+Done this would setup the agent template.</li>
+</ol>
+<p>Once above settings are done, you are good to run the job using jenkin build agent on docker container.
+I hope you liked the article. Cheers!</p>
+<hr>
+<br/>
+<p><em>Nihal Shah is a Devops engineer who loves to explore new tools and automate different processes for ease of use. He can be reached out on <a href="https://www.linkedin.com/in/nihal-shah-619469153" target="_blank" rel="noopener noreffer ">LinkedIn</a>, <a href="https://twitter.com/nihalshah9?t=a6xKhOgsQs_b1-I6tjxO_Q&amp;s=08" target="_blank" rel="noopener noreffer ">Twitter</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=nihals175@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-11-12</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/jenkins_docker_master_slave/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/jenkins_docker_master_slave/" data-title="Deploying Jenkins slave using docker containers" data-via="parthtwts" data-hashtags="How-to,technology,jenkins,docker,NihalShah,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/jenkins_docker_master_slave/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/jenkins_docker_master_slave/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/jenkins_docker_master_slave/" data-title="Deploying Jenkins slave using docker containers" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.parthgoswami.com/jenkins_docker_master_slave/" data-title="Deploying Jenkins slave using docker containers"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/jenkins_docker_master_slave/" data-title="Deploying Jenkins slave using docker containers"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/jenkins_docker_master_slave/" data-title="Deploying Jenkins slave using docker containers"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/technology/">technology</a>,&nbsp;<a href="/tags/jenkins/">jenkins</a>,&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/nihalshah/">NihalShah</a>,&nbsp;<a href="/tags/visitingauthors/">VisitingAuthors</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/contributorblog_4/" class="prev" rel="prev" title="Contributor Blog #4: Interview with Geoff Burke"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Contributor Blog #4: Interview with Geoff Burke</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

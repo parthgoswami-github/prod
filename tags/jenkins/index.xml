@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>jenkins - Tag - Parth&#39;s Blog - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/jenkins/</link>
+        <description>jenkins - Tag - Parth&#39;s Blog - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/jenkins/" rel="self" type="application/rss+xml" /><item>
+    <title>Deploying Jenkins slave using docker containers</title>
+    <link>https://www.parthgoswami.com/jenkins_docker_master_slave/</link>
+    <pubDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Nihal Shah</author>
+    <guid>https://www.parthgoswami.com/jenkins_docker_master_slave/</guid>
+    <description><![CDATA[While exploring Jenkins, I came across a usecase wherein I wanted to make use of Jenkins slave to build some of my jobs. So after exploring I found out a way wherein we can deploy Jenkins slave as containers. Once the job is complete, the containers will be destroyed, thus releasing the resources. This removes the dependency to have extra VM&rsquo;s or need for more storage to accomodate the jobs.]]></description>
+</item>
+</channel>
+</rss>

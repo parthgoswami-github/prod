@@ -4,7 +4,15 @@
         <link>https://www.parthgoswami.com/tags/technology/</link>
         <description>technology - Tag - Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/technology/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/technology/" rel="self" type="application/rss+xml" /><item>
+    <title>Deploying Jenkins slave using docker containers</title>
+    <link>https://www.parthgoswami.com/jenkins_docker_master_slave/</link>
+    <pubDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Nihal Shah</author>
+    <guid>https://www.parthgoswami.com/jenkins_docker_master_slave/</guid>
+    <description><![CDATA[While exploring Jenkins, I came across a usecase wherein I wanted to make use of Jenkins slave to build some of my jobs. So after exploring I found out a way wherein we can deploy Jenkins slave as containers. Once the job is complete, the containers will be destroyed, thus releasing the resources. This removes the dependency to have extra VM&rsquo;s or need for more storage to accomodate the jobs.]]></description>
+</item>
+<item>
     <title>Docker containers using Ansible on AWS</title>
     <link>https://www.parthgoswami.com/docker_containters_ansibleaws/</link>
     <pubDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</pubDate>
@@ -90,15 +98,6 @@ Leaving services running in cloud computing can escalate your bill quickly, henc
     <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
 Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
 In this article, I will be discussing how networking works in the cloud computing.]]></description>
-</item>
-<item>
-    <title>How AWS CloudFront works?</title>
-    <link>https://www.parthgoswami.com/cloudfront/</link>
-    <pubDate>Sun, 21 Nov 2021 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/cloudfront/</guid>
-    <description><![CDATA[In this article, we will see what AWS CloudFront is and in what scenario it is used. We will also take a look on some of its advantages and what edge locations are.
-Let’s consider an example where the user is searching for a website suppose www.primevideo.com and their request and response time should experience least latency. Now, if the amazon server is in the US and the user accessing prime video website is from California so they will experience less latency i.]]></description>
 </item>
 </channel>
 </rss>
