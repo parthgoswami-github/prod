@@ -4,7 +4,17 @@
         <link>https://www.parthgoswami.com/tags/technology/</link>
         <description>technology - Tag - Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/technology/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/technology/" rel="self" type="application/rss+xml" /><item>
+    <title>What is DNS?</title>
+    <link>https://www.parthgoswami.com/dns/</link>
+    <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Gaurav Kale</author>
+    <guid>https://www.parthgoswami.com/dns/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/visiting_authors/gaurav_kale/dns/dns_1.png" referrerpolicy="no-referrer">
+            </div>Domain Name System With over 8 billion cellphones worldwide (not including other devices), it is hard to correctly recall everyone&rsquo;s names and contact information. Because of this, the Domain Name System—or more precisely, the Phone Directory for IP Addresses—was introduced. However, due to the memory limitations of the human brain, we are unable to recall all of these billions of IP addresses. In order to make it easier to remember names, we began referring to these IP addresses by names, which are simply the website names that we type into the address bar of a browser.]]></description>
+</item>
+<item>
     <title>Deploying Jenkins slave using docker containers</title>
     <link>https://www.parthgoswami.com/jenkins_docker_master_slave/</link>
     <pubDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</pubDate>
@@ -88,16 +98,6 @@ After you create buckets and upload objects in Amazon S3, you can manage your ob
     <guid>https://www.parthgoswami.com/configuring_vpc/</guid>
     <description><![CDATA[In the previous article, we learned what VPC is, how does it work and what are its benefits. AWS provides a pre-configured to launch our instances, however, the best practice is to create your own custom VPC per your requirements and organization&rsquo;s network and security policies and launch your instances in the custom VPC. In this article, we will discuss how to configure your own custom VPC.
 Leaving services running in cloud computing can escalate your bill quickly, hence, it is equally important to understand how to delete the resources once you are done using it.]]></description>
-</item>
-<item>
-    <title>How does VPC work?</title>
-    <link>https://www.parthgoswami.com/decoding_vpc/</link>
-    <pubDate>Fri, 11 Mar 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange and Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/decoding_vpc/</guid>
-    <description><![CDATA[If you start from the bare metal layer and go right up until the container layer through virtualization, base OS and the container engine, you would notice that networking runs throughout the stack.
-Networking is the backbone of any infrastructure. Hence, understanding the networking concepts becomes very important and if we are talking about cloud computing, it becomes ever more important.
-In this article, I will be discussing how networking works in the cloud computing.]]></description>
 </item>
 </channel>
 </rss>

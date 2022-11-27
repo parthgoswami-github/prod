@@ -4,7 +4,17 @@
         <link>https://www.parthgoswami.com/posts/</link>
         <description>All Posts | Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>What is DNS?</title>
+    <link>https://www.parthgoswami.com/dns/</link>
+    <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Gaurav Kale</author>
+    <guid>https://www.parthgoswami.com/dns/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/visiting_authors/gaurav_kale/dns/dns_1.png" referrerpolicy="no-referrer">
+            </div>Domain Name System With over 8 billion cellphones worldwide (not including other devices), it is hard to correctly recall everyone&rsquo;s names and contact information. Because of this, the Domain Name System—or more precisely, the Phone Directory for IP Addresses—was introduced. However, due to the memory limitations of the human brain, we are unable to recall all of these billions of IP addresses. In order to make it easier to remember names, we began referring to these IP addresses by names, which are simply the website names that we type into the address bar of a browser.]]></description>
+</item>
+<item>
     <title>Deploying Jenkins slave using docker containers</title>
     <link>https://www.parthgoswami.com/jenkins_docker_master_slave/</link>
     <pubDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</pubDate>
@@ -83,16 +93,6 @@ Create AWS EC2 instances (master and slave) Update the security group of slave e
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/contributorblog_1/</guid>
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
-</item>
-<item>
-    <title>Managing Windows Server from Red Hat Server using Ansible on AWS EC2</title>
-    <link>https://www.parthgoswami.com/ansible_sd/</link>
-    <pubDate>Sat, 11 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/ansible_sd/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/ansible_sd/ansible_windows1.png" referrerpolicy="no-referrer">
-            </div>Pinging Windows server from Linux server where Windows server is the target node and Red Hat is the ansible server]]></description>
 </item>
 </channel>
 </rss>

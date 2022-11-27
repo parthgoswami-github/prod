@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>dns - Tag - Parth&#39;s Blog - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/dns/</link>
+        <description>dns - Tag - Parth&#39;s Blog - Parth Goswami</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/dns/" rel="self" type="application/rss+xml" /><item>
+    <title>What is DNS?</title>
+    <link>https://www.parthgoswami.com/dns/</link>
+    <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Gaurav Kale</author>
+    <guid>https://www.parthgoswami.com/dns/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/visiting_authors/gaurav_kale/dns/dns_1.png" referrerpolicy="no-referrer">
+            </div>Domain Name System With over 8 billion cellphones worldwide (not including other devices), it is hard to correctly recall everyone&rsquo;s names and contact information. Because of this, the Domain Name System—or more precisely, the Phone Directory for IP Addresses—was introduced. However, due to the memory limitations of the human brain, we are unable to recall all of these billions of IP addresses. In order to make it easier to remember names, we began referring to these IP addresses by names, which are simply the website names that we type into the address bar of a browser.]]></description>
+</item>
+</channel>
+</rss>

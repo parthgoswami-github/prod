@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>What is DNS? - Parth&#39;s Blog - Parth Goswami</title><meta name="Description" content="A platform for the community, by the community"><meta property="og:title" content="What is DNS?" />
+<meta property="og:description" content="Domain Name System With over 8 billion cellphones worldwide (not including other devices), it is hard to correctly recall everyone&rsquo;s names and contact information. Because of this, the Domain Name System—or more precisely, the Phone Directory for IP Addresses—was introduced. However, due to the memory limitations of the human brain, we are unable to recall all of these billions of IP addresses. In order to make it easier to remember names, we began referring to these IP addresses by names, which are simply the website names that we type into the address bar of a browser." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/dns/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-26T00:00:00+00:00" /><meta property="og:site_name" content="Parth Goswami" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="What is DNS?"/>
+<meta name="twitter:description" content="Domain Name System With over 8 billion cellphones worldwide (not including other devices), it is hard to correctly recall everyone&rsquo;s names and contact information. Because of this, the Domain Name System—or more precisely, the Phone Directory for IP Addresses—was introduced. However, due to the memory limitations of the human brain, we are unable to recall all of these billions of IP addresses. In order to make it easier to remember names, we began referring to these IP addresses by names, which are simply the website names that we type into the address bar of a browser."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/dns/" /><link rel="prev" href="https://www.parthgoswami.com/jenkins_docker_master_slave/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What is DNS?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/dns\/"
+        },"genre": "posts","keywords": "How-to, technology, dns, Gaurav Kale, VisitingAuthors","wordcount":  836 ,
+        "url": "https:\/\/www.parthgoswami.com\/dns\/","datePublished": "2022-11-26T00:00:00+00:00","dateModified": "2022-11-26T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Gaurav Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth&#39;s Blog - Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth&#39;s Blog - Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">What is DNS?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/gaurav-kale-74629b199" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Gaurav Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-26">2022-11-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;836 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/visiting_authors/gaurav_kale/dns/dns_1.png"
+        data-srcset="/images/visiting_authors/gaurav_kale/dns/dns_1.png, /images/visiting_authors/gaurav_kale/dns/dns_1.png 1.5x, /images/visiting_authors/gaurav_kale/dns/dns_1.png 2x"
+        data-sizes="auto"
+        alt="/images/visiting_authors/gaurav_kale/dns/dns_1.png"
+        title="/images/visiting_authors/gaurav_kale/dns/dns_1.png" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#domain-name-system">Domain Name System</a></li>
+    <li><a href="#components-and-jargons">Components and jargons</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#dns-recursor">DNS recursor</a></li>
+            <li><a href="#the-root-nameserver">The Root nameserver</a></li>
+            <li><a href="#the-top-level-domain-server-tld">The top-level domain server (TLD)</a></li>
+            <li><a href="#authoritative-nameserver">Authoritative nameserver</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#step-that-make-up-a-dns-lookup">Step that make up a DNS lookup:</a></li>
+    <li><a href="#types-of-queries">Types of Queries:</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-recursive-query">1. Recursive query</a></li>
+            <li><a href="#2-iterative-query">2. Iterative query</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="domain-name-system">Domain Name System</h2>
+<p>With over 8 billion cellphones worldwide (not including other devices), it is hard to correctly recall everyone&rsquo;s names and contact information. Because of this, the Domain Name System—or more precisely, the Phone Directory for IP Addresses—was introduced. However, due to the memory limitations of the human brain, we are unable to recall all of these billions of IP addresses. In order to make it easier to remember names, we began referring to these IP addresses by names, which are simply the website names that we type into the address bar of a browser. The task of determining which name is associated with which IP address is handled by DNS.</p>
+<p>To put it simply, it maps the Name to the available IP addresses. Everyone who uses a digital device and the internet uses DNS, or domain name system, without knowing(not that they need to) how it enables them to find the exact content they are seeking online. Take  an example that you have no idea what a phone book is. How will you remember all of the contact details of everyone you meet and try to stay in touch with? This is essential if you want to be able to reach the specific person you want to. Indeed, you can&rsquo;t do it properly, which is how the idea of a phone directory emerged.</p>
+<p>Similar to this, the digital gadgets we use every day, such as smartphones, routers, speakers, and other items that may connect to the internet, have their own naming conventions. These names are referred to as IP addresses.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/visiting_authors/gaurav_kale/dns/dns_2.png"
+        data-srcset="/images/visiting_authors/gaurav_kale/dns/dns_2.png, /images/visiting_authors/gaurav_kale/dns/dns_2.png 1.5x, /images/visiting_authors/gaurav_kale/dns/dns_2.png 2x"
+        data-sizes="auto"
+        alt="/images/visiting_authors/gaurav_kale/dns/dns_2.png"
+        title=" " /></p>
+<p>Coming to the technical part of how it works and get us the IP address, where it gets the IP address from?
+Let us first know the components and jargons that are involved in the above process.</p>
+<h2 id="components-and-jargons">Components and jargons</h2>
+<h4 id="dns-recursor">DNS recursor</h4>
+<p>The recursor might be likened to a librarian who is asked to search a library for a certain book. A server called the DNS recursor is made to take requests from client devices using software like web browsers. In most cases, the recursor is then in charge of sending further queries to respond to the client&rsquo;s DNS query.</p>
+<h4 id="the-root-nameserver">The Root nameserver</h4>
+<p>It is the first place where human readable host names are converted (resolved) into IP addresses. It can be compared to an index in a library that directs users to various book racks; often, it acts as a pointer to other, more precise locations.</p>
+<h4 id="the-top-level-domain-server-tld">The top-level domain server (TLD)</h4>
+<p>Can be compared to a particular shelf of books in a library. The final part of a hostname is hosted by this nameserver, which is the following stage in the process of locating an IP address (in the case of example.com, the TLD server is &ldquo;com&rdquo;).</p>
+<h4 id="authoritative-nameserver">Authoritative nameserver</h4>
+<p>This last nameserver can be compared to a dictionary on a shelf of books, where a name&rsquo;s definition can be found. The final stop in the nameserver query is the authoritative nameserver. The IP address for the requested hostname will be returned to the DNS Recursor (the librarian) who initiated the initial request if the authoritative name server has access to the requested record.</p>
+<h2 id="step-that-make-up-a-dns-lookup">Step that make up a DNS lookup:</h2>
+<ol>
+<li>A user types &ldquo;example.com&rdquo; into their web browser, which sends the query out over the Internet and into a DNS recursive resolver.</li>
+<li>A DNS root nameserver is then questioned by the resolver (.).</li>
+<li>The Top Level Domain (TLD) DNS server address (such as.com or.net), which holds the data for its domains, is then returned to the resolver by the root server. Our request is directed at the.com TLD while looking for example.com.</li>
+<li>After that, the resolver sends an inquiry to the.com TLD.</li>
+<li>The TLD server then replies with example.com&rsquo;s nameserver&rsquo;s IP address.</li>
+<li>The recursive resolver then queries the nameserver for the domain.</li>
+<li>The nameserver then provides the resolver with the IP address for example.com.</li>
+<li>After that, the DNS resolver replies to the web browser with the IP address of the domain that was originally requested.</li>
+</ol>
+<p>And after this, the browser is able to get the data for the website and display it to the user.</p>
+<h2 id="types-of-queries">Types of Queries:</h2>
+<h4 id="1-recursive-query">1. Recursive query</h4>
+<p>In a recursive query, a DNS client expects a DNS server (usually a DNS recursive resolver) to respond with either the requested resource record or, in the event that the resolver is unable to locate it, an error message.</p>
+<h4 id="2-iterative-query">2. Iterative query</h4>
+<p>In this case, the DNS client will let the DNS server give the best response it is able to. A referral to a DNS server authoritative for a lower level of the domain namespace will be returned if the queried DNS server does not have a match for the query name. The recommendation address will then be contacted by the DNS client. Up the query chain, this process is repeated with other DNS servers until an error or timeout happens.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/visiting_authors/gaurav_kale/dns/dns_3.png"
+        data-srcset="/images/visiting_authors/gaurav_kale/dns/dns_3.png, /images/visiting_authors/gaurav_kale/dns/dns_3.png 1.5x, /images/visiting_authors/gaurav_kale/dns/dns_3.png 2x"
+        data-sizes="auto"
+        alt="/images/visiting_authors/gaurav_kale/dns/dns_3.png"
+        title=" " /></p>
+<p>Hope this article was helpful. Happy learning :)</p>
+<hr>
+<br/>
+<p><em>Gaurav Kale can be reached out on <a href="https://www.linkedin.com/in/gaurav-kale-74629b199" target="_blank" rel="noopener noreffer ">LinkedIn</a>, <a href="https://twitter.com/kale_gauravv" target="_blank" rel="noopener noreffer ">Twitter</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=kalegaurav111@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-11-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/dns/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/dns/" data-title="What is DNS?" data-via="parthtwts" data-hashtags="How-to,technology,dns,Gaurav Kale,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/dns/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/dns/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/dns/" data-title="What is DNS?" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.parthgoswami.com/dns/" data-title="What is DNS?"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/dns/" data-title="What is DNS?"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/dns/" data-title="What is DNS?" data-image="/images/visiting_authors/gaurav_kale/dns/dns_1.png"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/technology/">technology</a>,&nbsp;<a href="/tags/dns/">dns</a>,&nbsp;<a href="/tags/gaurav-kale/">Gaurav Kale</a>,&nbsp;<a href="/tags/visitingauthors/">VisitingAuthors</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/jenkins_docker_master_slave/" class="prev" rel="prev" title="Deploying Jenkins slave using docker containers"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Deploying Jenkins slave using docker containers</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

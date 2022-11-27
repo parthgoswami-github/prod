@@ -4,7 +4,17 @@
         <link>https://www.parthgoswami.com/categories/technology/</link>
         <description>technology - Category - Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/categories/technology/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/categories/technology/" rel="self" type="application/rss+xml" /><item>
+    <title>What is DNS?</title>
+    <link>https://www.parthgoswami.com/dns/</link>
+    <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Gaurav Kale</author>
+    <guid>https://www.parthgoswami.com/dns/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/visiting_authors/gaurav_kale/dns/dns_1.png" referrerpolicy="no-referrer">
+            </div>Domain Name System With over 8 billion cellphones worldwide (not including other devices), it is hard to correctly recall everyone&rsquo;s names and contact information. Because of this, the Domain Name System—or more precisely, the Phone Directory for IP Addresses—was introduced. However, due to the memory limitations of the human brain, we are unable to recall all of these billions of IP addresses. In order to make it easier to remember names, we began referring to these IP addresses by names, which are simply the website names that we type into the address bar of a browser.]]></description>
+</item>
+<item>
     <title>Deploying Jenkins slave using docker containers</title>
     <link>https://www.parthgoswami.com/jenkins_docker_master_slave/</link>
     <pubDate>Sat, 12 Nov 2022 00:00:00 &#43;0000</pubDate>
@@ -89,18 +99,6 @@ Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon 
     <guid>https://www.parthgoswami.com/lambda_slack/</guid>
     <description><![CDATA[AWS Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code only when needed and scales automatically, from a few requests per day to thousands per second. AWS Lambda in our task is invoked using the API Gateway.
 Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work — all within a secure, enterprise-grade environment.]]></description>
-</item>
-<item>
-    <title>Amazon S3 at a glance</title>
-    <link>https://www.parthgoswami.com/s3/</link>
-    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>Shreya Dhange</author>
-    <guid>https://www.parthgoswami.com/s3/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/amazon_s3/s3_intro.png" referrerpolicy="no-referrer">
-            </div>Amazon S3 is used to store any amount of data of object type such as static websites, documents, images, videos and backup files as well. This data can be retrieved at any time from anywhere on the web.
-Inside S3 you create Buckets to store your objects/data. You can create multiple buckets in any region and it stores data upto 5TB.
-After you create buckets and upload objects in Amazon S3, you can manage your object storage using below features:]]></description>
 </item>
 </channel>
 </rss>
