@@ -60,7 +60,7 @@ Below are some of the key “building block” services which form the core of t
 
 Getting certified on AWS have great benefits and you don't have to get certified on all of them. Depending on your role/domain/aspirations, you select a specific track and prepare for accordingly. 
 
-The good thing is, AWS certificaion exams are simplified and borken down into different categories. 
+The good thing is, AWS certification exams are simplified and borken down into different categories. 
 
 - **Associate**: The associate exams are your more entry level exams, 
 - **Professional**: The professional exams build on top of the associate exams with more detail. 
