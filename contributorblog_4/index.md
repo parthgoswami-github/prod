@@ -159,7 +159,7 @@ I will leave you all with my favorite takeaway from this interview..
 
 _________________
 
-This blog post is part of the Sept edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. Don’t forget to check out the next one featuring [Gláucia Esppenchutz](https://www.parthgoswami.com/contributorblog_5/), Staff Data Engineer at Cloudera.
+This blog post is part of the Sept edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. Don’t forget to check out the next one featuring [Gláucia Esppenchutz](https://www.parthgoswami.com/contributorblog_5/), Staff Data Engineer at [Cloudera](https://www.cloudera.com/careers.html).
 
 Have a story to share? We’d be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community’s growth.
 
