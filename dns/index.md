@@ -55,5 +55,5 @@ Hope this article was helpful. Happy learning :)
 <br/>
 
 
-*Gaurav Kale can be reached out on [LinkedIn](https://www.linkedin.com/in/gaurav-kale-74629b199), [Twitter](https://twitter.com/kale_gauravv) or via [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kalegaurav111@gmail.com)*.
+*Gaurav Kale a tech enthusiast and a learner. He mostly deals with security and internet technologies and takes part in activities that can aid in promoting a better understanding of technology. In his free time, he enjoys reading books and watching movies. He can be reached out on [LinkedIn](https://www.linkedin.com/in/gaurav-kale-74629b199), [Twitter](https://twitter.com/kale_gauravv) or via [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kalegaurav111@gmail.com)*.
 
