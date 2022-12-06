@@ -3,7 +3,7 @@
 
 We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
 
-For this month’s edition, we talked about ...  with Manaswini Das.
+For this month’s edition, we talked about finding suitable projects to contribute, testing, documentation and speaking at conferences with Manaswini Das.
 
 
 <br/>
@@ -62,7 +62,8 @@ Apart from raising/solving multiple issues in open-source projects both as a par
 
 We also gave some insights about women in Python and how to get started. You can find the talk here: [https://www.facebook.com/TimesTechies/videos/204638157936414](https://www.facebook.com/TimesTechies/videos/204638157936414)
 
-In addition to this, I also help newbies get started with open source. I have mentored in open-source programs like [Google Code-In](https://codein.withgoogle.com/archive/), [Red Hat Open source contest](https://research.redhat.com/red-hat-open-source-contest/), and [GirlScript Summer of Code](https://gssoc.girlscript.tech/) for multiple cohorts. I take a lot of interest in design thinking; I often jam up with other community folks to brainstorm ideas about better UX and make technology more inclusive and diverse. I also provide 1:1 mentorship to new [Outreachy](https://www.outreachy.org/) interns by being part of informal chats in which I mostly proofread their resumes and extend opportunities they may miss out on. I also was a part of [Mentors Without Borders](https://www.mentorswithoutborders.net/) in 2020, where I mentored four underprivileged girls from Jharkhand and got them started with front-end development. I also write technical and non-technical articles on [Medium](https://manaswinidas.medium.com/)(Feel free to check them out).
+In addition to this, I also help newbies get started with open source. I have mentored in open-source programs like [Google Code-In](https://codein.withgoogle.com/archive/), [Red Hat Open source contest](https://research.redhat.com/red-hat-open-source-contest/), and [GirlScript Summer of Code](https://gssoc.girlscript.tech/) for multiple cohorts. I take a lot of interest in design thinking; I often jam up with other community folks to brainstorm ideas about better UX and make technology more inclusive and diverse. I also provide 1:1 mentorship to new [Outreachy](https://www.outreachy.org/) interns by being part of informal chats in which I mostly proofread their resumes and extend opportunities they may miss out on. I also was a part of [Mentors Without Borders](https://www.mentorswithoutborders.net/) in 2020, where I mentored four underprivileged girls from Jharkhand and got them started with front-end development. I also write technical and non-technical articles on [Medium](https://manaswinidas.medium.com/)(Feel free to check them out). I also am the lead and organiser of [Pyladies Bhubaneswar](https://twitter.com/PyladiesBbsr)(we didn’t have many sessions during the pandemic but we will be coming up with sessions soon). Feel free to checkout the Pyladies Bhuabneswar [Youtube channel](https://www.youtube.com/@bhubaneswarpyladies725/streams).
+
 
 
 <br/>
@@ -111,7 +112,16 @@ I will leave you all with my favorite takeaway from this interview..
 
 ###### Be bold in trying new things, who knows, you can be the first person to achieve something that no one from your local community has ever achieved. 
 
+<br/>
 
+## Resources
+
+- **Conference Talks**  | https://github.com/manaswinidas/conferences_talks/
+- **Manaswini's articles** | https://manaswinidas.medium.com/
+- **Good First Issues** | https://goodfirstissue.dev/
+- **Playlist of Talks** | https://www.youtube.com/playlist?list=PLAzCkRsKko5vp1pQZqrcSIP7SWAPlfeRa
+- **Mentor Without Borders**  | https://www.mentorswithoutborders.net/
+- **Outreachy** | https://www.outreachy.org/
 <br/>
 <br/>
 
