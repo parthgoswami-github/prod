@@ -110,7 +110,7 @@ Manaswini, thank you so much for taking the time to share your thoughts and expe
 
 I will leave you all with my favorite takeaway from this interview..
 
-###### Be bold in trying new things, who knows, you can be the first person to achieve something that no one from your local community has ever achieved. 
+###### Sometimes a tiny idea could make a huge difference, and keeping that small idea to yourself doesn’t help. 
 
 <br/>
 
