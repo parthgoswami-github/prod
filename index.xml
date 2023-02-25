@@ -4,9 +4,17 @@
         <link>https://www.parthgoswami.com/</link>
         <description>A platform for the community, by the community</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Wed, 22 Feb 2023 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://www.parthgoswami.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Contributor Blog #7: Interview with Pradumna Saraf</title>
+    <link>https://www.parthgoswami.com/contributor_7/</link>
+    <pubDate>Wed, 22 Feb 2023 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/contributor_7/</guid>
+    <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
+</item>
+<item>
     <title>What is DNS?</title>
     <link>https://www.parthgoswami.com/dns/</link>
     <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
@@ -85,16 +93,6 @@ In the process of exploring the tool, I went throught quite a handful of article
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/contributorblog_2/</guid>
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
-</item>
-<item>
-    <title>Docker containers using Ansible on AWS</title>
-    <link>https://www.parthgoswami.com/docker_containters_ansibleaws/</link>
-    <pubDate>Sat, 09 Jul 2022 00:00:00 &#43;0000</pubDate>
-    <author>Vrinda Hegde and Siya Amonkar</author>
-    <guid>https://www.parthgoswami.com/docker_containters_ansibleaws/</guid>
-    <description><![CDATA[Ansible is an open-source configuration management and deployment tool.
-Below are the steps to run docker container on AWS EC2 instances using Ansible playbook.
-Create AWS EC2 instances (master and slave) Update the security group of slave exposing port 8080 Install Ansible on master Install python on slave Update /etc/ansible/hosts on master with the slave IP Create a dockerfile which will be used to create customized image Create an ansible playbook with detailed tasks Execute the ansible playbook Check if the docker container is running successfully on the slave machine Install Ansible on master machine: Execute the below commands to install Ansible on the master machine:]]></description>
 </item>
 </channel>
 </rss>
