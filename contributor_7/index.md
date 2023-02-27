@@ -116,11 +116,22 @@ I will leave you all with my favorite takeaway from this interview..
 
 ######   
 
+<br/>
 
+## Resources
+
+- **Open Source With Pradumna** | https://github.com/Pradumnasaraf/open-source-with-pradumna
+- **Website** | https://pradumnasaraf.dev/
+- **Blog** | https://blog.pradumnasaraf.dev/
+- **GitHub** | https://github.com/pradumnasaraf
+- **EddieHub** | https://github.com/EddieHubCommunity
+- **LinkFree** | https://github.com/EddieHubCommunity/LinkFree
+- **Hacktoberfest** | https://hacktoberfest.com/
+- **Kubernetes SIGs** | https://github.com/kubernetes-sigs
 <br/>
 <br/>
 
-*Pradumna is a DevOps Engineer and Node.js Developer. He is passionate about Open Source and mentored hundreds of folks to break into the ecosystem. He is currently an Ambassador and Maintainer at EddieHub Org, Postman Student Leader, Major League Hacking Mentor, and Kubernetes SIGs and Kubernetes Org member. He also creates content on Twitter and Linkedin and educates people about Open Source and DevOps tools*
+*Pradumna is a DevOps Engineer and Node.js Developer. He is passionate about Open Source and mentored hundreds of folks to break into the ecosystem. He is currently an Ambassador and Maintainer at EddieHub Org, Postman Student Leader, Major League Hacking Mentor, and Kubernetes SIGs and Kubernetes Org member. He also creates content on Twitter and Linkedin and educates people about Open Source and DevOps tools. He can be reached out on [LinkedIn](https://www.linkedin.com/in/pradumnasaraf/), [Twitter](https://twitter.com/pradumna_saraf) or via [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pradumnasaraf@gmail.com)*
 
 <br/>
 <br/>
