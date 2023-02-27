@@ -3,12 +3,12 @@
 
 We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
 
-For this month’s edition, we talked about maintaing projects, translating kubernetes articles and involving more people into open source ecosystem with Pradumna Saraf.
+For this month’s edition, we talked about maintaning projects, translating kubernetes articles and involving more people into open source ecosystem with Pradumna Saraf.
 
 
 <br/>
 
-**Thank you for taking some time out and interacting with us, Pradumna. Can you introduce yourself and share your journey so far?**
+**Thank you for taking some time out and doing this interview with us, Pradumna. Can you introduce yourself and share your journey so far?**
 <br/>
 
 Hello, my name is Pradumna Saraf, and I am a devops and Go developer from India. My expertise includes working with DevOps tools such as Kubernetes, Docker, and other CNCF-based projects. I also enjoy building CLI and automation tools/projects. In addition to my technical skills, I am a strong advocate for open source literacy and inclusivity. I believe that open source is for everyone, and I strive to involve more people in the ecosystem by creating content on Twitter and LinkedIn, writing blogs, and producing videos. 
@@ -31,7 +31,7 @@ I have contributed to over 100 repositories, but I believe that people often hav
 **How did your contribution journey start?**
 <br/>
 
-My journey started in 2021 during Hacktoberfest, a month-long open source fest for FOSS organizations. I began contributing to open source by participating in Hacktoberfest, but I truly discovered the benefits of contributing through EddieHub. The community members were willing to help me in my contribution journey, even though I didn't know much about coding at the time. The inclusivity and international exposure of the community were particularly appealing to me, as I was able to connect with people from all over the world. In open source collaboration, anyone can contribute, collaborate, and connect with others without any barriers or gatekeeping. Everything is transparent, and people come together to discuss issues, features, and ideas.
+My journey started in 2021 during [Hacktoberfest](https://hacktoberfest.com/), a month-long open source fest for FOSS organizations. I began contributing to open source by participating in Hacktoberfest, but I truly discovered the benefits of contributing through [EddieHub](https://github.com/EddieHubCommunity). The community members were willing to help me in my contribution journey, even though I didn't know much about coding at the time. The inclusivity and international exposure of the community were particularly appealing to me, as I was able to connect with people from all over the world. In open source collaboration, anyone can contribute, collaborate, and connect with others without any barriers or gatekeeping. Everything is transparent, and people come together to discuss issues, features, and ideas.
 
 As I started contributing to repositories, I realized that it was important to know a subject well before writing or talking about it. This prevented me from spreading misinformation to others. I became familiar with tools like Git, GitHub, and began writing blog posts on topics that I was learning on a daily basis, such as how to use GitHub Actions and automate tasks. My LinkedIn and Twitter posts reflect my daily learnings, and I share my insights on various topics. For example, I recently learned about ArgoCD, and I shared my thoughts about it on LinkedIn and Twitter. This is how I contribute to open source by sharing my knowledge with others.
 
@@ -42,7 +42,7 @@ As I started contributing to repositories, I realized that it was important to k
 
 I am very interested in reviewing the pull request. I am also a huge supporter of documentation-side contributions because I find documentation to be equally as important as code. The reason for this is that if there is no documentation available to help you understand the code, then the code doesn't make any sense. Therefore, I am currently focused mainly on the documentation side. Speaking of other repo contributions, I have contributed to the Docker side of things by fixing some configuration files. Improving the configuration file can be crucial for deployment. A large or heavy configuration file may not impact much on a small scale, but it can become a challenge when it comes to larger scale deployments. It can lead to a latency of a few minutes, which can be problematic. A large file can also lead to more carbon emissions, so I've contributed to the configuration file. I have also co-contributed to the non-code side by reviewing and updating outdated documentation.
 
-Next, I have been a part of the EddieHub community, where I maintain several projects like LinkFree, which has over 3000+ stars, and we receive 50+ pull requests every day. I review and merge them on a daily basis.
+Next, I have been a part of the EddieHub community, where I maintain several projects like [LinkFree](https://github.com/EddieHubCommunity/LinkFree), which has over 3000+ stars, and we receive 50+ pull requests every day. I review and merge them on a daily basis.
 
 Also, as I mentioned earlier, I regularly create content on several platforms to spread awareness and encourage more people to get fascinated and join the Open Source mission.
 
@@ -58,10 +58,10 @@ We do have some traffic for Hindi documents. However, if you search for videos o
 
 <br/>
 
-**What specific product are you translating within the cncf portfolio?**
+**What specific product are you translating within the CNCF portfolio?**
 <br/>
 
-The focus translation is primarily on Kubernetes, and there is a reason for that. Given that most projects in the Cloud Native Computing Foundation (CNCF) revolve around Kubernetes, it wouldn't make sense to translate documentation for other projects if the main Kubernetes product itself is not translated. Currently, two major projects undergoing translation. The first is the main Kubernetes documentation, and the second is the CNCF glossary. Recently, the Hindi translation branch for Kubernetes was merged into the main branch, which means that the documentation in Hindi is now live. This is a positive development and a significant step forward in our translation efforts.
+The focus of translation is primarily on Kubernetes, and there is a reason for that. Given that most projects in the [Cloud Native Computing Foundation](https://github.com/cncf) (CNCF) revolve around Kubernetes, it wouldn't make sense to translate documentation for other projects if the main Kubernetes product itself is not translated. Currently, two major projects are undergoing translation. The first is the main Kubernetes documentation, and the second is the CNCF glossary. Recently, the Hindi translation branch for Kubernetes was merged into the main branch, which means that the documentation in Hindi is now live. This is a positive development and a significant step forward in our translation efforts.
 
 
 <br/>
@@ -85,7 +85,7 @@ My current experience is focused on open source development. I learned about Git
 
 In the past, I did not have much experience with Node or APIs. However, I met someone in the open source community and collaborated with them on a hackathon project. Through this project, I learned how to build CLI and API tools with Node, and I found that I really enjoy building CLI tools. Recently, I developed a CLI tool for LinkFree, which is an open source alternative to LinkTree. Seeing other people's projects and dreams have been a great source of motivation for me. Although I was not familiar with building APIs before, I now love creating them and talking about DevOps. I have also studied community projects that are hosted on Docker and Kubernetes, and I try to understand how the configuration files work. By examining these projects and understanding their configuration files, I have gained inspiration and motivation to work on my own projects.
 
-One of the great benefits of participating in the open source ecosystem is that I have had the opportunity to meet and converse with people like you. As I became more active in the open source community, people began to recognize me and follow me on social media. I have been able to bring more than 300 or 400 people into the open source community. I have also created a repository called "Open Source with Pradumna" that I started in April 2022. It has more than 500 stars and receives an average of 1,000 visitors every 10 days. However, creating and maintaining this repository requires a lot of effort, especially in terms of documenting everything properly.
+One of the great benefits of participating in the open source ecosystem is that I have had the opportunity to meet and converse with people like you. As I became more active in the open source community, people began to recognize me and follow me on social media. I have been able to bring more than 300 or 400 people into the open source community. I have also created a repository called ("Open Source with Pradumna")[https://github.com/Pradumnasaraf/open-source-with-pradumna] that I started in April 2022. It has more than 500 stars and receives an average of 1,000 visitors every 10 days. However, creating and maintaining this repository requires a lot of effort, especially in terms of documenting everything properly.
 
 <br/>
 
@@ -127,7 +127,7 @@ I will leave you all with my favorite takeaway from this interview..
 
 _________________
 
-This blog post is part of the Oct edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. If you like this article, check out the [stories of our other contributors](https://www.parthgoswami.com/categories/unconventionalcontributors/) and stay tuned for our upcoming editions.
+This blog post is part of the Jan edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. If you like this article, check out the [stories of our other contributors](https://www.parthgoswami.com/categories/unconventionalcontributors/) and stay tuned for our upcoming editions.
 
 
 Have a story to share? We’d be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community’s growth.
