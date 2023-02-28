@@ -98,7 +98,7 @@ I always recommend starting with the basics. Join a community because if you do,
 
 Next is choosing the right platform. You can choose any platform, but I prefer GitHub because it has a big community, a huge contributor base, and you can get fast support. People are familiar with it, so I highly recommend going for GitHub as it's a code hosting platform and Git is a tool that actually tracks the history of code. These are the two basic building blocks.
 
-The third step is to start with non-code contributions. The reason for starting with non-code contributions is that when you start with open source, it can be very overwhelming. You're unfamiliar with the code, can't understand the project, and there's a lot of room for error. Starting with a non-code contribution makes it easy to get started, like fixing typos in the documentation. You don't need to worry about your code working or not. Once you're familiar and have four or five non-code contributions, then you can move on to code contributions. Non-code contributions are very welcoming and help boost morale. Non-code contributions consist of translations, designing, and much more. I would say bigger projects have the most number of broken links, so fixing broken links is a non-code contribution and a good way to get involved. Then you can move towards "good first issues," "first-time contributors," and "first-timers." These are a couple of tags that are used in the industry.
+The third step is to start with non-code contributions. The reason for starting with non-code contributions is that when you start with open source, it can be very overwhelming. You're unfamiliar with the code, can't understand the project, and there's a lot of room for error. Starting with a non-code contribution makes it easy to get started, like fixing typos in the documentation. You don't need to worry about your code working or not. Once you're familiar and have four or five non-code contributions, then you can move on to code contributions. Non-code contributions are very welcoming and help boost morale. Non-code contributions consist of translations, designing, and much more. I would say bigger projects have the most number of broken links, so fixing broken links is a non-code contribution and a good way to get involved.  Then you can move towards “*good first issues*”, “*first-time contributors*”, and “*first-timers*”. These are a few tags that are used in the industry.
 
 <br/>
 
@@ -110,11 +110,13 @@ I greatly admire Eddie Jaoude the most. He is a digital nomad and the founder of
 <br/>
 <br/>
 
-Pradumna, thank you so much for taking the time to share your thoughts and experiences regarding contributions to open source software. Our conversation taught me a lot, and I hope that it will be beneficial to our readers. I greatly appreciate it. 
+Pradumna, I would like to express my heartfelt gratitude for generously sharing your thoughts and experiences on contributing to open source communities. Your insights were invaluable, and I am confident that they will benefit our readers. Thank you for taking the time to engage in such a productive conversation.
+
 
 I will leave you all with my favorite takeaway from this interview..
 
-######   
+######  Seeing other people’s projects and dreams have been a great source of motivation for me.
+ 
 
 <br/>
 
