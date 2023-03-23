@@ -141,11 +141,16 @@ I will leave you all with my favorite takeaway from this interview..
 
 ## Resources
 
-- **Kubernetes SIGs** | https://github.com/kubernetes-sigs
+- **Priya's Posts** | https://www.linkedin.com/search/results/all/?keywords=forkkiyakya&origin=GLOBAL_SEARCH_HEADER&sid=Z0C
+- **Apache OFBiz project** | https://ofbiz.apache.org/
+- **Apache Local Community - Indore** | https://www.linkedin.com/company/alcindorechapter/
+- **Apache Community Developement Project** | https://community.apache.org/
+
+
 <br/>
 <br/>
 
-*Priya Sharma is currently working with HotWax Systems as a Technical Consultant in Indore, India. She's been an active open-source user and a contributor since 2017, a committer on Apache OFBiz, PMC Member for Apache Community Development and an ASF Member.Priya loves talking about open source, helping people and solving problems. She can be reached out on [LinkedIn](https://www.linkedin.com/in/priya-k-sharma/), [Twitter](https://twitter.com/iampriyasharma9) or via [email](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=priya.sharma.9362@gmail.com)*
+*Priya Sharma is currently working with HotWax Systems as a Technical Consultant in Indore, India. She's been an active open-source user and a contributor since 2017, a committer on Apache OFBiz, PMC Member for Apache Community Development and an ASF Member.Priya loves talking about open source, helping people and solving problems. She can be reached out on [LinkedIn](https://www.linkedin.com/in/priya-k-sharma/), [Twitter](https://twitter.com/iampriyasharma9), [personal mail](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=priya.sharma.9362@gmail.com) or [community mail](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=priyasharma@apache.org)*
 
 <br/>
 <br/>
