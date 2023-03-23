@@ -27,6 +27,8 @@ Being a software developer, I always asked myself if it was worth writing code, 
 
 From a naive user to a [committer](https://home.apache.org/committer-index.html#P) and finally an ASF member, I cherish every moment of this journey.
 
+![ ](/images/unconventionalcontributors/contributor_8/committer_index.png " ")
+
 
 <br/>
 
@@ -36,6 +38,8 @@ From a naive user to a [committer](https://home.apache.org/committer-index.html#
 Initially, I started contributing to the Apache OFBiz project, which mostly involved code contributions. People used to say that the project was ahead of its time, but lacked documentation. It was a massive project with numerous services and modules, a complete world in itself. Even today, we find it astounding how this software can take care of every business need.
 
 Later on, I became interested in community building and got involved in the [Apache Community Development project](https://community.apache.org/), which primarily focuses on engaging new contributors and initiatives to support communities and make them more inclusive and welcoming.
+
+![ ](/images/unconventionalcontributors/contributor_8/first_patch.png " ")
 
 <br/>
 
@@ -67,7 +71,21 @@ I also write posts about different projects and their utilities to engage more p
 
 You can [read my posts](https://www.linkedin.com/search/results/all/?keywords=forkkiyakya&origin=GLOBAL_SEARCH_HEADER&sid=Z0C) by looking for the hashtag ***#forkkiyakya*** 
 
+As part of the ALC initiative, we deliver awareness sessions about open source and Apache Way. 
 
+![ ](/images/unconventionalcontributors/contributor_8/session.png " ")
+
+![ ](/images/unconventionalcontributors/contributor_8/community_meet.png " ")
+
+It is one of our mission at ALC to empower students and developer community in tier2/3 cities, Open Source is the doorway to their dreams.
+
+![ ](/images/unconventionalcontributors/contributor_8/session_2.png " ")
+
+Github is one of the most important tool in open source contributions. We help young minds gain some handon experience to facilitate their contributions.
+
+![ ](/images/unconventionalcontributors/contributor_8/iwd.png " ")
+
+![ ](/images/unconventionalcontributors/contributor_8/asf.png " ")
 
 <br/>
 
