@@ -11,7 +11,7 @@ For this month’s edition, we talked about community building, documentation, b
 **Can you introduce yourself and share your journey so far?**
 <br/>
 
-**Hi**, I am Priya, an average not-so-happening person (at least, that's what I think about myself) from Indore, the cleanest city of India. I am currently working as a Technical Consultant with HotWax Systems. I joined HotWax immediately after graduation. It was here that I first heard about Open Source, which later brought a lot of positive changes in my life.
+**Hi**, I am Priya, an average not-so-happening person (at least, that's what I think about myself) from Indore, the cleanest city of India. I am currently working as a Technical Consultant with [HotWax Systems](https://www.hotwaxsystems.com/). I joined HotWax immediately after graduation. It was here that I first heard about Open Source, which later brought a lot of positive changes in my life.
 
 I started contributing small chunks of code and fixing small bugs on the [Apache OFBiz project](https://ofbiz.apache.org/), which also happened to be the spine of the company back then. We used to have community Saturdays to come together and make contributions to the project, as our entire business was so closely connected to this project, and our founding team had a lot of love and respect for open source.
 
