@@ -4,9 +4,17 @@
         <link>https://www.parthgoswami.com/</link>
         <description>A platform for the community, by the community</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 24 Feb 2023 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://www.parthgoswami.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Contributor Blog #9: Interview with Prithvi Raj</title>
+    <link>https://www.parthgoswami.com/contributorblog_9/</link>
+    <pubDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>Parth Goswami</author>
+    <guid>https://www.parthgoswami.com/contributorblog_9/</guid>
+    <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
+</item>
+<item>
     <title>Contributor Blog #8: Interview with Priya Sharma</title>
     <link>https://www.parthgoswami.com/contributorblog_8/</link>
     <pubDate>Fri, 24 Feb 2023 00:00:00 &#43;0000</pubDate>
@@ -82,17 +90,6 @@ What is Project Calico? Project Calico is an open-source project with an active 
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/contributorblog_3/</guid>
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
-</item>
-<item>
-    <title>Getting started with Jupyter Notebooks</title>
-    <link>https://www.parthgoswami.com/jupyternotebooks/</link>
-    <pubDate>Thu, 21 Jul 2022 00:00:00 &#43;0000</pubDate>
-    <author>Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/jupyternotebooks/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/jupyternotebook/jupyternotebook.png" referrerpolicy="no-referrer">
-            </div>I started exploring and using Jupyter Notebook earlier this year for a project based on opensource enablement, licensing and operate first. This is the first time ever I was working with a notebook and apparently had to start from sratch right from understanding how it works, how it needs to be installed and finally how it is to be pushed to a repo and publish the work.
-In the process of exploring the tool, I went throught quite a handful of articles and videos.]]></description>
 </item>
 </channel>
 </rss>

@@ -2,19 +2,24 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.parthgoswami.com/tags/apache/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/asf/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/blogs/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/categories/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/community/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/categories/community/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/contributorblog_8/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/meetups/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/posts/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/categories/unconventionalcontributors/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/cncf/</loc><lastmod>2023-01-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/blogs/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/categories/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/chaosengineering/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/cloudnative/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/cncf/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/community/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/categories/community/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/contributorblog_9/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/harness/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/litmuschaos/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/meetups/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/posts/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/categories/unconventionalcontributors/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/apache/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/asf/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.parthgoswami.com/contributorblog_8/</loc><lastmod>2023-02-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/contributorblog_7/</loc><lastmod>2023-01-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/eddiehub/</loc><lastmod>2023-01-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/github/</loc><lastmod>2023-01-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -44,7 +49,6 @@
             <loc>https://www.parthgoswami.com/contributorblog_4/</loc><lastmod>2022-09-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/calico/</loc><lastmod>2022-08-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/certified-calico-operator/</loc><lastmod>2022-08-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/cloudnative/</loc><lastmod>2022-08-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/networking/</loc><lastmod>2022-08-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/project-calico/</loc><lastmod>2022-08-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/contributorblog_3/</loc><lastmod>2022-08-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
