@@ -11,13 +11,13 @@ For this month’s edition, we talked about creating a career out of opensource 
 **Can you introduce yourself and share your journey so far?**
 <br/>
 	
-Hi there, my name is Divya Mohan. I work as a Senior Technical Evangelist with SUSE and an advisor to Avesha. I graduated in electronics engineering and started working in an IT company because there were no electronics companies that came to my college. My plan was to switch to embedded electronics at my first company, which had an embedded electronics division. I chose that company for that specific purpose, but then I became interested in systems engineering and understanding how systems work in general. 
+Hi there, my name is Divya Mohan. I work as a Senior Technical Evangelist with [SUSE](https://www.suse.com/) and an advisor to [Avesha](https://avesha.io/). I graduated in electronics engineering and started working in an IT company because there were no electronics companies that came to my college. My plan was to switch to embedded electronics at my first company, which had an embedded electronics division. I chose that company for that specific purpose, but then I became interested in systems engineering and understanding how systems work in general. 
 
 <a href="/images/unconventionalcontributors/contributor_10/contributor_10.png" target="_blank"><img src="/images/unconventionalcontributors/contributor_10/contributor_10.png" width="300px" align="right" /></a>
 
-Although I'm not a software or developer professional and don't have a coding or computer science background, I'm still learning about coding, but systems engineering is where my true interest lies. I gained a lot of knowledge about Linux and how everything works in an application, holistically, because of my experience in systems engineering. Then I moved from Capgemini to HSBC and transitioned to a people manager role where I managed a team of 11 people. When the pandemic hit, I was transitioning and became interested in Kubernetes because it was being onboarded. I started reading the documentation and realized that I could contribute to the project and understand how it made decisions about which features to include in a release. 
+Although I'm not a software or developer professional and don't have a coding or computer science background, I'm still learning about coding, but systems engineering is where my true interest lies. I gained a lot of knowledge about Linux and how everything works in an application, holistically, because of my experience in systems engineering. Then I moved from Capgemini to [HSBC](https://www.hsbc.com/) and transitioned to a people manager role where I managed a team of 11 people. When the pandemic hit, I was transitioning and became interested in [Kubernetes](https://kubernetes.io/) because it was being onboarded. I started reading the documentation and realized that I could contribute to the project and understand how it made decisions about which features to include in a release. 
 
-As someone who had worked on proprietary products for most of my career, this was an interesting opportunity for me. I started finding ways to contribute to Kubernetes documentation, which eventually led me to become one of the maintainers of the project. I saw that CNCF Ambassador was something I could apply for and become a part of. After mentioning my contributions to the ecosystem, I was able to become a CNCF Ambassador seven to eight months after I started contributing. As of now, I'm one of the documentation maintainers for the Kubernetes & LitmusChaos projects and a CNCF ambassador.
+As someone who had worked on proprietary products for most of my career, this was an interesting opportunity for me. I started finding ways to contribute to [Kubernetes documentation](https://kubernetes.io/docs/home/), which eventually led me to become one of the maintainers of the project. I saw that CNCF Ambassador was something I could apply for and become a part of. After mentioning my contributions to the ecosystem, I was able to become a CNCF Ambassador seven to eight months after I started contributing. As of now, I'm one of the documentation maintainers for the Kubernetes & [LitmusChaos](https://litmuschaos.io/) projects and a CNCF ambassador.
 
 
 <br/>
@@ -108,23 +108,13 @@ I will leave you all with my favorite takeaway from this interview..
 
 ## Resources
 
-- **LitmustChaos** | https://litmuschaos.io/
-- **Chaosnative** | https://www.chaosnative.com/
-- **Chaos Carnival** | https://chaoscarnival.io/
-- **Census Slack** | https://docs.getcensus.com/destinations/slack
-- **Data on Kubernetes** | https://dok.community/
-- **Kapitan** | https://kapitan.dev/
-- **Pravega** | https://cncf.pravega.io/
-- **Ministry of Testing** | https://www.ministryoftesting.com/
-- **Google Developer Students Club** | https://developers.google.com/community/gdsc
-- **DEV Community** | https://dev.to/
-- **Kublr** | https://kublr.com/
-- **Octant** | https://octant.dev/
+- **Kubernetes** | https://kubernetes.io/
+- **K8s Docs** | https://kubernetes.io/docs/home/
 
 <br/>
 <br/>
 
-*Prithvi has been leading the community efforts for LitmusChaos, the CNCF incubating project based on Cloud-Native Chaos Engineering, and has helped scale a community of 1500+ folks from scratch. He is a Technical Community Manager at Harness, the primary sponsor of the LitmusChaos project. He is currently a CNCF Ambassador and is one of the organizers for Kubernetes Community Days Bengaluru. He has worked on global events, conferences, and meetups such as Chaos Carnival, Kubernetes Community Days Bengaluru & Chennai, CNCF Kubernetes Chaos Engineering Meetups, and more to help grow various communities in the DevOps ecosystem. He can be reached out on [LinkedIn](https://www.linkedin.com/in/prithvi1307/), [Twitter](https://twitter.com/prithvi137) or via [mail](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=rajprithvi1307@gmail.com)*
+*Divya is a Senior Technical Evangelist at SUSE, where she contributes to Rancher’s cloud native open source projects. She co-chairs the documentation for the Kubernetes & LitmusChaos projects & has previously worked extensively in the systems engineering space during her tenure with HSBC & IGate Global Solutions Pvt Ltd. A co-creator of the KCNA exam & a CNCF ambassador, she is invested in making technical communities & technologies more accessible & inclusive. She can be reached out on [LinkedIn](https://www.linkedin.com/in/divya-mohan0209/), [Twitter](https://twitter.com/Divya_Mohan02) or via [mail](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=divya.mohan0902@gmail.com)*
 
 
 <br/>
@@ -132,7 +122,7 @@ I will leave you all with my favorite takeaway from this interview..
 
 _________________
 
-This blog post is part of the March edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. If you like this article, check out the [stories of our other contributors](https://www.parthgoswami.com/categories/unconventionalcontributors/) and stay tuned for our upcoming editions.
+This blog post is part of the April edition of [UnconventionalContributors](https://www.parthgoswami.com/categories/unconventionalcontributors/), our monthly interview series about different ways to contribute to opensource. If you like this article, check out the [stories of our other contributors](https://www.parthgoswami.com/categories/unconventionalcontributors/) and stay tuned for our upcoming editions.
 
 
 Have a story to share? We’d be delighted to get in touch and discuss sharing your story. We are also open to suggestions for new content that will foster the community’s growth.
