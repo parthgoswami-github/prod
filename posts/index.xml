@@ -37,6 +37,16 @@
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
 </item>
 <item>
+    <title>HTTP Request Response Flow</title>
+    <link>https://www.parthgoswami.com/http_request_response_flow/</link>
+    <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Gaurav Kale</author>
+    <guid>https://www.parthgoswami.com/http_request_response_flow/</guid>
+    <description><![CDATA[In the image below, we can see the names of every part in an URL.
+Previously we have discussed about what DNS is and how it works. In the HTTP(Hypertext Transfer Protocol) RR Flow, we will only be using the term on high level.
+Refer to the above diagram for a better understanding. When a end user hits a url, a TCP connection is first established with the server that is going to server the content.]]></description>
+</item>
+<item>
     <title>What is DNS?</title>
     <link>https://www.parthgoswami.com/dns/</link>
     <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
@@ -77,17 +87,6 @@
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/contributorblog_4/</guid>
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
-</item>
-<item>
-    <title>Certified Calico Operator: Level1</title>
-    <link>https://www.parthgoswami.com/certified-calico-operator/</link>
-    <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
-    <author>Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/certified-calico-operator/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/ccol1/banner.png" referrerpolicy="no-referrer">
-            </div>In this article, I will share my experience in becoming a Certified Calico Operator: Level 1. Most of the information is available on the course portal and Calico’s webpages. I&rsquo;ve made an effort to compile all the essential details about the course and exam in one location, and I hope it will be helpful to you.
-What is Project Calico? Project Calico is an open-source project with an active development and user community.]]></description>
 </item>
 </channel>
 </rss>

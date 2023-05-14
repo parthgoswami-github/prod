@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>HTTP Request Response Flow - Parth&#39;s Blog - Parth Goswami</title><meta name="Description" content="A platform for the community, by the community"><meta property="og:title" content="HTTP Request Response Flow" />
+<meta property="og:description" content="In the image below, we can see the names of every part in an URL.
+Previously we have discussed about what DNS is and how it works. In the HTTP(Hypertext Transfer Protocol) RR Flow, we will only be using the term on high level.
+Refer to the above diagram for a better understanding. When a end user hits a url, a TCP connection is first established with the server that is going to server the content." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.parthgoswami.com/http_request_response_flow/" /><meta property="og:image" content="https://www.parthgoswami.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-26T00:00:00+00:00" /><meta property="og:site_name" content="Parth Goswami" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.parthgoswami.com/logo.png"/>
+
+<meta name="twitter:title" content="HTTP Request Response Flow"/>
+<meta name="twitter:description" content="In the image below, we can see the names of every part in an URL.
+Previously we have discussed about what DNS is and how it works. In the HTTP(Hypertext Transfer Protocol) RR Flow, we will only be using the term on high level.
+Refer to the above diagram for a better understanding. When a end user hits a url, a TCP connection is first established with the server that is going to server the content."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.parthgoswami.com/http_request_response_flow/" /><link rel="prev" href="https://www.parthgoswami.com/dns/" /><link rel="next" href="https://www.parthgoswami.com/contributorblog_7/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "HTTP Request Response Flow",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.parthgoswami.com\/http_request_response_flow\/"
+        },"genre": "posts","keywords": "How-to, technology, http, GauravKale, VisitingAuthors","wordcount":  873 ,
+        "url": "https:\/\/www.parthgoswami.com\/http_request_response_flow\/","datePublished": "2022-11-26T00:00:00+00:00","dateModified": "2022-11-26T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Gaurav Kale"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Parth&#39;s Blog - Parth Goswami"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="posts"> ~/posts </a><a class="menu-item" href="/tags/" title="tags"> ~/tags </a><a class="menu-item" href="/categories/" title="categories"> ~/categories </a><a class="menu-item" href="/about/" title="about"> /home/parth </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Parth&#39;s Blog - Parth Goswami"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="posts">~/posts</a><a class="menu-item" href="/tags/" title="tags">~/tags</a><a class="menu-item" href="/categories/" title="categories">~/categories</a><a class="menu-item" href="/about/" title="about">/home/parth</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTTP Request Response Flow</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/gaurav-kale-74629b199" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Gaurav Kale</a></span>&nbsp;<span class="post-category">included in <a href="/categories/how-to/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>How-to</a>&nbsp;<a href="/categories/visitingauthors/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>VisitingAuthors</a>&nbsp;<a href="/categories/technology/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-26">2022-11-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;873 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#here-is-an-example-of-http-request">Here is an example of HTTP request:</a></li>
+    <li><a href="#example-of-http-response">Example of HTTP response:</a></li>
+    <li><a href="#the-process-will-be-as-follows">The process will be as follows:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>In the image below, we can see the names of every part in an URL.</p>
+<p><figure><a class="lightgallery" href="/images/visiting_authors/gaurav_kale/http_request_response_flow/parts_of_url.png" title=" " data-thumbnail="/images/visiting_authors/gaurav_kale/http_request_response_flow/parts_of_url.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/visiting_authors/gaurav_kale/http_request_response_flow/parts_of_url.png"
+            data-srcset="/images/visiting_authors/gaurav_kale/http_request_response_flow/parts_of_url.png, /images/visiting_authors/gaurav_kale/http_request_response_flow/parts_of_url.png 1.5x, /images/visiting_authors/gaurav_kale/http_request_response_flow/parts_of_url.png 2x"
+            data-sizes="auto"
+            alt="/images/visiting_authors/gaurav_kale/http_request_response_flow/parts_of_url.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p>Previously we have discussed about what DNS is and how it works. In the HTTP(Hypertext Transfer Protocol) RR Flow, we will only be using the term on high level.</p>
+<p><figure><a class="lightgallery" href="/images/visiting_authors/gaurav_kale/http_request_response_flow/rr.png" title=" " data-thumbnail="/images/visiting_authors/gaurav_kale/http_request_response_flow/rr.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/visiting_authors/gaurav_kale/http_request_response_flow/rr.png"
+            data-srcset="/images/visiting_authors/gaurav_kale/http_request_response_flow/rr.png, /images/visiting_authors/gaurav_kale/http_request_response_flow/rr.png 1.5x, /images/visiting_authors/gaurav_kale/http_request_response_flow/rr.png 2x"
+            data-sizes="auto"
+            alt="/images/visiting_authors/gaurav_kale/http_request_response_flow/rr.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p>Refer to the above diagram for a better understanding. When a end user hits a url, a TCP connection is first established with the server that is going to server the content. What is TCP connection!? TCP stand for Transfer control protocol and is basically a tunnel that is established between a client(end user) and the server.  Any request will flow or any communication will only take place within them only and only when there is a way or a tunnel through which they can send and receive requests, which is done by TCP Connection.</p>
+<p>Let&rsquo;s learn more about TCP in another article.</p>
+<p>After the connection is established, an HTTP request is sent to the server and that will contain a set of things.
+The HTTP protocol is used to retrieve resources like HTML documents. It is the basis for all data interchange on the Web and operates on a client-server model, so requests must be made by the recipient, which is often a web browser.
+After the request is sent to the server, it will respond with the content that is asked and it will serve. After the content is served, if there is a need to reuse the connection then we can otherwise the connection can be closed.</p>
+<h2 id="here-is-an-example-of-http-request">Here is an example of HTTP request:</h2>
+<p><figure><a class="lightgallery" href="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_request.png" title=" " data-thumbnail="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_request.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_request.png"
+            data-srcset="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_request.png, /images/visiting_authors/gaurav_kale/http_request_response_flow/http_request.png 1.5x, /images/visiting_authors/gaurav_kale/http_request_response_flow/http_request.png 2x"
+            data-sizes="auto"
+            alt="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_request.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<ul>
+<li>An HTTP method, usually a verb like GET, POST, or a noun like OPTIONS or HEAD that defines the operation the client wants to perform. Typically, a client wants to fetch a resource (using GET) or post the value of an HTML form (using POST), though more operations may be needed in other cases.</li>
+<li>The path of the resource to fetch; the URL of the resource stripped from elements that are obvious from the context, for example without the protocol (http://), the domain (here, developer.mozilla.org), or the TCP port (here, 80).</li>
+<li>The version of the HTTP protocol.</li>
+<li>Optional headers that convey additional information for the servers.</li>
+<li>A body, for some methods like POST, similar to those in responses, which contain the resource sent.</li>
+</ul>
+<h2 id="example-of-http-response">Example of HTTP response:</h2>
+<p><figure><a class="lightgallery" href="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_response.png" title=" " data-thumbnail="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_response.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_response.png"
+            data-srcset="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_response.png, /images/visiting_authors/gaurav_kale/http_request_response_flow/http_response.png 1.5x, /images/visiting_authors/gaurav_kale/http_request_response_flow/http_response.png 2x"
+            data-sizes="auto"
+            alt="/images/visiting_authors/gaurav_kale/http_request_response_flow/http_response.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<ul>
+<li>The version of the HTTP protocol they follow.</li>
+<li>A status code, indicating if the request was successful or not, and why.</li>
+<li>A status message, a non-authoritative short description of the status code.</li>
+<li>HTTP headers, like those for requests.</li>
+<li>Optionally, a body containing the fetched resource.</li>
+</ul>
+<p>That is an high level overview of how the request response flow happens for an HTTP request.</p>
+<p>Now, the catch here is that all this flow is not very secure. Which is why we have <strong>HTTPS</strong>.</p>
+<p>HTTP but secure is HTTPS. It may be just another word added to HTTP but it brings a lot of additional processes with it.</p>
+<p>Let&rsquo;s first see what all these technical terms mean and then get the process sorted.</p>
+<ul>
+<li>
+<p><strong>TCP Connection</strong> : Transmission Control Protocol (TCP) is a standard that defines how to establish and maintain a network conversation by which applications can exchange data. TCP works with the Internet Protocol (IP), which defines how computers send packets of data to each other.</p>
+</li>
+<li>
+<p><strong>Client Hello</strong> : The client initiates the handshake by sending a &ldquo;hello&rdquo; message to the server. The message will include which TLS version the client supports, the cipher suites supported, and a string of random bytes known as the &ldquo;client random.&rdquo;</p>
+</li>
+<li>
+<p><strong>TLS</strong> : It is a widely adopted security protocol designed to facilitate privacy and data security for communications over the Internet</p>
+</li>
+<li>
+<p><strong>Server Hello</strong> : The server hello includes the server&rsquo;s certificate, digital signature, server random, and chosen cipher suite. Because it already has the master secret, it also sends a &ldquo;Finished&rdquo; message.
+We will discuss other terms like CA(Certificate Authority), Certificates, master key in a separate session. (Let&rsquo;s Go with the basic meaning for now)</p>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/images/visiting_authors/gaurav_kale/http_request_response_flow/flow.png" title=" " data-thumbnail="/images/visiting_authors/gaurav_kale/http_request_response_flow/flow.png" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/visiting_authors/gaurav_kale/http_request_response_flow/flow.png"
+            data-srcset="/images/visiting_authors/gaurav_kale/http_request_response_flow/flow.png, /images/visiting_authors/gaurav_kale/http_request_response_flow/flow.png 1.5x, /images/visiting_authors/gaurav_kale/http_request_response_flow/flow.png 2x"
+            data-sizes="auto"
+            alt="/images/visiting_authors/gaurav_kale/http_request_response_flow/flow.png" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<h2 id="the-process-will-be-as-follows">The process will be as follows:</h2>
+<p>Resuming from TCP connection, now there will be another process added and that will be the Client Hello. It will basically send a request to the server asking for its authentication and if it really is the server that is supposed to serve the content.</p>
+<p>Then the server will send it&rsquo;s certificates to the client so that client can validate the authenticity of the server. This process is called Server hello. Also, there are ciphers involved which the client and server will decide to communicate in. After this process is done then all the communication will be done using the cipher and will totally be encrypted.</p>
+<p>This makes the requests and responses going to and fro very secure as compared to the HTTP. Hence HTTPS provides more security. This is called to be the SSL(Secure Socket Layer) connection.</p>
+<p>Hope this article was helpful. Happy learning :)</p>
+<hr>
+<br/>
+<p><em>Gaurav Kale a tech enthusiast and a learner. He mostly deals with security and internet technologies and takes part in activities that can aid in promoting a better understanding of technology. In his free time, he enjoys reading books and watching movies. He can be reached out on <a href="https://www.linkedin.com/in/gaurav-kale-74629b199" target="_blank" rel="noopener noreffer ">LinkedIn</a>, <a href="https://twitter.com/kale_gauravv" target="_blank" rel="noopener noreffer ">Twitter</a> or via <a href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=kalegaurav111@gmail.com" target="_blank" rel="noopener noreffer ">email</a></em>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-11-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/http_request_response_flow/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.parthgoswami.com/http_request_response_flow/" data-title="HTTP Request Response Flow" data-via="parthtwts" data-hashtags="How-to,technology,http,GauravKale,VisitingAuthors"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.parthgoswami.com/http_request_response_flow/" data-hashtag="How-to"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.parthgoswami.com/http_request_response_flow/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.parthgoswami.com/http_request_response_flow/" data-title="HTTP Request Response Flow" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.parthgoswami.com/http_request_response_flow/" data-title="HTTP Request Response Flow"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.parthgoswami.com/http_request_response_flow/" data-title="HTTP Request Response Flow"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.parthgoswami.com/http_request_response_flow/" data-title="HTTP Request Response Flow"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/how-to/">How-to</a>,&nbsp;<a href="/tags/technology/">technology</a>,&nbsp;<a href="/tags/http/">http</a>,&nbsp;<a href="/tags/gauravkale/">GauravKale</a>,&nbsp;<a href="/tags/visitingauthors/">VisitingAuthors</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/dns/" class="prev" rel="prev" title="What is DNS?"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>What is DNS?</a>
+            <a href="/contributorblog_7/" class="next" rel="next" title="Contributor Blog #7: Interview with Pradumna Saraf">Contributor Blog #7: Interview with Pradumna Saraf<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Made with ❤️  by community</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.parthgoswami.com" target="_blank">Parth Goswami</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"Have a cookie:) We use cookies to deliver the best web experience"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"parth@cloudera ~ $","id-2":"parth@cloudera ~ $"},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"_","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

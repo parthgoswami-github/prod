@@ -5,6 +5,16 @@
         <description>How-to - Tag - Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
             <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/how-to/" rel="self" type="application/rss+xml" /><item>
+    <title>HTTP Request Response Flow</title>
+    <link>https://www.parthgoswami.com/http_request_response_flow/</link>
+    <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>Gaurav Kale</author>
+    <guid>https://www.parthgoswami.com/http_request_response_flow/</guid>
+    <description><![CDATA[In the image below, we can see the names of every part in an URL.
+Previously we have discussed about what DNS is and how it works. In the HTTP(Hypertext Transfer Protocol) RR Flow, we will only be using the term on high level.
+Refer to the above diagram for a better understanding. When a end user hits a url, a TCP connection is first established with the server that is going to server the content.]]></description>
+</item>
+<item>
     <title>What is DNS?</title>
     <link>https://www.parthgoswami.com/dns/</link>
     <pubDate>Sat, 26 Nov 2022 00:00:00 &#43;0000</pubDate>
@@ -90,15 +100,6 @@ Microsoft Azure offers the Azure Kubernetes Service (AKS) AWS offers the Amazon 
     <author>Parth Goswami</author>
     <guid>https://www.parthgoswami.com/aws_for_beginners/</guid>
     <description><![CDATA[Nope! This is article is not about what AWS is, how it works and what are its services, rather it talks about AWS and how to get started with it being a complete beginner. I am working on AWS for more than 5+ years now and have taught professionally for 2 years, hence, I understand how overwhelming it might get for a beginner to figure out how to start studying AWS.]]></description>
-</item>
-<item>
-    <title>Invoke AWS Lambda from Slack</title>
-    <link>https://www.parthgoswami.com/lambda_slack/</link>
-    <pubDate>Fri, 03 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>Siya Amonkar and Varshareddykumbham</author>
-    <guid>https://www.parthgoswami.com/lambda_slack/</guid>
-    <description><![CDATA[AWS Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code only when needed and scales automatically, from a few requests per day to thousands per second. AWS Lambda in our task is invoked using the API Gateway.
-Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work — all within a secure, enterprise-grade environment.]]></description>
 </item>
 </channel>
 </rss>
