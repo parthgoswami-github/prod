@@ -2,8 +2,20 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://www.parthgoswami.com/categories/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/gauravkale/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/how-to/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/categories/how-to/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/http/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/http_request_response_flow/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/posts/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/technology/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/categories/technology/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/tags/visitingauthors/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.parthgoswami.com/categories/visitingauthors/</loc><lastmod>2023-05-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/blogs/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://www.parthgoswami.com/categories/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/cncf/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/community/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.parthgoswami.com/categories/community/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
@@ -12,9 +24,6 @@
             <loc>https://www.parthgoswami.com/tags/kubernetes/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/litmuschaos/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/meetups/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://www.parthgoswami.com/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://www.parthgoswami.com/posts/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.parthgoswami.com/categories/unconventionalcontributors/</loc><lastmod>2023-04-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/chaosengineering/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/cloudnative/</loc><lastmod>2023-03-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -26,15 +35,6 @@
             <loc>https://www.parthgoswami.com/tags/eddiehub/</loc><lastmod>2023-01-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/github/</loc><lastmod>2023-01-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/dns/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/gauravkale/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/how-to/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/categories/how-to/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/http/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/http_request_response_flow/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/technology/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/categories/technology/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/tags/visitingauthors/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.parthgoswami.com/categories/visitingauthors/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/dns/</loc><lastmod>2022-11-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/contributorblog_6/</loc><lastmod>2022-11-16T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.parthgoswami.com/tags/django/</loc><lastmod>2022-11-16T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
