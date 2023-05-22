@@ -99,11 +99,6 @@ That's very difficult because no two journeys are the same, right? But if it had
 
 Divya, I appreciate you so much for taking the time to share your experience and viewpoint on open source contributions. I have learned lots of things from our conversation, and I hope that it will be helpful to our readers. Thank you so much!
 
-I will leave you all with my favorite takeaway from this interview..
-
-###### A contributor is only a contributor when they can bring in other contributors to contribute to the project. 
- 
-
 <br/>
 
 ## Resources
