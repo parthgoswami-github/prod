@@ -25,7 +25,7 @@ In the same timeframe, I also happened to apply for the CNCF Ambassadors program
 **Were all of your contributions focused on a single project within the CNCF landscape?**
 <br/>
 
-Not all of my projects were related to CNCF, although most of them were. I was heavily involved with both LitmusChaos and Kubernetes, and eventually became one of the documentation maintainers for LitmusChaos in 2020. Additionally, I worked with the Kubernetes release team and did documentation edits on the side. This was also the year when I participated in Google Season of Docs with CERN as my mentoring organization . During the program, I worked on the documentation overhaul for their large hadron collider’s data management system, Rucio. While I'm sure CNCF did not take this into consideration during my application to become an ambassador, it did help me learn a lot more about technical writing in general.
+Not all of my projects were related to CNCF, although most of them were. I was heavily involved with both LitmusChaos and Kubernetes, and eventually became one of the documentation maintainers for LitmusChaos in 2020. Additionally, I worked with the Kubernetes release team and did documentation edits on the side. This was also the year when I participated in Google Season of Docs with CERN as my mentoring organization. During the program, I worked on the documentation overhaul for their large hadron collider’s data management system, Rucio. While I'm sure CNCF did not take this into consideration during my application to become an ambassador, it did help me learn a lot more about technical writing in general.
 
 
 <br/>
@@ -33,7 +33,7 @@ Not all of my projects were related to CNCF, although most of them were. I was h
 **Did you contribute to any other projects along with Kubernetes and LitmusChaos?**
 <br/>
 	
-The projects I am currently heavily involved with are Kubernetes and SUSE’s entire cloud native suite. Since SUSE is an opensource company, the list of projects I am involved with is  quite long. I am also an advisor to Avesha, which has an open-source project called Kubeslice.. In Kubernetes and LitmusChaos, I continue to serve as a  documentation maintainer. With Kubeslice, I am not a maintainer, but provide assistance with improving contributor experience & building an open source community from scratch around the project.. 
+The projects I am currently heavily involved with are Kubernetes and SUSE’s entire cloud native suite. Since SUSE is an opensource company, the list of projects I am involved with is  quite long. I am also an advisor to Avesha, which has an open-source project called Kubeslice. In Kubernetes and LitmusChaos, I continue to serve as a  documentation maintainer. With Kubeslice, I am not a maintainer, but provide assistance with improving contributor experience & building an open source community from scratch around the project. 
 
 
 <br/>
@@ -41,7 +41,7 @@ The projects I am currently heavily involved with are Kubernetes and SUSE’s en
 **How did your contribution journey start?**
 <br/>
 
-I started my journey with a minor edit that involved fixing the date field for the Kubernetes documentation so that it could be parsed by crawlers & search engines. To be honest, I did not know a lot about version control or static site generators before I stepped into open source. In my job as a systems engineer, we didn't use either of these things. However, I realized that I needed to learn more about Git and the static site generator that Kubernetes used   in order to start contributing to its documentation. .. . . I faced many stumbling blocks, but Tim Bannister, who was a tech lead then, advised me and helped me out. I am extremely grateful to all the community members who also stepped up to help by clarifying the process, identifying more areas to contribute, and being extremely patient with me. Eventually I gained confidence and started contributing to more areas of the project and didn’t limit myself to just the documentation.
+I started my journey with a minor edit that involved fixing the date field for the Kubernetes documentation so that it could be parsed by crawlers & search engines. To be honest, I did not know a lot about version control or static site generators before I stepped into open source. In my job as a systems engineer, we didn't use either of these things. However, I realized that I needed to learn more about Git and the static site generator that Kubernetes used in order to start contributing to its documentation. I faced many stumbling blocks, but Tim Bannister, who was a tech lead then, advised me and helped me out. I am extremely grateful to all the community members who also stepped up to help by clarifying the process, identifying more areas to contribute, and being extremely patient with me. Eventually I gained confidence and started contributing to more areas of the project and didn’t limit myself to just the documentation.
 
 
 <br/>
