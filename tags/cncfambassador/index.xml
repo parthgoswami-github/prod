@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>harness - Tag - Parth&#39;s Blog - Parth Goswami</title>
-        <link>https://www.parthgoswami.com/tags/harness/</link>
-        <description>harness - Tag - Parth&#39;s Blog - Parth Goswami</description>
+        <title>cncfambassador - Tag - Parth&#39;s Blog - Parth Goswami</title>
+        <link>https://www.parthgoswami.com/tags/cncfambassador/</link>
+        <description>cncfambassador - Tag - Parth&#39;s Blog - Parth Goswami</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>parthifs.g@gmail.com (Parth Goswami)</managingEditor>
-            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/harness/" rel="self" type="application/rss+xml" /><item>
-    <title>Contributor Blog #9: Interview with Prithvi Raj</title>
-    <link>https://www.parthgoswami.com/contributorblog_9/</link>
-    <pubDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</pubDate>
+            <webMaster>parthifs.g@gmail.com (Parth Goswami)</webMaster><lastBuildDate>Mon, 17 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.parthgoswami.com/tags/cncfambassador/" rel="self" type="application/rss+xml" /><item>
+    <title>Contributor Blog #10: Interview with Divya Mohan</title>
+    <link>https://www.parthgoswami.com/contributorblog_10/</link>
+    <pubDate>Mon, 17 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>Parth Goswami</author>
-    <guid>https://www.parthgoswami.com/contributorblog_9/</guid>
+    <guid>https://www.parthgoswami.com/contributorblog_10/</guid>
     <description><![CDATA[We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.]]></description>
 </item>
 </channel>
