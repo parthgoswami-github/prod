@@ -3,8 +3,7 @@
 
 We have many diverse contributors in opensource that help upstream communities in unconventional ways, which doesn’t require any coding or development skills. Starting with a non-code contribution can help anyone overcome the sense of failure and not being good enough, and it can also serve as a springboard for our open source adventure. This interview series aims to highlight some non-code open source contributions that anyone can make right now to get started contributing.
 
-For this month’s edition, we talked about creating a career out of opensource contributions and becoming a community manager  with Divya Mohan.
-
+For this month’s edition, we talked about creating a career out of opensource contributions and becoming a CNCF Ambassador with Divya Mohan.
 
 <br/>
 
@@ -111,7 +110,7 @@ Divya, I appreciate you so much for taking the time to share your experience and
 - **CNCF Ambassadors** | https://www.cncf.io/people/ambassadors/
 - **LitmusChaos** | https://litmuschaos.io/
 - **CNCF** | https://www.cncf.io/
-- **Google Season of Docs** | Google Season of Docs
+- **Google Season of Docs** | https://developers.google.com/season-of-docs
 - **Rucio** | https://rucio.cern.ch/
 - **Kubeslice** | https://github.com/kubeslice
 
